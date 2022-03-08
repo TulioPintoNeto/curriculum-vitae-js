@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Icon Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8a9d323955.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS Vanilla Init -->
+    <script src="./static/bundle/script.js" defer></script>
+  </head>
+  <body>
+    <button
+      class="btn btn-primary d-print-none position-fixed m-3"
+      id="changeLanguage"
+    >
+      Mudar Idioma
+    </button>
+    <div
+      class="container-fluid d-flex flex-column align-items-stretch jusity"
+      id="curriculum"
+    >
+      <div class="row justify-content-end align-items-center" id="header">
+        <div class="me-5 pe-5 light-gray" id="header-titles">
+          <h2>Tulio Pinto Neto</h2>
+          <h3>Front-end Developer</h3>
+        </div>
+        <div id="header-img">
+          <img src="./img/header-photo.jpg" />
+        </div>
+      </div>
+      <div class="row align-items-stretch p-0">
+        <div class="px-2 py-2" id="side-menu">
+          <h5 class="light-gray">Contact</h5>
+          <div class="row mx-0 mb-1">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fab fa-github gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0">/TulioPintoNeto</p>
+            </div>
+          </div>
+          <div class="row mx-0 mb-1">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fab fa-linkedin gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0">/tulio-pinto-neto</p>
+            </div>
+          </div>
+          <div class="row mx-0 mb-1">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-map-marker-alt gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0">Pelotas/RS - Brazil</p>
+            </div>
+          </div>
+          <div class="row mx-0 mb-1">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-mobile-alt gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0 mt-1">+55 51 99408-1002</p>
+            </div>
+          </div>
+          <div class="row mx-0 mb-2">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-envelope gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0">tulio_neto_2@hotmail.com</p>
+            </div>
+          </div>
+          <h5 class="light-gray mt-3">Languages</h5>
+          <div id="languages"></div>
+          <!-- <div class="row gray" id="languages">
+            <div class="col-6">
+              <p class="mb-0">Portuguese</p>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+            </div>
+            <div class="col-6">
+              <p class="mb-0">English</p>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <i class="fas fa-circle"></i>
+              <i class="far fa-circle"></i>
+              <i class="far fa-circle"></i>
+            </div>
+          </div> -->
+          <h5 class="light-gray mt-3">Expertise</h5>
+          <div class="row gray">
+            <div class="col-6">
+              <p class="mb-2">CSS</p>
+              <p class="mb-2">HTML</p>
+              <p class="mb-2">MySQL</p>
+              <p class="mb-2">PHP</p>
+              <p class="mb-2">R</p>
+            </div>
+            <div class="col-6">
+              <p class="mb-2">Flutter</p>
+              <p class="mb-2">JavaScript</p>
+              <p class="mb-2">Node</p>
+              <p class="mb-2">Python</p>
+              <p class="mb-2">React JS</p>
+            </div>
+          </div>
+          <h5 class="light-gray mt-3">Softwares/IDE</h5>
+          <div class="row gray">
+            <div class="col-5">
+              <p class="mb-2">FileZilla</p>
+              <p class="mb-2">MS Excel</p>
+              <p class="mb-2">MS Word</p>
+              <p class="mb-2">SourceTree</p>
+            </div>
+            <div class="col-7">
+              <p class="mb-2">Insomnia</p>
+              <p class="mb-2">MS PowerPoint</p>
+              <p class="mb-2">Postman</p>
+              <p class="mb-2">VSCode</p>
+            </div>
+          </div>
+          <h5 class="light-gray mt-3">Others</h5>
+          <div class="row gray">
+            <div class="col-5">
+              <p class="mb-2">Bootstrap</p>
+              <p class="mb-2">Clean Architecture</p>
+              <p class="mb-2">RegEx</p>
+              <p class="mb-2">SEO</p>
+            </div>
+            <div class="col-7">
+              <p class="mb-2">Clean Code</p>
+              <p class="mb-2">JQuery</p>
+              <p class="mb-2">Scrum</p>
+              <p class="mb-2">TDD</p>
+            </div>
+          </div>
+          <h5 class="light-gray mt-3">Interests</h5>
+          <div class="row mx-0 mb-2">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-biking gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0">Physical Activity</p>
+            </div>
+          </div>
+          <div class="row mx-0 mb-2">
+            <div
+              class="col-1 p-0 d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-music gray"></i>
+            </div>
+            <div class="col-11 pe-0">
+              <p class="gray mb-0">Music</p>
+            </div>
+          </div>
+        </div>
+        <div class="px-0 py-2 text-center" id="main-content">
+          <h5 class="py-2 w-100 light-gray bg-dark-blue">Experience</h5>
+          <div class="row dark-blue content">
+            <div class="col-3 ps-2 pe-0">
+              <p class="mb-0 year"><b>2021 - Present</b></p>
+              <span>5 months</span>
+            </div>
+            <div class="col-9 pe-2 ps-0">
+              <p class="mb-0">
+                <b class="activity"
+                  >(Full-time) Mobile developer with Flutter</b
+                >
+              </p>
+              <p class="mb-0">
+                <i class="local">Startaideia, Pelotas, Brazil</i>
+              </p>
+              <p class="description mb-0">
+                🞄 Development of multiplataform applications (Web, Android and
+                iOS);
+              </p>
+              <p class="description mb-0">
+                🞄 Definition of project patterns and creation of unit tests
+                using TDD and Clean Architecture;
+              </p>
+              <p class="description">
+                🞄 Implementation of changes in habits, CI/CD culture and
+                automation.
+              </p>
+            </div>
+          </div>
+          <div class="row dark-blue content">
+            <div class="col-3 ps-2 pe-0">
+              <p class="mb-0 year"><b>2021 - Present</b></p>
+              <span>8 months</span>
+            </div>
+            <div class="col-9 pe-2 ps-0">
+              <p class="mb-0">
+                <b class="activity"
+                  >(Freelance) Mobile developer with Flutter</b
+                >
+              </p>
+              <p class="mb-0">
+                <i class="local">Primeira Mesa, Pelotas, Brazil</i>
+              </p>
+              <p class="description">
+                🞄 Maintenance of the company application and development of new
+                functionalities.
+              </p>
+            </div>
+          </div>
+          <div class="row dark-blue content">
+            <div class="col-3 ps-2 pe-0">
+              <p class="mb-0 year"><b>2021 - Present</b></p>
+              <span>10 months</span>
+            </div>
+            <div class="col-9 pe-2 ps-0">
+              <p class="mb-0">
+                <b class="activity"
+                  >(Freelance) Front-end developer with React JS</b
+                >
+              </p>
+              <p class="mb-0">
+                <i class="local">Eagle Soluções, Pelotas, Brazil</i>
+              </p>
+              <p class="description mb-0">
+                🞄 Maintenance and development of new functionalities for the
+                company website source code.
+              </p>
+              <p class="description mb-0">
+                🞄 Maintenance of the existent SPA and development of new
+                functionalities.
+              </p>
+              <p class="description">
+                🞄 Development of new SPA in partnership with the company's
+                development team.
+              </p>
+            </div>
+          </div>
+          <div class="row dark-blue content">
+            <div class="col-3 ps-2 pe-0">
+              <p class="mb-0 year">
+                <b>2020 - 2021</b>
+              </p>
+              <span>9 months</span>
+            </div>
+            <div class="col-9 pe-2 ps-0">
+              <p class="mb-0">
+                <b class="activity"
+                  >(Self Employed) Front-end developer with React JS</b
+                >
+              </p>
+              <p class="mb-0">
+                <i class="local">Emotus, Pelotas, Brazil</i>
+              </p>
+              <p class="description">
+                🞄 SPA development to integrate commercial distributor, installer
+                and final client using JavaScript, JS Linter with the Airbnb
+                style guide, React JS using function components,
+                Styled-Components, React Testing Library and React Router.
+              </p>
+            </div>
+          </div>
+          <div class="row dark-blue content">
+            <div class="col-3 ps-2 pe-0">
+              <p class="mb-0 year">
+                <b>2020 - 2021</b>
+              </p>
+              <span>4 months</span>
+            </div>
+            <div class="col-9 pe-2 ps-0">
+              <p class="mb-0">
+                <b class="activity"
+                  >(Freelance) Mobile developer with Flutter</b
+                >
+              </p>
+              <p class="mb-0">
+                <i class="local">Pataki, Pelotas, Brazil</i>
+              </p>
+              <p class="description">
+                🞄 Front-end development of a social media for mobile devices,
+                using Flutter and Android Studio. The abilities that was used:
+                control forms, video player, timeline and chat.
+              </p>
+            </div>
+          </div>
+          <div class="row dark-blue content">
+            <div class="col-3 ps-2 pe-0">
+              <p class="mb-0 year"><b>2019 - 2020</b></p>
+              <span>17 months</span>
+            </div>
+            <div class="col-9 pe-2 ps-0">
+              <p class="mb-0">
+                <b class="activity"
+                  >(Intern) Web developer and engineer intern</b
+                >
+              </p>
+              <p class="mb-0">
+                <i class="local">D3 Energia, Porto Alegre, Brazil</i>
+              </p>
+              <p class="description mb-0">
+                🞄 Development of new functionalities for the company software.
+                That was a concern in changing the software from procedural to
+                object oriented.
+              </p>
+              <p class="description mb-0">
+                🞄 Doing the back-up of emails, files and database.
+              </p>
+              <p class="description mb-0">
+                🞄 Creation and maintenance of the company website.
+              </p>
+              <p class="description">
+                🞄 Sizing, checking viability, projecting, coordinating the
+                installation and maintenance of solar systems.
+              </p>
+            </div>
+          </div>
+          <div id="education">
+            <h5 class="py-2 w-100 light-gray bg-dark-blue" id="second-title">
+              Education
+            </h5>
+            <div class="row dark-blue content">
+              <div class="col-3 ps-2 pe-0">
+                <p class="mb-0 year"><b>2021 - Present</b></p>
+              </div>
+              <div class="col-9 pe-2 ps-0">
+                <p class="mb-0">
+                  <b class="activity"
+                    >(Bachelor's Degree) Systems Analysis and Development</b
+                  >
+                </p>
+                <p>
+                  <i class="local">UCPel, Pelotas, Brazil</i>
+                </p>
+              </div>
+              <div class="col-3 ps-2 pe-0">
+                <p class="mb-0 year"><b>2021 - Present</b></p>
+              </div>
+              <div class="col-9 pe-2 ps-0">
+                <p class="mb-0">
+                  <b class="activity">(Certificate) Node</b>
+                </p>
+                <p><i class="local">Alura, Brazil</i></p>
+              </div>
+              <div class="col-3 ps-2 pe-0">
+                <p class="mb-0 year"><b>2021</b></p>
+              </div>
+              <div class="col-9 pe-2 ps-0">
+                <p class="mb-0">
+                  <b class="activity">(Certificate) Flutter</b>
+                </p>
+                <p><i class="local">Alura, Brazil</i></p>
+              </div>
+              <div class="col-3 ps-2 pe-0">
+                <p class="mb-0 year"><b>2021</b></p>
+              </div>
+              <div class="col-9 pe-2 ps-0">
+                <p class="mb-0">
+                  <b class="activity">(Certificate) React JS</b>
+                </p>
+                <p><i class="local">Alura, Brazil</i></p>
+              </div>
+              <div class="col-3 ps-2 pe-0">
+                <p class="mb-0 year"><b>2013 - 2020</b></p>
+              </div>
+              <div class="col-9 pe-2 ps-0">
+                <p class="mb-0">
+                  <b class="activity">(Bachelor's Degree) Energy Engineering</b>
+                </p>
+                <p class="mb-0">
+                  <i class="local">UFRGS, Porto Alegre, Brazil</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
