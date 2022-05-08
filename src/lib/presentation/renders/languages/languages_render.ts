@@ -22,19 +22,15 @@ export class LanguagesRender extends AppendRender<UserLanguage[]> {
     languageRender: LanguageRender;
     render: UniversalRender;
   }) {
-    super();
+    super(params.render);
     this.asideRowRender = params.asideRowRender;
     this.languageRender = params.languageRender;
     this.render = params.render;
   }
 
   build(userLanguages: UserLanguage[]): void {
-    const fatherElement: HTMLElement = this._getFatherElement();
-
-    this.render.removeAllChildren(fatherElement);
-
     for (let i = 0; i < userLanguages.length; i += 2) {
-      fatherElement.append(
+      this.append(
         this.asideRowRender.build({
           children: this._rowBuilder({ userLanguages, index: i }),
         })

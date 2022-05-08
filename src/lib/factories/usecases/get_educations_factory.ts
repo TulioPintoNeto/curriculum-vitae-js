@@ -6,7 +6,7 @@ import { flutterCertificateFactory } from "../content/educations/flutter_certifi
 import { nodeJSCertificateFactory } from "../content/educations/node_js_factory";
 import { reactJSCertificateFactory } from "../content/educations/react_js_factory";
 import { systemsAnalysisAndDevelopmentFactory } from "../content/educations/systems_analysis_and_development";
-import { educationTitleFactory } from "../content/tite/education_title_factory";
+import { educationTitleFactory } from "../content/title/education_title_factory";
 
 export const getEducationsFactory = (language: Language): GetEducations => {
   return new GetEducationsImpl({

@@ -8,23 +8,17 @@ export class InterestsRender extends AppendRender<Map<string, string>> {
   fatherId: string = "interests";
 
   interestRender: InterestRender;
-  render: UniversalRender;
 
   constructor(params: {
     interestRender: InterestRender;
     render: UniversalRender;
   }) {
-    super();
+    super(params.render);
     this.interestRender = params.interestRender;
-    this.render = params.render;
   }
 
   build(interests: Map<string, string>): void {
-    const fatherElement: HTMLElement = this._getFatherElement();
-
-    this.render.removeAllChildren(fatherElement);
-
-    fatherElement.append(
+    this.append(
       ...[
         this.interestRender.build({
           icon: Icons.BIKING,

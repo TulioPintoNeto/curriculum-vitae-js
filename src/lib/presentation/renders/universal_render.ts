@@ -29,6 +29,13 @@ export class UniversalRender {
     return document.createTextNode(text);
   }
 
+  createTitle(params?: RenderParams): HTMLHeadingElement {
+    return this._create({
+      tagName: "h5",
+      renderParams: params,
+    });
+  }
+
   _create<TagName extends keyof HTMLElementTagNameMap>(params: {
     tagName: TagName;
     renderParams?: RenderParams;

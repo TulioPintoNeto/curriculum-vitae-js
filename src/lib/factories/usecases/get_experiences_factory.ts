@@ -7,7 +7,7 @@ import { emotusFactory } from "../content/experiences/emotus_factory";
 import { firstTableFactory } from "../content/experiences/first_table_factory";
 import { petSocialMediaFactory } from "../content/experiences/pet_social_media_factory";
 import { startaideiaFactory } from "../content/experiences/startaideia_factory";
-import { experienceTitleFactory } from "../content/tite/experience_title_factory";
+import { experienceTitleFactory } from "../content/title/experience_title_factory";
 
 export const getExperiencesFactory = (language: Language): GetExperiences => {
   return new GetExperiencesImpl({

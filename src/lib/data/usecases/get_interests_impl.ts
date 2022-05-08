@@ -1,6 +1,7 @@
+import { GetInterests } from "../../domain/usecases/get_interests";
 import { InterestsData } from "../content/side_menu/interests";
 
-export class GetInterestsImpl {
+export class GetInterestsImpl implements GetInterests {
   interests: InterestsData;
 
   constructor(interests: InterestsData) {

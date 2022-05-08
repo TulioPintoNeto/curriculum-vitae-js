@@ -23,9 +23,8 @@ export class ColumnRender extends ElementRender {
   private _getClasses(params: { classes?: string[]; size: number }): string[] {
     const classes = this._getClassesWith(params.classes);
     const columnClass = this._columnSize(params.size);
+
     classes.push(columnClass);
-    console.log(classes);
-    console.log("hi");
 
     return classes;
   }

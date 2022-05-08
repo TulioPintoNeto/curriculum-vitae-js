@@ -1,6 +1,8 @@
-import { Title } from "../../../domain/entities/title";
+import { Title, Titles } from "../../../domain/entities/title";
 
-export abstract class EducationTitle extends Title {}
+export abstract class EducationTitle extends Title {
+  type: Titles = Titles.EDUCATION;
+}
 
 export class EducationTitlePT extends EducationTitle {
   locale: string = "Educação";

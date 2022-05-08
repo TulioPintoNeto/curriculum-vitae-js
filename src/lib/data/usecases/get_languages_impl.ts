@@ -1,7 +1,8 @@
 import { UserLanguage } from "../../domain/entities/user_language";
+import { GetLanguages } from "../../domain/usecases/get_languages";
 import { UserLanguages } from "../content/side_menu/user_languages";
 
-export class GetLanguagesImpl {
+export class GetLanguagesImpl implements GetLanguages {
   languages: UserLanguages;
 
   constructor(languages: UserLanguages) {
