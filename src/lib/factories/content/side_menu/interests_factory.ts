@@ -1,11 +1,11 @@
 import { Language } from "../../../core/languages/language";
 import {
-  Interests,
+  InterestsData,
   InterestsEN,
   InterestsPT,
 } from "../../../data/content/side_menu/interests";
 
-export const interestsFactory = (language: Language): Interests => {
+export const interestsFactory = (language: Language): InterestsData => {
   switch (language) {
     case Language.EN_US:
       return new InterestsEN();

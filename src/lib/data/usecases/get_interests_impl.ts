@@ -1,9 +1,9 @@
-import { Interests } from "../content/side_menu/interests";
+import { InterestsData } from "../content/side_menu/interests";
 
 export class GetInterestsImpl {
-  interests: Interests;
+  interests: InterestsData;
 
-  constructor(interests: Interests) {
+  constructor(interests: InterestsData) {
     this.interests = interests;
   }
 

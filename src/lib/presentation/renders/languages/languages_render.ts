@@ -1,3 +1,5 @@
+import { AppendRender } from "../../../core/renders/append_render";
+import { Render } from "../../../core/renders/render";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { AsideRowRender } from "../common/aside_row_render";
 import { UniversalRender } from "../universal_render";
@@ -8,7 +10,7 @@ interface RowBuilderParams {
   index: number;
 }
 
-export class LanguagesRender {
+export class LanguagesRender extends AppendRender<UserLanguage[]> {
   fatherId: string = "languages";
 
   asideRowRender: AsideRowRender;
@@ -20,34 +22,24 @@ export class LanguagesRender {
     languageRender: LanguageRender;
     render: UniversalRender;
   }) {
+    super();
     this.asideRowRender = params.asideRowRender;
     this.languageRender = params.languageRender;
     this.render = params.render;
   }
 
   build(userLanguages: UserLanguage[]): void {
-    const fatherElement: HTMLElement = this._fatherElement();
+    const fatherElement: HTMLElement = this._getFatherElement();
 
     this.render.removeAllChildren(fatherElement);
 
     for (let i = 0; i < userLanguages.length; i += 2) {
       fatherElement.append(
-        ...[
-          this.asideRowRender.build({
-            children: this._rowBuilder({ userLanguages, index: i }),
-          }),
-        ]
+        this.asideRowRender.build({
+          children: this._rowBuilder({ userLanguages, index: i }),
+        })
       );
     }
-  }
-
-  private _fatherElement(): HTMLElement {
-    const element = document.getElementById(this.fatherId);
-
-    if (element === null) {
-      throw Error("Could not find father element.");
-    }
-    return element;
   }
 
   private _rowBuilder({ userLanguages, index }: RowBuilderParams): Node[] {

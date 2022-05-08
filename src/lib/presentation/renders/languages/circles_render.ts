@@ -1,15 +1,11 @@
-import { UserLanguage } from "../../../domain/entities/user_language";
-import { UniversalRender } from "../universal_render";
+import { Render } from "../../../core/renders/render";
+import { IconRender, Icons } from "../common/icon_render";
 
-export class CirclesRender {
-  emptyCircleClass: string = "far";
-  filledCircleClass: string = "fas";
-  circleClass: string = "fa-circle";
+export class CirclesRender implements Render<number, HTMLElement[]> {
+  iconRender: IconRender;
 
-  render: UniversalRender;
-
-  constructor(render: UniversalRender) {
-    this.render = render;
+  constructor(iconRender: IconRender) {
+    this.iconRender = iconRender;
   }
 
   build(levelOfUser: number): HTMLElement[] {
@@ -23,12 +19,9 @@ export class CirclesRender {
   }
 
   private _buildLevel(level: number, levelOfUser: number) {
-    const levelElement: HTMLElement = this.render.createI();
-    const typeOfCircle: string =
-      level < levelOfUser ? this.filledCircleClass : this.emptyCircleClass;
+    const icon: Icons =
+      level < levelOfUser ? Icons.FILLED_CIRCLE : Icons.EMPTY_CIRCLE;
 
-    levelElement.classList.add(this.circleClass, typeOfCircle);
-
-    return levelElement;
+    return this.iconRender.build(icon);
   }
 }

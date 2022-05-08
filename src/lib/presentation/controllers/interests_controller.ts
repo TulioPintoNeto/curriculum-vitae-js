@@ -1,5 +1,6 @@
 import { RendersController } from "../../core/controllers/controller";
 import { GetInterests } from "../../domain/usecases/get_interests";
+import { InterestsRender } from "../renders/interests/interests_render";
 
 export class InterestsController implements RendersController {
   interests: Map<string, string>;
@@ -8,16 +9,16 @@ export class InterestsController implements RendersController {
   interestsRender: InterestsRender;
 
   constructor(params: {
-    getLanguages: GetInterests;
+    getInterests: GetInterests;
     interestsRender: InterestsRender;
   }) {
-    this.getInterests = params.getLanguages;
+    this.getInterests = params.getInterests;
     this.interestsRender = params.interestsRender;
 
     this.interests = this.getInterests.call();
   }
 
   update(): void {
-    throw new Error("Method not implemented.");
+    this.interestsRender.build(this.interests);
   }
 }
