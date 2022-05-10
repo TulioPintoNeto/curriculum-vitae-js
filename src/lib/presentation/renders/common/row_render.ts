@@ -2,7 +2,7 @@ import { ElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
 import { UniversalRender } from "../universal_render";
 
-export interface RowRenderParams {
+interface RowRenderParams {
   children?: Node[];
   classes?: string[];
 }
