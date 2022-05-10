@@ -7,7 +7,10 @@ interface ColumnReaderParams {
   size: number;
 }
 
-export class ColumnRender extends ElementRender {
+export class ColumnRender extends ElementRender<
+  ColumnReaderParams,
+  HTMLDivElement
+> {
   content: HTMLDivElement;
 
   constructor(params: ColumnReaderParams) {

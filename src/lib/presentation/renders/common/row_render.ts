@@ -7,7 +7,7 @@ interface RowRenderParams {
   classes?: string[];
 }
 
-export class RowRender extends ElementRender {
+export class RowRender extends ElementRender<RowRenderParams, HTMLDivElement> {
   content: HTMLDivElement;
 
   constructor(params: RowRenderParams) {

@@ -1,4 +1,9 @@
-export abstract class ElementRender {
+import { Render } from "./render";
+
+export abstract class ElementRender<Params, BuildResponse> extends Render<
+  Params,
+  BuildResponse
+> {
   protected classes(): string[] {
     return [];
   }
