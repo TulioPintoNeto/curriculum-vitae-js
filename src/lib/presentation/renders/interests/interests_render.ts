@@ -6,13 +6,6 @@ import { InterestRender } from "./interest_render";
 export class InterestsRender extends AppendRender<Map<string, string>> {
   fatherId: string = "interests";
 
-  // interestRender: InterestRender;
-
-  // constructor(params: { interestRender: InterestRender }) {
-  //   super();
-  //   this.interestRender = params.interestRender;
-  // }
-
   build(interests: Map<string, string>): void {
     const physicalBuilded = new InterestRender({
       icon: Icons.BIKING,
