@@ -9,12 +9,6 @@ export enum Icons {
 }
 
 export class IconRender implements Render<Icons, HTMLElement> {
-  render: UniversalRender;
-
-  constructor(render: UniversalRender) {
-    this.render = render;
-  }
-
   build(icon: Icons): HTMLElement {
     const element: HTMLElement = UniversalRender.createI();
     const classList = icon.split(" ");
