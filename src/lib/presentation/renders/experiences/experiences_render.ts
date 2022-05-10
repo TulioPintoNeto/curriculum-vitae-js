@@ -7,22 +7,14 @@ import { MainSectionRowRender } from "../common/main_section_row_render";
 export class ExperiencesRender extends AppendRender<Experience<Position>[]> {
   fatherId: string = "experiences";
 
-  mainSectionColumnRender: MainSectionColumnRender;
-
-  constructor(params: { mainSectionColumnRender: MainSectionColumnRender }) {
-    super();
-    this.mainSectionColumnRender = params.mainSectionColumnRender;
-  }
-
   build(experiences: Experience<Position>[]): void {
-    const builded = new MainSectionRowRender({
-      children: [
-        this.mainSectionColumnRender.build({
-          size: 3,
+    const buildedMainSectionColumn = new MainSectionColumnRender({
+      size: 3,
+      children: [],
+    });
 
-          children: [],
-        }),
-      ],
+    const builded = new MainSectionRowRender({
+      children: [buildedMainSectionColumn.content],
     });
 
     this.append(builded.content);

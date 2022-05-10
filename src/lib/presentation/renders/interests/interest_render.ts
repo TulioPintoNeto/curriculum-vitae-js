@@ -11,41 +11,38 @@ export interface InterestParams {
 }
 
 export class InterestRender extends Render<InterestParams, HTMLElement> {
-  columnRender: ColumnRender;
   iconRender: IconRender;
   paragraphRender: ParagraphRender;
 
   constructor(params: {
-    columnRender: ColumnRender;
     iconRender: IconRender;
     paragraphRender: ParagraphRender;
   }) {
     super();
-    this.columnRender = params.columnRender;
     this.iconRender = params.iconRender;
     this.paragraphRender = params.paragraphRender;
   }
 
   build(interest: InterestParams): HTMLElement {
-    const builded = new AsideRowRender({
-      classes: this.asideRowAdditionalClasses(),
+    const buildedIconColumn = new ColumnRender({
+      size: 1,
+      classes: this.iconColumnAdditionalClasses(),
+      children: [this.iconRender.build(interest.icon)],
+    });
+    const buildedTextColumn = new ColumnRender({
+      size: 11,
+      classes: this.textColumnAdditionalClasses(),
       children: [
-        this.columnRender.build({
-          size: 1,
-          classes: this.iconColumnAdditionalClasses(),
-          children: [this.iconRender.build(interest.icon)],
-        }),
-        this.columnRender.build({
-          size: 11,
-          classes: this.textColumnAdditionalClasses(),
-          children: [
-            this.paragraphRender.build({
-              withoutMarginBottom: true,
-              text: interest.text,
-            }),
-          ],
+        this.paragraphRender.build({
+          withoutMarginBottom: true,
+          text: interest.text,
         }),
       ],
+    });
+
+    const builded = new AsideRowRender({
+      classes: this.asideRowAdditionalClasses(),
+      children: [buildedIconColumn.content, buildedTextColumn.content],
     });
 
     return builded.content;

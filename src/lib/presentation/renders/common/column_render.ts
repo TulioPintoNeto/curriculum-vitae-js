@@ -1,12 +1,21 @@
 import { ElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universal_render";
 
+interface ColumnReaderParams {
+  children?: Node[];
+  classes?: string[];
+  size: number;
+}
+
 export class ColumnRender extends ElementRender {
-  build(params: {
-    children?: Node[];
-    classes?: string[];
-    size: number;
-  }): HTMLDivElement {
+  content: HTMLDivElement;
+
+  constructor(params: ColumnReaderParams) {
+    super();
+    this.content = this.build(params);
+  }
+
+  build(params: ColumnReaderParams): HTMLDivElement {
     return UniversalRender.createDiv({
       classes: this._getClasses({ classes: params.classes, size: params.size }),
       children: params.children,
