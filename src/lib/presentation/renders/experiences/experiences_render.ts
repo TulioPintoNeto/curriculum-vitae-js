@@ -16,7 +16,7 @@ export class ExperiencesRender extends AppendRender<Experience<Position>[]> {
     mainSectionRowRender: MainSectionRowRender;
     render: UniversalRender;
   }) {
-    super(params.render);
+    super();
     this.mainSectionColumnRender = params.mainSectionColumnRender;
     this.mainSectionRowRender = params.mainSectionRowRender;
   }

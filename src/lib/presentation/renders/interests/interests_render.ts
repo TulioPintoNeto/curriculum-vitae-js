@@ -13,7 +13,7 @@ export class InterestsRender extends AppendRender<Map<string, string>> {
     interestRender: InterestRender;
     render: UniversalRender;
   }) {
-    super(params.render);
+    super();
     this.interestRender = params.interestRender;
   }
 

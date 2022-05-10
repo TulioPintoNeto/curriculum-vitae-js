@@ -22,7 +22,7 @@ export class LanguagesRender extends AppendRender<UserLanguage[]> {
     languageRender: LanguageRender;
     render: UniversalRender;
   }) {
-    super(params.render);
+    super();
     this.asideRowRender = params.asideRowRender;
     this.languageRender = params.languageRender;
     this.render = params.render;
