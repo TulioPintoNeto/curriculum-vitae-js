@@ -4,7 +4,7 @@ import { MainSection } from "../../domain/entities/main_section";
 import { Position } from "../../domain/entities/position";
 import { Title } from "../../domain/entities/title";
 import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";
-import { ExperiencesAppender } from "../renders/experiences/experiences_render";
+import { ExperiencesAppender } from "../renders/experiences/experiences_appender";
 import { TitleRender } from "../renders/titles/title_render";
 
 export class ExperiencesController implements RendersController {

@@ -1,5 +1,5 @@
-import { InterestsRender } from "../../../presentation/renders/interests/interests_render";
+// import { InterestsAppender } from "../../../presentation/renders/interests/interests_appender";
 
-export const interestsRenderFactory = (): InterestsRender => {
-  return new InterestsRender();
-};
+// export const interestsRenderFactory = (): InterestsAppender => {
+//   return new InterestsAppender();
+// };
