@@ -1,12 +1,24 @@
 import { Render } from "../../../core/renders/render";
 import { IconRender, Icons } from "../common/icon_render";
 
-export class CirclesRender implements Render<number, HTMLElement[]> {
-  build(levelOfUser: number): HTMLElement[] {
+interface CirclesRenderParams {
+  levelOfUser: number;
+}
+
+export class CirclesRender
+  implements Render<CirclesRenderParams, HTMLElement[]>
+{
+  content: HTMLElement[];
+
+  constructor(params: CirclesRenderParams) {
+    this.content = this.build(params);
+  }
+
+  build(params: CirclesRenderParams): HTMLElement[] {
     let levels: HTMLElement[] = [];
 
     for (let i = 0; i < 5; i++) {
-      levels[i] = this._buildLevel(i, levelOfUser);
+      levels[i] = this._buildLevel(i, params.levelOfUser);
     }
 
     return levels;
