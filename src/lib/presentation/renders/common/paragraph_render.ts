@@ -9,7 +9,7 @@ export class ParagraphRender {
   }
 
   build(params: { text: string; withoutMarginBottom?: boolean }) {
-    return this.render.createParagraph({
+    return UniversalRender.createParagraph({
       classes: [params.withoutMarginBottom ? Classes.noMarginBottom : ""],
       children: [UniversalRender.createText(params.text)],
     });

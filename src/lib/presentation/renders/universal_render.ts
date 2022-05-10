@@ -18,7 +18,7 @@ export class UniversalRender {
     });
   }
 
-  createParagraph(params?: RenderParams): HTMLParagraphElement {
+  static createParagraph(params?: RenderParams): HTMLParagraphElement {
     return UniversalRender._create({
       tagName: "p",
       renderParams: params,
