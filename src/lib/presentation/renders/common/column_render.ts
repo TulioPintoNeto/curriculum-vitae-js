@@ -14,7 +14,7 @@ export class ColumnRender extends ElementRender {
     classes?: string[];
     size: number;
   }): HTMLDivElement {
-    return this.render.createDiv({
+    return UniversalRender.createDiv({
       classes: this._getClasses({ classes: params.classes, size: params.size }),
       children: params.children,
     });

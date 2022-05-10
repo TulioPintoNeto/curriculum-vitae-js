@@ -4,7 +4,7 @@ export interface RenderParams {
 }
 
 export class UniversalRender {
-  createDiv(params?: RenderParams): HTMLDivElement {
+  static createDiv(params?: RenderParams): HTMLDivElement {
     return UniversalRender._create({
       tagName: "div",
       renderParams: params,

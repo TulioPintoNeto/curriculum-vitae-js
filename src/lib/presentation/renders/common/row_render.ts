@@ -11,7 +11,7 @@ export class RowRender extends ElementRender {
   }
 
   build(params: { children?: Node[]; classes?: string[] }): HTMLDivElement {
-    return this.render.createDiv({
+    return UniversalRender.createDiv({
       classes: this._getClassesWith(params.classes),
       children: params.children,
     });
