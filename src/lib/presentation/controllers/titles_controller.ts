@@ -1,7 +1,7 @@
 import { RendersController } from "../../core/controllers/controller";
 import { Title, Titles } from "../../domain/entities/title";
 import { GetTitles } from "../../domain/usecases/get_titles";
-import { TitleRender } from "../renders/titles/title_render";
+import { TitleAppender } from "../renders/titles/title_appender";
 
 export class TitlesController implements RendersController {
   contactId: string = "contact-title";
@@ -12,18 +12,16 @@ export class TitlesController implements RendersController {
   titles: Title[];
 
   getTitles: GetTitles;
-  titleRender: TitleRender;
 
-  constructor(params: { getTitles: GetTitles; titleRender: TitleRender }) {
+  constructor(params: { getTitles: GetTitles }) {
     this.getTitles = params.getTitles;
-    this.titleRender = params.titleRender;
 
     this.titles = this.getTitles.call();
   }
 
   update(): void {
     this.titles.forEach((title: Title) => {
-      this.titleRender.build({
+      new TitleAppender({
         text: title.locale,
         fatherId: this._getIdByType(title.type),
       });

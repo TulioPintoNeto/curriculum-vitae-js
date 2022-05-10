@@ -5,22 +5,15 @@ import { Position } from "../../domain/entities/position";
 import { Title } from "../../domain/entities/title";
 import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";
 import { ExperiencesAppender } from "../renders/experiences/experiences_appender";
-import { TitleRender } from "../renders/titles/title_render";
+import { TitleAppender } from "../renders/titles/title_appender";
 
 export class ExperiencesController implements RendersController {
   experiencesTitleFatherId: string = "experiences-title";
 
   experiencesMainSection: MainSection<Experience<Position>>;
 
-  titleRender: TitleRender;
-
-  constructor(params: {
-    getExperiences: GetExperiencesMainSection;
-    titleRender: TitleRender;
-  }) {
+  constructor(params: { getExperiences: GetExperiencesMainSection }) {
     this.experiencesMainSection = params.getExperiences.call();
-
-    this.titleRender = params.titleRender;
   }
 
   update(): void {
@@ -30,7 +23,7 @@ export class ExperiencesController implements RendersController {
 
     new ExperiencesAppender({ experiences });
 
-    this.titleRender.build({
+    new TitleAppender({
       text: experiencesTitle.locale,
       fatherId: this.experiencesTitleFatherId,
     });

@@ -1,6 +1,5 @@
 import { Language } from "../../core/languages/language";
 import { TitlesController } from "../../presentation/controllers/titles_controller";
-import { titleRenderFactory } from "../renders/titles/titles_render_factory";
 import { getTitlesFactory } from "../usecases/get_titles_factory";
 
 export const titlesControllerFactory = (
@@ -8,6 +7,5 @@ export const titlesControllerFactory = (
 ): TitlesController => {
   return new TitlesController({
     getTitles: getTitlesFactory(language),
-    titleRender: titleRenderFactory(),
   });
 };
