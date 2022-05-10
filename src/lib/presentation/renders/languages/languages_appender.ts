@@ -8,8 +8,6 @@ interface LanguagesAppenderParams {
 }
 
 export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
-  fatherId: string = "languages";
-
   build(params: LanguagesAppenderParams): void {
     for (let i = 0; i < params.userLanguages.length; i += 2) {
       const builded = new AsideRowRender({
@@ -21,6 +19,10 @@ export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
 
       this.append(builded.content);
     }
+  }
+
+  getFatherId(): string {
+    return "languages";
   }
 
   private _rowBuilder(params: {

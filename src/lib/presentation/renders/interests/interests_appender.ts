@@ -8,7 +8,9 @@ interface InterestsAppenderParams {
 }
 
 export class InterestsAppender extends Appender<InterestsAppenderParams> {
-  fatherId: string = "interests";
+  getFatherId(): string {
+    return "interests";
+  }
 
   build(params: InterestsAppenderParams): void {
     const physicalBuilded = new InterestRender({

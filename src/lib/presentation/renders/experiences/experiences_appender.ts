@@ -9,7 +9,9 @@ interface ExperiencesAppenderParams {
 }
 
 export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
-  fatherId: string = "experiences";
+  getFatherId(): string {
+    return "experiences";
+  }
 
   build(params: ExperiencesAppenderParams): void {
     const buildedMainSectionColumn = new MainSectionColumnRender({

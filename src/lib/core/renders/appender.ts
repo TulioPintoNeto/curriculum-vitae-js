@@ -2,12 +2,12 @@ import { UniversalRender } from "../../presentation/renders/universals/universal
 import { Render } from "./render";
 
 export abstract class Appender<Params> extends Render<Params, void> {
-  abstract fatherId: string;
-
   constructor(params: Params) {
     super();
     this.build(params);
   }
+
+  abstract getFatherId(): string;
 
   protected append(...nodes: (string | Node)[]): void {
     const fatherElement: HTMLElement = this._getFatherElement();
@@ -18,7 +18,7 @@ export abstract class Appender<Params> extends Render<Params, void> {
   }
 
   private _getFatherElement(): HTMLElement {
-    const element = document.getElementById(this.fatherId);
+    const element = document.getElementById(this.getFatherId());
 
     if (element === null) {
       throw Error("Could not find father element.");
