@@ -2,5 +2,5 @@ import { ParagraphRender } from "../../../presentation/renders/common/paragraph_
 import { universalRenderFactory } from "../universal_render_factory";
 
 export const paragraphRenderFactory = (): ParagraphRender => {
-  return new ParagraphRender(universalRenderFactory());
+  return new ParagraphRender();
 };
