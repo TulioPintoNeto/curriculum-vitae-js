@@ -11,13 +11,6 @@ interface RowBuilderParams {
 export class LanguagesRender extends AppendRender<UserLanguage[]> {
   fatherId: string = "languages";
 
-  languageRender: LanguageRender;
-
-  constructor(params: { languageRender: LanguageRender }) {
-    super();
-    this.languageRender = params.languageRender;
-  }
-
   build(userLanguages: UserLanguage[]): void {
     for (let i = 0; i < userLanguages.length; i += 2) {
       const builded = new AsideRowRender({
@@ -31,10 +24,14 @@ export class LanguagesRender extends AppendRender<UserLanguage[]> {
   private _rowBuilder({ userLanguages, index }: RowBuilderParams): Node[] {
     const row = [];
 
-    row.push(this.languageRender.build(userLanguages[index]));
+    const builded = new LanguageRender({ userLanguage: userLanguages[index] });
+    row.push(builded.content);
 
     if (userLanguages[index + 1] !== undefined) {
-      row.push(this.languageRender.build(userLanguages[index + 1]));
+      const builded1 = new LanguageRender({
+        userLanguage: userLanguages[index + 1],
+      });
+      row.push(builded1.content);
     }
 
     return row;
