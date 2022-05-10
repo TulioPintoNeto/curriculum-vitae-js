@@ -10,11 +10,6 @@ interface LanguagesAppenderParams {
 export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
   fatherId: string = "languages";
 
-  constructor(params: LanguagesAppenderParams) {
-    super();
-    this.build(params);
-  }
-
   build(params: LanguagesAppenderParams): void {
     for (let i = 0; i < params.userLanguages.length; i += 2) {
       const builded = new AsideRowRender({

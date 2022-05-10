@@ -11,11 +11,6 @@ interface ExperiencesAppenderParams {
 export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
   fatherId: string = "experiences";
 
-  constructor(params: ExperiencesAppenderParams) {
-    super();
-    this.build(params);
-  }
-
   build(params: ExperiencesAppenderParams): void {
     const buildedMainSectionColumn = new MainSectionColumnRender({
       size: 3,

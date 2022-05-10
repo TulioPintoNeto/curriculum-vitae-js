@@ -4,6 +4,11 @@ import { Render } from "./render";
 export abstract class Appender<Params> extends Render<Params, void> {
   abstract fatherId: string;
 
+  constructor(params: Params) {
+    super();
+    this.build(params);
+  }
+
   protected append(...nodes: (string | Node)[]): void {
     const fatherElement: HTMLElement = this._getFatherElement();
 

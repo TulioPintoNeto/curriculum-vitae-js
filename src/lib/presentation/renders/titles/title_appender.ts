@@ -8,11 +8,6 @@ interface TitleAppenderParams {
 export class TitleAppender extends Appender<TitleAppenderParams> {
   fatherId!: string;
 
-  constructor(params: TitleAppenderParams) {
-    super();
-    this.build(params);
-  }
-
   build(params: TitleAppenderParams): void {
     this.fatherId = params.fatherId;
 

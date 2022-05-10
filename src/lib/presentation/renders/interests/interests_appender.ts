@@ -10,11 +10,6 @@ interface InterestsAppenderParams {
 export class InterestsAppender extends Appender<InterestsAppenderParams> {
   fatherId: string = "interests";
 
-  constructor(params: InterestsAppenderParams) {
-    super();
-    this.build(params);
-  }
-
   build(params: InterestsAppenderParams): void {
     const physicalBuilded = new InterestRender({
       icon: Icons.BIKING,
