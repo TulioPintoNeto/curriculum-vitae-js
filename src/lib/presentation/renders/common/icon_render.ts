@@ -16,7 +16,7 @@ export class IconRender implements Render<Icons, HTMLElement> {
   }
 
   build(icon: Icons): HTMLElement {
-    const element: HTMLElement = this.render.createI();
+    const element: HTMLElement = UniversalRender.createI();
     const classList = icon.split(" ");
 
     element.classList.add(...classList);

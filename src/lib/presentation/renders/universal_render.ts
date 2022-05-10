@@ -11,7 +11,7 @@ export class UniversalRender {
     });
   }
 
-  createI(params?: RenderParams): HTMLElement {
+  static createI(params?: RenderParams): HTMLElement {
     return UniversalRender._create({
       tagName: "i",
       renderParams: params,
