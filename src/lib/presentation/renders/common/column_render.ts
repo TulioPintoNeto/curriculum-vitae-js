@@ -2,13 +2,6 @@ import { ElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universal_render";
 
 export class ColumnRender extends ElementRender {
-  render: UniversalRender;
-
-  constructor(render: UniversalRender) {
-    super();
-    this.render = render;
-  }
-
   build(params: {
     children?: Node[];
     classes?: string[];
