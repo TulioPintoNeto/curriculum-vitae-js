@@ -9,5 +9,5 @@ export class ExperienceTitlePT extends ExperienceTitle {
 }
 
 export class ExperienceTitleEN extends ExperienceTitle {
-  locale: string = "Experiência";
+  locale: string = "Experience";
 }

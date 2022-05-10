@@ -7,26 +7,27 @@ import { TitlesController } from "./titles_controller";
 
 export class AppController implements RendersController {
   // educationsController: EducationsController;
-  // experiencesController: ExperiencesController;
+  experiencesController: ExperiencesController;
   interestsController: InterestsController;
   languagesController: LanguagesController;
   titlesController: TitlesController;
 
   constructor(params: {
     // educationsController: EducationsController;
-    // experiencesController: ExperiencesController;
+    experiencesController: ExperiencesController;
     interestsController: InterestsController;
     languagesController: LanguagesController;
     titlesController: TitlesController;
   }) {
     // this.educationsController = params.educationsController;
-    // this.experiencesController = params.experiencesController;
+    this.experiencesController = params.experiencesController;
     this.interestsController = params.interestsController;
     this.languagesController = params.languagesController;
     this.titlesController = params.titlesController;
   }
 
   update() {
+    this.experiencesController.update();
     this.interestsController.update();
     this.languagesController.update();
     this.titlesController.update();
