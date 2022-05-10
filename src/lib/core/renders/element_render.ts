@@ -1,9 +1,9 @@
 import { Render } from "./render";
 
-export abstract class ElementRender<Params, BuildResponse> extends Render<
+export abstract class ElementRender<
   Params,
-  BuildResponse
-> {
+  BuildResponse extends Node
+> extends Render<Params, BuildResponse> {
   content: BuildResponse;
 
   constructor(params: Params) {
