@@ -1,16 +1,18 @@
-import { Render } from "../../../core/renders/render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { IconRender, Icons } from "../common/icon_render";
 
 interface CirclesRenderParams {
   levelOfUser: number;
 }
 
-export class CirclesRender
-  implements Render<CirclesRenderParams, HTMLElement[]>
-{
+export class CirclesRender extends ElementRender<
+  CirclesRenderParams,
+  HTMLElement[]
+> {
   content: HTMLElement[];
 
   constructor(params: CirclesRenderParams) {
+    super();
     this.content = this.build(params);
   }
 

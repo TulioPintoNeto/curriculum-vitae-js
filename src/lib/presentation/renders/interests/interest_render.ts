@@ -1,4 +1,4 @@
-import { Render } from "../../../core/renders/render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
 import { AsideRowRender } from "../common/aside_row_render";
 import { ColumnRender } from "../common/column_render";
@@ -10,7 +10,10 @@ interface InterestRenderParams {
   text: string;
 }
 
-export class InterestRender extends Render<InterestRenderParams, HTMLElement> {
+export class InterestRender extends ElementRender<
+  InterestRenderParams,
+  HTMLElement
+> {
   content: HTMLElement;
 
   constructor(params: InterestRenderParams) {

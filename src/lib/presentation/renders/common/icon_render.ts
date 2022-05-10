@@ -1,4 +1,4 @@
-import { Render } from "../../../core/renders/render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universal_render";
 
 export enum Icons {
@@ -12,10 +12,11 @@ interface IconRenderParams {
   icon: Icons;
 }
 
-export class IconRender implements Render<IconRenderParams, HTMLElement> {
+export class IconRender extends ElementRender<IconRenderParams, HTMLElement> {
   content: HTMLElement;
 
   constructor(params: IconRenderParams) {
+    super();
     this.content = this.build(params);
   }
 

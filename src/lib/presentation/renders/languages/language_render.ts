@@ -1,4 +1,4 @@
-import { Render } from "../../../core/renders/render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
@@ -8,7 +8,7 @@ interface LanguageRenderParams {
   userLanguage: UserLanguage;
 }
 
-export class LanguageRender extends Render<
+export class LanguageRender extends ElementRender<
   LanguageRenderParams,
   HTMLDivElement
 > {
