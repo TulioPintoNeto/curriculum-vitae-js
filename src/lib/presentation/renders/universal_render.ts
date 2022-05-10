@@ -25,15 +25,8 @@ export class UniversalRender {
     });
   }
 
-  createText(text: string): Text {
+  static createText(text: string): Text {
     return document.createTextNode(text);
-  }
-
-  createTitle(params?: RenderParams): HTMLHeadingElement {
-    return UniversalRender._create({
-      tagName: "h5",
-      renderParams: params,
-    });
   }
 
   static _create<TagName extends keyof HTMLElementTagNameMap>(params: {

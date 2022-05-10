@@ -11,7 +11,7 @@ export class ParagraphRender {
   build(params: { text: string; withoutMarginBottom?: boolean }) {
     return this.render.createParagraph({
       classes: [params.withoutMarginBottom ? Classes.noMarginBottom : ""],
-      children: [this.render.createText(params.text)],
+      children: [UniversalRender.createText(params.text)],
     });
   }
 }
