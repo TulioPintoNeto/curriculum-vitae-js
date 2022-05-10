@@ -2,5 +2,5 @@ import { AsideRowRender } from "../../../presentation/renders/common/aside_row_r
 import { universalRenderFactory } from "../universal_render_factory";
 
 export const asideRowRenderFactory = (): AsideRowRender => {
-  return new AsideRowRender(universalRenderFactory());
+  return new AsideRowRender();
 };

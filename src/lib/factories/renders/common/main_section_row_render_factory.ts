@@ -2,5 +2,5 @@ import { MainSectionRowRender } from "../../../presentation/renders/common/main_
 import { universalRenderFactory } from "../universal_render_factory";
 
 export const mainSectionRowRenderFactory = (): MainSectionRowRender => {
-  return new MainSectionRowRender(universalRenderFactory());
+  return new MainSectionRowRender();
 };
