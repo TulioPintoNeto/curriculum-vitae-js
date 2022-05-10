@@ -1,8 +1,6 @@
 import { AppendRender } from "../../../core/renders/append_render";
-import { Render } from "../../../core/renders/render";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { AsideRowRender } from "../common/aside_row_render";
-import { UniversalRender } from "../universal_render";
 import { LanguageRender } from "./language_render";
 
 interface RowBuilderParams {
@@ -15,17 +13,14 @@ export class LanguagesRender extends AppendRender<UserLanguage[]> {
 
   asideRowRender: AsideRowRender;
   languageRender: LanguageRender;
-  render: UniversalRender;
 
   constructor(params: {
     asideRowRender: AsideRowRender;
     languageRender: LanguageRender;
-    render: UniversalRender;
   }) {
     super();
     this.asideRowRender = params.asideRowRender;
     this.languageRender = params.languageRender;
-    this.render = params.render;
   }
 
   build(userLanguages: UserLanguage[]): void {
