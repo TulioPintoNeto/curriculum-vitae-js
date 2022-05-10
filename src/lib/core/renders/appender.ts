@@ -1,4 +1,5 @@
 import { UniversalRender } from "../../presentation/renders/universals/universal_render";
+import { CustomElement } from "./custom_element";
 import { Render } from "./render";
 
 export abstract class Appender<Params> extends Render<Params, void> {
@@ -9,12 +10,14 @@ export abstract class Appender<Params> extends Render<Params, void> {
 
   abstract getFatherId(): string;
 
-  protected append(...nodes: (string | Node)[]): void {
+  protected append(...elements: CustomElement[]): void {
     const fatherElement: HTMLElement = this._getFatherElement();
 
     UniversalRender.removeAllChildren(fatherElement);
 
-    fatherElement.append(...nodes);
+    elements.forEach((element) => {
+      fatherElement.append(element.content);
+    });
   }
 
   private _getFatherElement(): HTMLElement {

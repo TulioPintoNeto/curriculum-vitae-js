@@ -19,10 +19,10 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
       children: [],
     });
 
-    const builded = new MainSectionRowRender({
-      children: [buildedMainSectionColumn.content],
-    });
-
-    this.append(builded.content);
+    this.append(
+      new MainSectionRowRender({
+        children: [buildedMainSectionColumn.content],
+      })
+    );
   }
 }

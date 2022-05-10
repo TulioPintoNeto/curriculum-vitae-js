@@ -10,14 +10,14 @@ interface LanguagesAppenderParams {
 export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
   build(params: LanguagesAppenderParams): void {
     for (let i = 0; i < params.userLanguages.length; i += 2) {
-      const builded = new AsideRowRender({
-        children: this._rowBuilder({
-          userLanguages: params.userLanguages,
-          index: i,
-        }),
-      });
-
-      this.append(builded.content);
+      this.append(
+        new AsideRowRender({
+          children: this._rowBuilder({
+            userLanguages: params.userLanguages,
+            index: i,
+          }),
+        })
+      );
     }
   }
 
