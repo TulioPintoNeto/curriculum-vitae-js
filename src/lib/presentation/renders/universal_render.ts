@@ -3,7 +3,7 @@ export interface RenderParams {
   children?: Node[];
 }
 
-export class UniversalRender {
+export abstract class UniversalRender {
   static createDiv(params?: RenderParams): HTMLDivElement {
     return UniversalRender._create({
       tagName: "div",
