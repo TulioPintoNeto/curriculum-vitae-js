@@ -7,6 +7,5 @@ export const experiencesRenderFactory = (): ExperiencesRender => {
   return new ExperiencesRender({
     mainSectionColumnRender: mainSectionColumnRenderFactory(),
     mainSectionRowRender: mainSectionRowRenderFactory(),
-    render: universalRenderFactory(),
   });
 };
