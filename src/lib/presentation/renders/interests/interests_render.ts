@@ -6,25 +6,23 @@ import { InterestRender } from "./interest_render";
 export class InterestsRender extends AppendRender<Map<string, string>> {
   fatherId: string = "interests";
 
-  interestRender: InterestRender;
+  // interestRender: InterestRender;
 
-  constructor(params: { interestRender: InterestRender }) {
-    super();
-    this.interestRender = params.interestRender;
-  }
+  // constructor(params: { interestRender: InterestRender }) {
+  //   super();
+  //   this.interestRender = params.interestRender;
+  // }
 
   build(interests: Map<string, string>): void {
-    this.append(
-      ...[
-        this.interestRender.build({
-          icon: Icons.BIKING,
-          text: interests.get(Interests.PHYSICAL_ACTIVITY)!,
-        }),
-        this.interestRender.build({
-          icon: Icons.MUSIC,
-          text: interests.get(Interests.MUSIC)!,
-        }),
-      ]
-    );
+    const physicalBuilded = new InterestRender({
+      icon: Icons.BIKING,
+      text: interests.get(Interests.PHYSICAL_ACTIVITY)!,
+    });
+    const musicBuilded = new InterestRender({
+      icon: Icons.MUSIC,
+      text: interests.get(Interests.MUSIC)!,
+    });
+
+    this.append(...[physicalBuilded.content, musicBuilded.content]);
   }
 }

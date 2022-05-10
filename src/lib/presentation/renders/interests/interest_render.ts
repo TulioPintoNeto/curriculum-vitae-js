@@ -5,14 +5,21 @@ import { ColumnRender } from "../common/column_render";
 import { IconRender, Icons } from "../common/icon_render";
 import { ParagraphRender } from "../common/paragraph_render";
 
-export interface InterestParams {
+interface InterestRenderParams {
   icon: Icons;
   text: string;
 }
 
-export class InterestRender extends Render<InterestParams, HTMLElement> {
-  build(interest: InterestParams): HTMLElement {
-    const buildedIcon = new IconRender({ icon: interest.icon });
+export class InterestRender extends Render<InterestRenderParams, HTMLElement> {
+  content: HTMLElement;
+
+  constructor(params: InterestRenderParams) {
+    super();
+    this.content = this.build(params);
+  }
+
+  build(params: InterestRenderParams): HTMLElement {
+    const buildedIcon = new IconRender({ icon: params.icon });
     const buildedIconColumn = new ColumnRender({
       size: 1,
       classes: this.iconColumnAdditionalClasses(),
@@ -20,7 +27,7 @@ export class InterestRender extends Render<InterestParams, HTMLElement> {
     });
     const buildedParagraph = new ParagraphRender({
       withoutMarginBottom: true,
-      text: interest.text,
+      text: params.text,
     });
     const buildedTextColumn = new ColumnRender({
       size: 11,
