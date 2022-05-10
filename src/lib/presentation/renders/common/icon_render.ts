@@ -8,10 +8,20 @@ export enum Icons {
   MUSIC = "fas fa-music gray",
 }
 
-export class IconRender implements Render<Icons, HTMLElement> {
-  build(icon: Icons): HTMLElement {
+interface IconRenderParams {
+  icon: Icons;
+}
+
+export class IconRender implements Render<IconRenderParams, HTMLElement> {
+  content: HTMLElement;
+
+  constructor(params: IconRenderParams) {
+    this.content = this.build(params);
+  }
+
+  build(params: IconRenderParams): HTMLElement {
     const element: HTMLElement = UniversalRender.createI();
-    const classList = icon.split(" ");
+    const classList = params.icon.split(" ");
 
     element.classList.add(...classList);
 

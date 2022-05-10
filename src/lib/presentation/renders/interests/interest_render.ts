@@ -11,23 +11,19 @@ export interface InterestParams {
 }
 
 export class InterestRender extends Render<InterestParams, HTMLElement> {
-  iconRender: IconRender;
   paragraphRender: ParagraphRender;
 
-  constructor(params: {
-    iconRender: IconRender;
-    paragraphRender: ParagraphRender;
-  }) {
+  constructor(params: { paragraphRender: ParagraphRender }) {
     super();
-    this.iconRender = params.iconRender;
     this.paragraphRender = params.paragraphRender;
   }
 
   build(interest: InterestParams): HTMLElement {
+    const buildedIcon = new IconRender({ icon: interest.icon });
     const buildedIconColumn = new ColumnRender({
       size: 1,
       classes: this.iconColumnAdditionalClasses(),
-      children: [this.iconRender.build(interest.icon)],
+      children: [buildedIcon.content],
     });
     const buildedTextColumn = new ColumnRender({
       size: 11,

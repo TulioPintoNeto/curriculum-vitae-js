@@ -2,12 +2,6 @@ import { Render } from "../../../core/renders/render";
 import { IconRender, Icons } from "../common/icon_render";
 
 export class CirclesRender implements Render<number, HTMLElement[]> {
-  iconRender: IconRender;
-
-  constructor(iconRender: IconRender) {
-    this.iconRender = iconRender;
-  }
-
   build(levelOfUser: number): HTMLElement[] {
     let levels: HTMLElement[] = [];
 
@@ -22,6 +16,8 @@ export class CirclesRender implements Render<number, HTMLElement[]> {
     const icon: Icons =
       level < levelOfUser ? Icons.FILLED_CIRCLE : Icons.EMPTY_CIRCLE;
 
-    return this.iconRender.build(icon);
+    const builded = new IconRender({ icon });
+
+    return builded.content;
   }
 }
