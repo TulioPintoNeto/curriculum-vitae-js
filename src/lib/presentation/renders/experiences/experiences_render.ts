@@ -8,28 +8,23 @@ export class ExperiencesRender extends AppendRender<Experience<Position>[]> {
   fatherId: string = "experiences";
 
   mainSectionColumnRender: MainSectionColumnRender;
-  mainSectionRowRender: MainSectionRowRender;
 
-  constructor(params: {
-    mainSectionColumnRender: MainSectionColumnRender;
-    mainSectionRowRender: MainSectionRowRender;
-  }) {
+  constructor(params: { mainSectionColumnRender: MainSectionColumnRender }) {
     super();
     this.mainSectionColumnRender = params.mainSectionColumnRender;
-    this.mainSectionRowRender = params.mainSectionRowRender;
   }
 
   build(experiences: Experience<Position>[]): void {
-    this.append(
-      this.mainSectionRowRender.build({
-        children: [
-          this.mainSectionColumnRender.build({
-            size: 3,
+    const builded = new MainSectionRowRender({
+      children: [
+        this.mainSectionColumnRender.build({
+          size: 3,
 
-            children: [],
-          }),
-        ],
-      })
-    );
+          children: [],
+        }),
+      ],
+    });
+
+    this.append(builded.content);
   }
 }

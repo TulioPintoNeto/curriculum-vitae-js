@@ -11,25 +11,20 @@ interface RowBuilderParams {
 export class LanguagesRender extends AppendRender<UserLanguage[]> {
   fatherId: string = "languages";
 
-  asideRowRender: AsideRowRender;
   languageRender: LanguageRender;
 
-  constructor(params: {
-    asideRowRender: AsideRowRender;
-    languageRender: LanguageRender;
-  }) {
+  constructor(params: { languageRender: LanguageRender }) {
     super();
-    this.asideRowRender = params.asideRowRender;
     this.languageRender = params.languageRender;
   }
 
   build(userLanguages: UserLanguage[]): void {
     for (let i = 0; i < userLanguages.length; i += 2) {
-      this.append(
-        this.asideRowRender.build({
-          children: this._rowBuilder({ userLanguages, index: i }),
-        })
-      );
+      const builded = new AsideRowRender({
+        children: this._rowBuilder({ userLanguages, index: i }),
+      });
+
+      this.append(builded.content);
     }
   }
 

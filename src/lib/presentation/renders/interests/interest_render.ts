@@ -11,26 +11,23 @@ export interface InterestParams {
 }
 
 export class InterestRender extends Render<InterestParams, HTMLElement> {
-  asideRowRender: AsideRowRender;
   columnRender: ColumnRender;
   iconRender: IconRender;
   paragraphRender: ParagraphRender;
 
   constructor(params: {
-    asideRowRender: AsideRowRender;
     columnRender: ColumnRender;
     iconRender: IconRender;
     paragraphRender: ParagraphRender;
   }) {
     super();
-    this.asideRowRender = params.asideRowRender;
     this.columnRender = params.columnRender;
     this.iconRender = params.iconRender;
     this.paragraphRender = params.paragraphRender;
   }
 
   build(interest: InterestParams): HTMLElement {
-    return this.asideRowRender.build({
+    const builded = new AsideRowRender({
       classes: this.asideRowAdditionalClasses(),
       children: [
         this.columnRender.build({
@@ -50,6 +47,8 @@ export class InterestRender extends Render<InterestParams, HTMLElement> {
         }),
       ],
     });
+
+    return builded.content;
   }
 
   private asideRowAdditionalClasses(): string[] {
