@@ -1,6 +1,6 @@
 import { ElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
-import { UniversalRender } from "../universal_render";
+import { UniversalRender } from "../universals/universal_render";
 
 interface RowRenderParams {
   children?: Node[];

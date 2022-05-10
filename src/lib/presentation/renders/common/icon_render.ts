@@ -1,5 +1,5 @@
 import { ElementRender } from "../../../core/renders/element_render";
-import { UniversalRender } from "../universal_render";
+import { UniversalRender } from "../universals/universal_render";
 
 export enum Icons {
   EMPTY_CIRCLE = "far fa-circle",

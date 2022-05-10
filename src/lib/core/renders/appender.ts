@@ -1,4 +1,4 @@
-import { UniversalRender } from "../../presentation/renders/universal_render";
+import { UniversalRender } from "../../presentation/renders/universals/universal_render";
 import { Render } from "./render";
 
 export abstract class Appender<Params> extends Render<Params, void> {
