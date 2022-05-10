@@ -5,21 +5,21 @@ export interface RenderParams {
 
 export class UniversalRender {
   createDiv(params?: RenderParams): HTMLDivElement {
-    return this._create({
+    return UniversalRender._create({
       tagName: "div",
       renderParams: params,
     });
   }
 
   createI(params?: RenderParams): HTMLElement {
-    return this._create({
+    return UniversalRender._create({
       tagName: "i",
       renderParams: params,
     });
   }
 
   createParagraph(params?: RenderParams): HTMLParagraphElement {
-    return this._create({
+    return UniversalRender._create({
       tagName: "p",
       renderParams: params,
     });
@@ -30,13 +30,13 @@ export class UniversalRender {
   }
 
   createTitle(params?: RenderParams): HTMLHeadingElement {
-    return this._create({
+    return UniversalRender._create({
       tagName: "h5",
       renderParams: params,
     });
   }
 
-  _create<TagName extends keyof HTMLElementTagNameMap>(params: {
+  static _create<TagName extends keyof HTMLElementTagNameMap>(params: {
     tagName: TagName;
     renderParams?: RenderParams;
   }): HTMLElementTagNameMap[TagName] {
