@@ -1,7 +1,7 @@
 import { UniversalRender } from "../../presentation/renders/universal_render";
 import { Render } from "./render";
 
-export abstract class AppendRender<Params> extends Render<Params, void> {
+export abstract class Appender<Params> extends Render<Params, void> {
   abstract fatherId: string;
 
   protected append(...nodes: (string | Node)[]): void {

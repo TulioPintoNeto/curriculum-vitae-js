@@ -1,11 +1,11 @@
-import { AppendRender } from "../../../core/renders/append_render";
+import { Appender } from "../../../core/renders/appender";
 
 interface TitleAppenderParams {
   text: string;
   fatherId: string;
 }
 
-export class TitleAppender extends AppendRender<TitleAppenderParams> {
+export class TitleAppender extends Appender<TitleAppenderParams> {
   fatherId!: string;
 
   constructor(params: TitleAppenderParams) {

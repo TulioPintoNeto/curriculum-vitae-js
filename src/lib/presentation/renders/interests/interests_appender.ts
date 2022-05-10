@@ -1,4 +1,4 @@
-import { AppendRender } from "../../../core/renders/append_render";
+import { Appender } from "../../../core/renders/appender";
 import { Interests } from "../../../domain/entities/interests";
 import { Icons } from "../common/icon_render";
 import { InterestRender } from "./interest_render";
@@ -7,7 +7,7 @@ interface InterestsAppenderParams {
   interests: Map<string, string>;
 }
 
-export class InterestsAppender extends AppendRender<InterestsAppenderParams> {
+export class InterestsAppender extends Appender<InterestsAppenderParams> {
   fatherId: string = "interests";
 
   constructor(params: InterestsAppenderParams) {

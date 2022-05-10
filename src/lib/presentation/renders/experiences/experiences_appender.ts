@@ -1,4 +1,4 @@
-import { AppendRender } from "../../../core/renders/append_render";
+import { Appender } from "../../../core/renders/appender";
 import { Experience } from "../../../domain/entities/experience";
 import { Position } from "../../../domain/entities/position";
 import { MainSectionColumnRender } from "../common/main_section_column_render";
@@ -8,7 +8,7 @@ interface ExperiencesAppenderParams {
   experiences: Experience<Position>[];
 }
 
-export class ExperiencesAppender extends AppendRender<ExperiencesAppenderParams> {
+export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
   fatherId: string = "experiences";
 
   constructor(params: ExperiencesAppenderParams) {

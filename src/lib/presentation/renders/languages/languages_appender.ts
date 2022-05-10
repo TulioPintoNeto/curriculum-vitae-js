@@ -1,4 +1,4 @@
-import { AppendRender } from "../../../core/renders/append_render";
+import { Appender } from "../../../core/renders/appender";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { AsideRowRender } from "../common/aside_row_render";
 import { LanguageRender } from "./language_render";
@@ -7,7 +7,7 @@ interface LanguagesAppenderParams {
   userLanguages: UserLanguage[];
 }
 
-export class LanguagesAppender extends AppendRender<LanguagesAppenderParams> {
+export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
   fatherId: string = "languages";
 
   constructor(params: LanguagesAppenderParams) {
