@@ -11,13 +11,6 @@ export class ColumnRender extends ElementRender<
   ColumnReaderParams,
   HTMLDivElement
 > {
-  content: HTMLDivElement;
-
-  constructor(params: ColumnReaderParams) {
-    super();
-    this.content = this.build(params);
-  }
-
   build(params: ColumnReaderParams): HTMLDivElement {
     return UniversalRender.createDiv({
       classes: this._getClasses({ classes: params.classes, size: params.size }),

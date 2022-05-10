@@ -9,13 +9,6 @@ export class CirclesRender extends ElementRender<
   CirclesRenderParams,
   HTMLElement[]
 > {
-  content: HTMLElement[];
-
-  constructor(params: CirclesRenderParams) {
-    super();
-    this.content = this.build(params);
-  }
-
   build(params: CirclesRenderParams): HTMLElement[] {
     let levels: HTMLElement[] = [];
 

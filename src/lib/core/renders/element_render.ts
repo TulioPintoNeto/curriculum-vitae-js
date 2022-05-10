@@ -4,6 +4,13 @@ export abstract class ElementRender<Params, BuildResponse> extends Render<
   Params,
   BuildResponse
 > {
+  content: BuildResponse;
+
+  constructor(params: Params) {
+    super();
+    this.content = this.build(params);
+  }
+
   protected classes(): string[] {
     return [];
   }

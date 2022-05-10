@@ -14,13 +14,6 @@ export class InterestRender extends ElementRender<
   InterestRenderParams,
   HTMLElement
 > {
-  content: HTMLElement;
-
-  constructor(params: InterestRenderParams) {
-    super();
-    this.content = this.build(params);
-  }
-
   build(params: InterestRenderParams): HTMLElement {
     const buildedIcon = new IconRender({ icon: params.icon });
     const buildedIconColumn = new ColumnRender({

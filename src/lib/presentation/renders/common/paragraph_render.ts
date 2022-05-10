@@ -11,13 +11,6 @@ export class ParagraphRender extends ElementRender<
   ParagraphRenderParams,
   HTMLParagraphElement
 > {
-  content: HTMLParagraphElement;
-
-  constructor(params: ParagraphRenderParams) {
-    super();
-    this.content = this.build(params);
-  }
-
   build(params: ParagraphRenderParams): HTMLParagraphElement {
     return UniversalRender.createParagraph({
       classes: [params.withoutMarginBottom ? Classes.noMarginBottom : ""],

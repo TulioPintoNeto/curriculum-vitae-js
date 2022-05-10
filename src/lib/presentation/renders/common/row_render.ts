@@ -8,13 +8,6 @@ interface RowRenderParams {
 }
 
 export class RowRender extends ElementRender<RowRenderParams, HTMLDivElement> {
-  content: HTMLDivElement;
-
-  constructor(params: RowRenderParams) {
-    super();
-    this.content = this.build(params);
-  }
-
   build(params: RowRenderParams): HTMLDivElement {
     return UniversalRender.createDiv({
       classes: this._getClassesWith(params.classes),

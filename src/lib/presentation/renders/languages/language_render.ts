@@ -12,13 +12,6 @@ export class LanguageRender extends ElementRender<
   LanguageRenderParams,
   HTMLDivElement
 > {
-  content: HTMLDivElement;
-
-  constructor(params: LanguageRenderParams) {
-    super();
-    this.content = this.build(params);
-  }
-
   build(params: LanguageRenderParams): HTMLDivElement {
     const buildedParagraph = new ParagraphRender({
       text: params.userLanguage.language,
