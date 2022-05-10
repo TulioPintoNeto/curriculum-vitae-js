@@ -1,7 +1,7 @@
 import { RendersController } from "../../core/controllers/controller";
 import { UserLanguage } from "../../domain/entities/user_language";
 import { GetLanguages } from "../../domain/usecases/get_languages";
-import { LanguagesAppender } from "../renders/languages/languages_render";
+import { LanguagesAppender } from "../renders/languages/languages_appender";
 
 export class LanguagesController implements RendersController {
   languages: UserLanguage[];
