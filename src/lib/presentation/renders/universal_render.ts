@@ -47,7 +47,7 @@ export class UniversalRender {
     return element;
   }
 
-  removeAllChildren(element: HTMLElement): void {
+  static removeAllChildren(element: HTMLElement): void {
     while (element.firstChild) {
       element.removeChild(element.firstChild);
     }

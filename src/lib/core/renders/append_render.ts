@@ -14,7 +14,7 @@ export abstract class AppendRender<Params> extends Render<Params, void> {
   protected append(...nodes: (string | Node)[]): void {
     const fatherElement: HTMLElement = this._getFatherElement();
 
-    this.render.removeAllChildren(fatherElement);
+    UniversalRender.removeAllChildren(fatherElement);
 
     fatherElement.append(...nodes);
   }
