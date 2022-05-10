@@ -5,15 +5,8 @@ import { InterestsAppender } from "../renders/interests/interests_appender";
 export class InterestsController implements RendersController {
   interests: Map<string, string>;
 
-  // interestsRender: InterestsAppender;
-
-  constructor(params: {
-    getInterests: GetInterests;
-    // interestsRender: InterestsAppender;
-  }) {
+  constructor(params: { getInterests: GetInterests }) {
     this.interests = params.getInterests.call();
-
-    // this.interestsRender = params.interestsRender;
   }
 
   update(): void {
