@@ -4,10 +4,19 @@ import { Position } from "../../../domain/entities/position";
 import { MainSectionColumnRender } from "../common/main_section_column_render";
 import { MainSectionRowRender } from "../common/main_section_row_render";
 
-export class ExperiencesRender extends AppendRender<Experience<Position>[]> {
+interface ExperiencesAppenderParams {
+  experiences: Experience<Position>[];
+}
+
+export class ExperiencesAppender extends AppendRender<ExperiencesAppenderParams> {
   fatherId: string = "experiences";
 
-  build(experiences: Experience<Position>[]): void {
+  constructor(params: ExperiencesAppenderParams) {
+    super();
+    this.build(params);
+  }
+
+  build(params: ExperiencesAppenderParams): void {
     const buildedMainSectionColumn = new MainSectionColumnRender({
       size: 3,
       children: [],

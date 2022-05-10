@@ -4,7 +4,7 @@ import { MainSection } from "../../domain/entities/main_section";
 import { Position } from "../../domain/entities/position";
 import { Title } from "../../domain/entities/title";
 import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";
-import { ExperiencesRender } from "../renders/experiences/experiences_render";
+import { ExperiencesAppender } from "../renders/experiences/experiences_render";
 import { TitleRender } from "../renders/titles/title_render";
 
 export class ExperiencesController implements RendersController {
@@ -12,17 +12,14 @@ export class ExperiencesController implements RendersController {
 
   experiencesMainSection: MainSection<Experience<Position>>;
 
-  experiencesRender: ExperiencesRender;
   titleRender: TitleRender;
 
   constructor(params: {
-    experiencesRender: ExperiencesRender;
     getExperiences: GetExperiencesMainSection;
     titleRender: TitleRender;
   }) {
     this.experiencesMainSection = params.getExperiences.call();
 
-    this.experiencesRender = params.experiencesRender;
     this.titleRender = params.titleRender;
   }
 
@@ -31,7 +28,8 @@ export class ExperiencesController implements RendersController {
       this.experiencesMainSection.content;
     const experiencesTitle: Title = this.experiencesMainSection.title;
 
-    this.experiencesRender.build(experiences);
+    new ExperiencesAppender({ experiences });
+
     this.titleRender.build({
       text: experiencesTitle.locale,
       fatherId: this.experiencesTitleFatherId,
