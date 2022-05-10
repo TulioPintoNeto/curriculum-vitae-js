@@ -11,13 +11,6 @@ export interface InterestParams {
 }
 
 export class InterestRender extends Render<InterestParams, HTMLElement> {
-  // paragraphRender: ParagraphRender;
-
-  // constructor(params: { paragraphRender: ParagraphRender }) {
-  //   super();
-  //   this.paragraphRender = params.paragraphRender;
-  // }
-
   build(interest: InterestParams): HTMLElement {
     const buildedIcon = new IconRender({ icon: interest.icon });
     const buildedIconColumn = new ColumnRender({
