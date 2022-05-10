@@ -5,24 +5,25 @@ import { CirclesRender } from "./circles_render";
 
 export class LanguageRender {
   circlesRender: CirclesRender;
-  paragraphRender: ParagraphRender;
+  // paragraphRender: ParagraphRender;
 
   constructor(params: {
     circlesRender: CirclesRender;
-    paragraphRender: ParagraphRender;
+    // paragraphRender: ParagraphRender;
   }) {
     this.circlesRender = params.circlesRender;
-    this.paragraphRender = params.paragraphRender;
+    // this.paragraphRender = params.paragraphRender;
   }
 
   build(userLanguage: UserLanguage): HTMLDivElement {
+    const buildedParagraph = new ParagraphRender({
+      text: userLanguage.language,
+      withoutMarginBottom: true,
+    });
     const builded = new ColumnRender({
       size: 6,
       children: [
-        this.paragraphRender.build({
-          text: userLanguage.language,
-          withoutMarginBottom: true,
-        }),
+        buildedParagraph.content,
         ...this.circlesRender.build(userLanguage.level),
       ],
     });
