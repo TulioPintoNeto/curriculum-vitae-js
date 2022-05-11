@@ -1,54 +1,30 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
 
-export interface RenderParams {
-  classes?: string[];
-  children?: Node[];
-}
-
-export interface NewRenderParams {
+interface RenderParams {
   classes?: string[];
   children?: NodeElement[];
 }
 
 export abstract class UniversalRender {
-  static createDiv(params?: NewRenderParams): HTMLDivElement {
+  static createDiv(params?: RenderParams): HTMLDivElement {
     return UniversalRender._create({
       tagName: "div",
-      renderParams: {
-        children: this._contentToNode(params?.children),
-        classes: params?.classes,
-      },
+      renderParams: params,
     });
   }
 
-  static createI(params?: NewRenderParams): HTMLElement {
+  static createI(params?: RenderParams): HTMLElement {
     return UniversalRender._create({
       tagName: "i",
-      renderParams: {
-        children: this._contentToNode(params?.children),
-        classes: params?.classes,
-      },
+      renderParams: params,
     });
   }
 
-  static createParagraph(params?: NewRenderParams): HTMLParagraphElement {
+  static createParagraph(params?: RenderParams): HTMLParagraphElement {
     return UniversalRender._create({
       tagName: "p",
-      renderParams: {
-        children: this._contentToNode(params?.children),
-        classes: params?.classes,
-      },
+      renderParams: params,
     });
-  }
-
-  private static _contentToNode(elements?: NodeElement[]): Node[] {
-    const nodes: Node[] = [];
-
-    elements?.forEach((element) => {
-      nodes.push(element.content);
-    });
-
-    return nodes;
   }
 
   static createText(text: string): Text {
@@ -67,10 +43,20 @@ export abstract class UniversalRender {
     }
 
     if (renParams?.children != undefined) {
-      element.append(...renParams?.children);
+      element.append(...this._getChildrenNodes(renParams?.children));
     }
 
     return element;
+  }
+
+  private static _getChildrenNodes(elements?: NodeElement[]): Node[] {
+    const nodes: Node[] = [];
+
+    elements?.forEach((element) => {
+      nodes.push(element.content);
+    });
+
+    return nodes;
   }
 
   static removeAllChildren(element: HTMLElement): void {
