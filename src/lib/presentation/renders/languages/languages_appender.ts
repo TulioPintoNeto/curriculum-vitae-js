@@ -1,4 +1,5 @@
 import { Appender } from "../../../core/renders/appender";
+import { NodeElement } from "../../../core/renders/elements/node_element";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { AsideRowRender } from "../common/aside_row_render";
 import { LanguageRender } from "./language_render";
@@ -28,19 +29,21 @@ export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
   private _rowBuilder(params: {
     userLanguages: UserLanguage[];
     index: number;
-  }): Node[] {
-    const row = [];
+  }): NodeElement[] {
+    const row: NodeElement[] = [];
 
-    const builded = new LanguageRender({
-      userLanguage: params.userLanguages[params.index],
-    });
-    row.push(builded.content);
+    row.push(
+      new LanguageRender({
+        userLanguage: params.userLanguages[params.index],
+      })
+    );
 
     if (params.userLanguages[params.index + 1] !== undefined) {
-      const builded1 = new LanguageRender({
-        userLanguage: params.userLanguages[params.index + 1],
-      });
-      row.push(builded1.content);
+      row.push(
+        new LanguageRender({
+          userLanguage: params.userLanguages[params.index + 1],
+        })
+      );
     }
 
     return row;

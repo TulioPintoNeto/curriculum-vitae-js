@@ -1,14 +1,33 @@
+import { NodeElement } from "../../../core/renders/elements/node_element";
+
 export interface RenderParams {
   classes?: string[];
   children?: Node[];
 }
 
+export interface NewRenderParams {
+  classes?: string[];
+  children?: NodeElement[];
+}
+
 export abstract class UniversalRender {
-  static createDiv(params?: RenderParams): HTMLDivElement {
+  static createDiv(params?: NewRenderParams): HTMLDivElement {
     return UniversalRender._create({
       tagName: "div",
-      renderParams: params,
+      renderParams: {
+        children: this._contentToNode(params?.children),
+      },
     });
+  }
+
+  private static _contentToNode(elements?: NodeElement[]): Node[] {
+    const nodes: Node[] = [];
+
+    elements?.forEach((element) => {
+      nodes.push(element.content);
+    });
+
+    return nodes;
   }
 
   static createI(params?: RenderParams): HTMLElement {

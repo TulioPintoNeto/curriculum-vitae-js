@@ -14,14 +14,14 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
   }
 
   build(params: ExperiencesAppenderParams): void {
-    const buildedMainSectionColumn = new MainSectionColumnRender({
-      size: 3,
-      children: [],
-    });
-
     this.append(
       new MainSectionRowRender({
-        children: [buildedMainSectionColumn.content],
+        children: [
+          new MainSectionColumnRender({
+            size: 3,
+            children: [],
+          }),
+        ],
       })
     );
   }

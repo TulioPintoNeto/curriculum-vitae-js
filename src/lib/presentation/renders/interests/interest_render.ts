@@ -15,25 +15,25 @@ export class InterestRender extends ElementRender<
   HTMLElement
 > {
   build(params: InterestRenderParams): HTMLElement {
-    const buildedIcon = new IconRender({ icon: params.icon });
-    const buildedIconColumn = new ColumnRender({
-      size: 1,
-      classes: this.iconColumnAdditionalClasses(),
-      children: [buildedIcon.content],
-    });
-    const buildedParagraph = new ParagraphRender({
-      withoutMarginBottom: true,
-      text: params.text,
-    });
-    const buildedTextColumn = new ColumnRender({
-      size: 11,
-      classes: this.textColumnAdditionalClasses(),
-      children: [buildedParagraph.content],
-    });
-
     const builded = new AsideRowRender({
       classes: this.asideRowAdditionalClasses(),
-      children: [buildedIconColumn.content, buildedTextColumn.content],
+      children: [
+        new ColumnRender({
+          size: 1,
+          classes: this.iconColumnAdditionalClasses(),
+          children: [new IconRender({ icon: params.icon })],
+        }),
+        new ColumnRender({
+          size: 11,
+          classes: this.textColumnAdditionalClasses(),
+          children: [
+            new ParagraphRender({
+              withoutMarginBottom: true,
+              text: params.text,
+            }),
+          ],
+        }),
+      ],
     });
 
     return builded.content;

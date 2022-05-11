@@ -1,8 +1,9 @@
+import { NodeElement } from "../../../core/renders/elements/node_element";
 import { ElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universals/universal_render";
 
 interface ColumnReaderParams {
-  children?: Node[];
+  children?: NodeElement[];
   classes?: string[];
   size: number;
 }

@@ -1,3 +1,4 @@
+import { NodeElement } from "../../../core/renders/elements/node_element";
 import { ElementRender } from "../../../core/renders/element_render";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { ColumnRender } from "../common/column_render";
@@ -20,18 +21,17 @@ export class LanguageRender extends ElementRender<
     const buildedLevels = this._buildedLevels(params.userLanguage.level);
     const builded = new ColumnRender({
       size: 6,
-      children: [buildedParagraph.content, ...buildedLevels],
+      children: [buildedParagraph, ...buildedLevels],
     });
 
     return builded.content;
   }
 
-  private _buildedLevels(levelOfUser: number): HTMLElement[] {
-    let levels: HTMLElement[] = [];
+  private _buildedLevels(levelOfUser: number): NodeElement[] {
+    let levels: NodeElement[] = [];
 
     for (let i = 0; i < 5; i++) {
-      const builded = new CircleRender({ level: i, levelOfUser });
-      levels[i] = builded.content;
+      levels[i] = new CircleRender({ level: i, levelOfUser });
     }
 
     return levels;

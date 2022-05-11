@@ -1,9 +1,10 @@
+import { NodeElement } from "../../../core/renders/elements/node_element";
 import { ElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
 import { UniversalRender } from "../universals/universal_render";
 
 interface RowRenderParams {
-  children?: Node[];
+  children?: NodeElement[];
   classes?: string[];
 }
 

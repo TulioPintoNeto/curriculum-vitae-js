@@ -1,5 +1,6 @@
 import { Appender } from "../../../core/renders/appender";
-import { TextElement } from "../../../core/renders/text_element";
+import { NodeElement } from "../../../core/renders/elements/node_element";
+import { TextElement } from "../../../core/renders/elements/text_element";
 
 interface TitleAppenderParams {
   text: string;

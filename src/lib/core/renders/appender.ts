@@ -1,5 +1,5 @@
 import { UniversalRender } from "../../presentation/renders/universals/universal_render";
-import { CustomElement } from "./custom_element";
+import { CustomElement } from "./elements/custom_element";
 import { Render } from "./render";
 
 export abstract class Appender<Params> extends Render<Params, void> {
