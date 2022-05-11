@@ -14,10 +14,10 @@ interface IconRenderParams {
 
 export class IconRender extends ElementRender<IconRenderParams, HTMLElement> {
   build(params: IconRenderParams): HTMLElement {
-    const element: HTMLElement = UniversalRender.createI();
     const classList = params.icon.split(" ");
-
-    element.classList.add(...classList);
+    const element: HTMLElement = UniversalRender.createI({
+      classes: classList,
+    });
 
     return element;
   }

@@ -16,6 +16,17 @@ export abstract class UniversalRender {
       tagName: "div",
       renderParams: {
         children: this._contentToNode(params?.children),
+        classes: params?.classes,
+      },
+    });
+  }
+
+  static createI(params?: NewRenderParams): HTMLElement {
+    return UniversalRender._create({
+      tagName: "i",
+      renderParams: {
+        children: this._contentToNode(params?.children),
+        classes: params?.classes,
       },
     });
   }
@@ -28,13 +39,6 @@ export abstract class UniversalRender {
     });
 
     return nodes;
-  }
-
-  static createI(params?: RenderParams): HTMLElement {
-    return UniversalRender._create({
-      tagName: "i",
-      renderParams: params,
-    });
   }
 
   static createParagraph(params?: RenderParams): HTMLParagraphElement {
