@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { ElementRender } from "../../../core/renders/element_render";
+import { NewElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universals/universal_render";
 
 interface ColumnReaderParams {
@@ -8,15 +8,17 @@ interface ColumnReaderParams {
   size: number;
 }
 
-export class ColumnRender extends ElementRender<
-  ColumnReaderParams,
-  HTMLDivElement
-> {
-  build(params: ColumnReaderParams): HTMLDivElement {
-    return UniversalRender.createDiv({
-      classes: this._getClasses({ classes: params.classes, size: params.size }),
-      children: params.children,
-    });
+export class ColumnRender extends NewElementRender<ColumnReaderParams> {
+  build(params: ColumnReaderParams): NodeElement {
+    return new NodeElement(
+      UniversalRender.createDiv({
+        classes: this._getClasses({
+          classes: params.classes,
+          size: params.size,
+        }),
+        children: params.children,
+      })
+    );
   }
 
   protected _getClasses(params: {
