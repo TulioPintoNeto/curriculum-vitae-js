@@ -1,8 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import {
-  ElementRender,
-  NewElementRender,
-} from "../../../core/renders/element_render";
+import { NewElementRender } from "../../../core/renders/element_render";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
