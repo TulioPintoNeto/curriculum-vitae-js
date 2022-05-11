@@ -1,4 +1,5 @@
-import { ElementRender } from "../../../core/renders/element_render";
+import { NodeElement } from "../../../core/renders/elements/node_element";
+import { NewElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universals/universal_render";
 
 export enum Icons {
@@ -12,13 +13,14 @@ interface IconRenderParams {
   icon: Icons;
 }
 
-export class IconRender extends ElementRender<IconRenderParams, HTMLElement> {
-  build(params: IconRenderParams): HTMLElement {
+export class IconRender extends NewElementRender<IconRenderParams> {
+  build(params: IconRenderParams): NodeElement {
     const classList = params.icon.split(" ");
-    const element: HTMLElement = UniversalRender.createI({
-      classes: classList,
-    });
 
-    return element;
+    return new NodeElement(
+      UniversalRender.createI({
+        classes: classList,
+      })
+    );
   }
 }
