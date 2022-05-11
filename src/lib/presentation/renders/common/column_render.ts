@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { NewElementRender } from "../../../core/renders/element_render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universals/universal_render";
 
 interface ColumnReaderParams {
@@ -8,7 +8,7 @@ interface ColumnReaderParams {
   size: number;
 }
 
-export class ColumnRender extends NewElementRender<ColumnReaderParams> {
+export class ColumnRender extends ElementRender<ColumnReaderParams> {
   build(params: ColumnReaderParams): NodeElement {
     return new NodeElement(
       UniversalRender.createDiv({

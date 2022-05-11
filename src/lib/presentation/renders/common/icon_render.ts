@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { NewElementRender } from "../../../core/renders/element_render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { UniversalRender } from "../universals/universal_render";
 
 export enum Icons {
@@ -13,7 +13,7 @@ interface IconRenderParams {
   icon: Icons;
 }
 
-export class IconRender extends NewElementRender<IconRenderParams> {
+export class IconRender extends ElementRender<IconRenderParams> {
   build(params: IconRenderParams): NodeElement {
     const classList = params.icon.split(" ");
 

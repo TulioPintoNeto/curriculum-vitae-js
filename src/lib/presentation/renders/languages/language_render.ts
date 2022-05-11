@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { NewElementRender } from "../../../core/renders/element_render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { UserLanguage } from "../../../domain/entities/user_language";
 import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
@@ -9,7 +9,7 @@ interface LanguageRenderParams {
   userLanguage: UserLanguage;
 }
 
-export class LanguageRender extends NewElementRender<LanguageRenderParams> {
+export class LanguageRender extends ElementRender<LanguageRenderParams> {
   build(params: LanguageRenderParams): NodeElement {
     return new ColumnRender({
       size: 6,

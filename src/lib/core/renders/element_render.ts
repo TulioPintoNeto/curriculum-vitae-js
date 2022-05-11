@@ -1,33 +1,7 @@
 import { NodeElement } from "./elements/node_element";
 import { Render } from "./render";
 
-export abstract class ElementRender<Params, BuildResponse extends Node>
-  extends Render<Params, BuildResponse>
-  implements NodeElement
-{
-  content: BuildResponse;
-
-  constructor(params: Params) {
-    super();
-    this.content = this.build(params);
-  }
-
-  protected classes(): string[] {
-    return [];
-  }
-
-  protected _getClassesWith(additionalClasses?: string[]): string[] {
-    const classes = this.classes();
-
-    if (additionalClasses !== undefined) {
-      classes.push(...additionalClasses);
-    }
-
-    return classes;
-  }
-}
-
-export abstract class NewElementRender<Params>
+export abstract class ElementRender<Params>
   extends Render<Params, NodeElement>
   implements NodeElement
 {

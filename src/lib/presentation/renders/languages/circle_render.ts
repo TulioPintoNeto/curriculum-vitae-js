@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { NewElementRender } from "../../../core/renders/element_render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { IconRender, Icons } from "../common/icon_render";
 
 interface CircleRenderParams {
@@ -7,7 +7,7 @@ interface CircleRenderParams {
   levelOfUser: number;
 }
 
-export class CircleRender extends NewElementRender<CircleRenderParams> {
+export class CircleRender extends ElementRender<CircleRenderParams> {
   build(params: CircleRenderParams): NodeElement {
     return new IconRender({ icon: this._getIcon(params) });
   }

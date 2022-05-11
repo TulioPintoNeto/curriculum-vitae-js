@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { NewElementRender } from "../../../core/renders/element_render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
 import { AsideRowRender } from "../common/aside_row_render";
 import { ColumnRender } from "../common/column_render";
@@ -11,7 +11,7 @@ interface InterestRenderParams {
   text: string;
 }
 
-export class InterestRender extends NewElementRender<InterestRenderParams> {
+export class InterestRender extends ElementRender<InterestRenderParams> {
   build(params: InterestRenderParams): NodeElement {
     return new AsideRowRender({
       classes: this.asideRowAdditionalClasses(),

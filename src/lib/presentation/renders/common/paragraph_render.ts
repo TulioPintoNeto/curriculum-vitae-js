@@ -1,5 +1,5 @@
 import { NodeElement } from "../../../core/renders/elements/node_element";
-import { NewElementRender } from "../../../core/renders/element_render";
+import { ElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
 import { UniversalRender } from "../universals/universal_render";
 
@@ -8,7 +8,7 @@ interface ParagraphRenderParams {
   withoutMarginBottom?: boolean;
 }
 
-export class ParagraphRender extends NewElementRender<ParagraphRenderParams> {
+export class ParagraphRender extends ElementRender<ParagraphRenderParams> {
   build(params: ParagraphRenderParams): NodeElement {
     return new NodeElement(
       UniversalRender.createParagraph({
