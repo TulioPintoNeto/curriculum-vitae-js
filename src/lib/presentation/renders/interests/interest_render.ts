@@ -1,4 +1,5 @@
-import { ElementRender } from "../../../core/renders/element_render";
+import { NodeElement } from "../../../core/renders/elements/node_element";
+import { NewElementRender } from "../../../core/renders/element_render";
 import { Classes } from "../../../core/utils/classes";
 import { AsideRowRender } from "../common/aside_row_render";
 import { ColumnRender } from "../common/column_render";
@@ -10,12 +11,9 @@ interface InterestRenderParams {
   text: string;
 }
 
-export class InterestRender extends ElementRender<
-  InterestRenderParams,
-  HTMLElement
-> {
-  build(params: InterestRenderParams): HTMLElement {
-    const builded = new AsideRowRender({
+export class InterestRender extends NewElementRender<InterestRenderParams> {
+  build(params: InterestRenderParams): NodeElement {
+    return new AsideRowRender({
       classes: this.asideRowAdditionalClasses(),
       children: [
         new ColumnRender({
@@ -35,8 +33,6 @@ export class InterestRender extends ElementRender<
         }),
       ],
     });
-
-    return builded.content;
   }
 
   private asideRowAdditionalClasses(): string[] {
