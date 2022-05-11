@@ -31,6 +31,16 @@ export abstract class UniversalRender {
     });
   }
 
+  static createParagraph(params?: NewRenderParams): HTMLParagraphElement {
+    return UniversalRender._create({
+      tagName: "p",
+      renderParams: {
+        children: this._contentToNode(params?.children),
+        classes: params?.classes,
+      },
+    });
+  }
+
   private static _contentToNode(elements?: NodeElement[]): Node[] {
     const nodes: Node[] = [];
 
@@ -39,13 +49,6 @@ export abstract class UniversalRender {
     });
 
     return nodes;
-  }
-
-  static createParagraph(params?: RenderParams): HTMLParagraphElement {
-    return UniversalRender._create({
-      tagName: "p",
-      renderParams: params,
-    });
   }
 
   static createText(text: string): Text {
