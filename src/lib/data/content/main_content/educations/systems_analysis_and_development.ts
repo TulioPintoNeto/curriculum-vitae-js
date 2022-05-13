@@ -11,12 +11,9 @@ export abstract class SystemsAnalysisAndDevelopment extends Education<Certificat
 
   _experienceLocationFromCountry(country: Brazil): LocationDetails {
     const company: string = EducationInstitutions.UCPEL;
-    const city: string = Cities.PELOTAS;
 
     return new LocationDetails({
-      city,
       company,
-      country,
     });
   }
 }

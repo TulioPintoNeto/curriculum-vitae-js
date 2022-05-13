@@ -11,12 +11,9 @@ export abstract class EnergyEngineer extends Education<Bachelor> {
 
   _experienceLocationFromCountry(country: Brazil): LocationDetails {
     const company: string = EducationInstitutions.UFRGS;
-    const city: string = Cities.PORTO_ALEGRE;
 
     return new LocationDetails({
-      city,
       company,
-      country,
     });
   }
 }

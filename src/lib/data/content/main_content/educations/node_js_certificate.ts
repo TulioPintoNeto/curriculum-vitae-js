@@ -13,9 +13,7 @@ export class NodeJSCertificate extends Education<Certificate> {
     const company: string = EducationInstitutions.ALURA;
 
     return new LocationDetails({
-      city: null,
       company,
-      country,
     });
   }
 }
