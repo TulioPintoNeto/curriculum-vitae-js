@@ -9,18 +9,7 @@ import { MobileDevPosition } from "../../positions/mobile_dev_position";
 export abstract class FirstTable extends Experience<MobileDevPosition> {
   endDate: Date = new Date(2021, 12);
   initialDate: Date = new Date(2021, 4);
-
-  constructor(params: ExperienceParams<MobileDevPosition>) {
-    super(params);
-  }
-
-  _experienceLocationFromCountry(country: Brazil): LocationDetails {
-    const company: string = "Primeira Mesa";
-
-    return new LocationDetails({
-      company: company,
-    });
-  }
+  company: string = "Primeira Mesa";
 }
 
 export class FirstTablePT extends FirstTable {

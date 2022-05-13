@@ -1,28 +1,9 @@
-import { Brazil } from "../../../../domain/entities/brazil";
-import {
-  Experience,
-  ExperienceParams,
-} from "../../../../domain/entities/experience";
-import { LocationDetails } from "../../../../domain/entities/location_details";
+import { Experience } from "../../../../domain/entities/experience";
 import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class PetSocialMedia extends Experience<MobileDevPosition> {
-  abstract company: string;
-
   endDate: Date = new Date(2021, 3);
   initialDate: Date = new Date(2020, 11);
-
-  constructor(params: ExperienceParams<MobileDevPosition>) {
-    super(params);
-  }
-
-  _experienceLocationFromCountry(country: Brazil): LocationDetails {
-    const company: string = this.company;
-
-    return new LocationDetails({
-      company: company,
-    });
-  }
 }
 
 export class PetSocialMediaPT extends PetSocialMedia {

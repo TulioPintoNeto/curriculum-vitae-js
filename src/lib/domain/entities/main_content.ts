@@ -1,6 +1,5 @@
 import { Conversions } from "../../core/utils/conversios";
 import { Brazil } from "./brazil";
-import { LocationDetails } from "./location_details";
 import { MainContentLocales } from "./main_content_locales";
 
 export interface MainContentParams {
@@ -11,16 +10,13 @@ export interface MainContentParams {
 export abstract class MainContent {
   abstract endDate: Date | null;
   abstract initialDate: Date;
+  abstract company: string;
 
   locales: MainContentLocales;
-  location: LocationDetails;
 
   constructor(params: MainContentParams) {
-    this.location = this._experienceLocationFromCountry(params.country);
     this.locales = params.locales;
   }
-
-  abstract _experienceLocationFromCountry(country: Brazil): LocationDetails;
 
   getDuration(): string {
     const months: number = this._getMonthDuration();

@@ -9,18 +9,7 @@ import { MobileDevPosition } from "../../positions/mobile_dev_position";
 export abstract class Startaideia extends Experience<MobileDevPosition> {
   endDate: Date | null = null;
   initialDate: Date = new Date(2021, 7);
-
-  constructor(params: ExperienceParams<MobileDevPosition>) {
-    super(params);
-  }
-
-  _experienceLocationFromCountry(country: Brazil): LocationDetails {
-    const company: string = "Startaideia";
-
-    return new LocationDetails({
-      company: company,
-    });
-  }
+  company: string = "Startaideia";
 }
 
 export class StartaideiaPT extends Startaideia {

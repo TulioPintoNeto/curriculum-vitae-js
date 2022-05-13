@@ -8,14 +8,7 @@ import { Bachelor } from "../../education_types/bachelor";
 export abstract class EnergyEngineer extends Education<Bachelor> {
   endDate: Date = new Date(2020);
   initialDate: Date = new Date(2013);
-
-  _experienceLocationFromCountry(country: Brazil): LocationDetails {
-    const company: string = EducationInstitutions.UFRGS;
-
-    return new LocationDetails({
-      company,
-    });
-  }
+  company: string = EducationInstitutions.UFRGS;
 }
 
 export class EnergyEngineerEN extends EnergyEngineer {

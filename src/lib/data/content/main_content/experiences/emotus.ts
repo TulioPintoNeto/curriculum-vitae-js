@@ -1,26 +1,10 @@
-import { Brazil } from "../../../../domain/entities/brazil";
-import {
-  Experience,
-  ExperienceParams,
-} from "../../../../domain/entities/experience";
-import { LocationDetails } from "../../../../domain/entities/location_details";
+import { Experience } from "../../../../domain/entities/experience";
 import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
 export abstract class Emotus extends Experience<FrontEndDevPosition> {
   endDate: Date = new Date(2021, 7);
   initialDate: Date = new Date(2020, 11);
-
-  constructor(params: ExperienceParams<FrontEndDevPosition>) {
-    super(params);
-  }
-
-  _experienceLocationFromCountry(country: Brazil): LocationDetails {
-    const company: string = "Emotus";
-
-    return new LocationDetails({
-      company: company,
-    });
-  }
+  company: string = "Emotus";
 }
 
 export class EmotusEN extends Emotus {

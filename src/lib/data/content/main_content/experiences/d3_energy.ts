@@ -1,19 +1,10 @@
-import { Brazil } from "../../../../domain/entities/brazil";
 import { Experience } from "../../../../domain/entities/experience";
-import { LocationDetails } from "../../../../domain/entities/location_details";
 import { D3EnergyPosition } from "../../positions/d3_energy_position";
 
 export abstract class D3Energy extends Experience<D3EnergyPosition> {
   endDate: Date = new Date(2020, 11);
   initialDate: Date = new Date(2019, 6);
-
-  _experienceLocationFromCountry(country: Brazil): LocationDetails {
-    const company: string = "D3 Energia";
-
-    return new LocationDetails({
-      company,
-    });
-  }
+  company: string = "D3 Energia";
 }
 
 export class D3EnergyPT extends D3Energy {
