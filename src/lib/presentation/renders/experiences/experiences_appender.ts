@@ -5,6 +5,7 @@ import { Position } from "../../../domain/entities/position";
 import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
 import { RowRender } from "../common/row_render";
+import { SpanRender } from "../common/span_render";
 
 interface ExperiencesAppenderParams {
   experiences: Experience<Position>[];
@@ -28,6 +29,9 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
                 new ParagraphRender({
                   classes: [Classes.year, Classes.textBold],
                   text: experience.getYearsInterval(),
+                }),
+                new SpanRender({
+                  text: `experience.getDuration()`,
                 }),
               ],
             }),

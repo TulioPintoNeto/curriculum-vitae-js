@@ -27,6 +27,13 @@ export abstract class UniversalRender {
     });
   }
 
+  static createSpan(params?: RenderParams): HTMLSpanElement {
+    return UniversalRender._create({
+      tagName: "span",
+      renderParams: params,
+    });
+  }
+
   static createText(text: string): Text {
     return document.createTextNode(text);
   }
