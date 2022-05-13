@@ -1,10 +1,9 @@
-import { Brazil } from "./brazil";
-import { MainContent } from "./main_content";
+import { MainContent, MainContentParams } from "./main_content";
 import { Position } from "./position";
 
 export interface ExperienceParams<TypeDevPosition extends Position> {
   position: TypeDevPosition;
-  country: Brazil;
+  mainContentParams: MainContentParams;
 }
 
 export abstract class Experience<
@@ -15,7 +14,7 @@ export abstract class Experience<
   title: string;
 
   constructor(params: ExperienceParams<TypeDevPosition>) {
-    super(params.country);
+    super(params.mainContentParams);
     this.title = params.position.locale();
   }
 }

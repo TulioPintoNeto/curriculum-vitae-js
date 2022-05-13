@@ -1,10 +1,9 @@
-import { Brazil } from "./brazil";
 import { EducationType } from "./education_type";
-import { MainContent } from "./main_content";
+import { MainContent, MainContentParams } from "./main_content";
 
 export interface EducationParams<Type extends EducationType> {
   educationType: Type;
-  country: Brazil;
+  mainContentParams: MainContentParams;
 }
 
 export abstract class Education<
@@ -14,7 +13,7 @@ export abstract class Education<
   abstract title: string;
 
   constructor(params: EducationParams<Type>) {
-    super(params.country);
+    super(params.mainContentParams);
     this.educationType = params.educationType.locale;
   }
 }

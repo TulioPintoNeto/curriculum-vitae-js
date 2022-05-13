@@ -6,15 +6,15 @@ import {
 } from "../../../data/content/educations/systems_analysis_and_development";
 import { Bachelor } from "../../../data/content/education_types/bachelor";
 import { EducationParams } from "../../../domain/entities/education";
-import { brazilFactory } from "../countries/brazil_factory";
 import { bachelorFactory } from "../education_types/bachelor_factory";
+import { mainContentParamsFactory } from "../main_content/main_content_params_factory";
 
 export const systemsAnalysisAndDevelopmentFactory = (
   language: Language
 ): SystemsAnalysisAndDevelopment => {
   const params: EducationParams<Bachelor> = {
     educationType: bachelorFactory(language),
-    country: brazilFactory(language),
+    mainContentParams: mainContentParamsFactory(language),
   };
 
   switch (language) {
