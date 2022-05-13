@@ -16,7 +16,6 @@ export class LanguageRender extends ElementRender<LanguageRenderParams> {
       children: [
         new ParagraphRender({
           text: params.userLanguage.language,
-          withoutMarginBottom: true,
         }),
         ...this._buildedLevels(params),
       ],

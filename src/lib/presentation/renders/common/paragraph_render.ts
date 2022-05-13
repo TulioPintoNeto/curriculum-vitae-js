@@ -5,14 +5,14 @@ import { UniversalRender } from "../universals/universal_render";
 
 interface ParagraphRenderParams {
   text: string;
-  withoutMarginBottom?: boolean;
+  withMarginBottom?: boolean;
 }
 
 export class ParagraphRender extends ElementRender<ParagraphRenderParams> {
   build(params: ParagraphRenderParams): NodeElement {
     return new NodeElement(
       UniversalRender.createParagraph({
-        classes: [params.withoutMarginBottom ? Classes.noMarginBottom : ""],
+        classes: [params.withMarginBottom ? "" : Classes.noMarginBottom],
         children: [new NodeElement(UniversalRender.createText(params.text))],
       })
     );

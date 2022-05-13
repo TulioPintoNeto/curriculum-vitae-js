@@ -26,7 +26,6 @@ export class InterestRender extends ElementRender<InterestRenderParams> {
           classes: this.textColumnAdditionalClasses(),
           children: [
             new ParagraphRender({
-              withoutMarginBottom: true,
               text: params.text,
             }),
           ],
