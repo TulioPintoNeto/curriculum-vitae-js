@@ -26,6 +26,7 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
               size: 3,
               children: [
                 new ParagraphRender({
+                  classes: [Classes.year, Classes.textBold],
                   text: experience.getYearsInterval(),
                 }),
               ],
