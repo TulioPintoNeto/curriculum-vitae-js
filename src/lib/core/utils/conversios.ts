@@ -1,7 +1,7 @@
 export abstract class Conversions {
-  static milisecondsToYears(miliseconds: number): number {
-    const years = miliseconds / (1000 * 60 * 60 * 24 * 365);
+  static milisecondsToMonths(miliseconds: number): number {
+    const months = (miliseconds / (1000 * 60 * 60 * 24 * 365)) * 12;
 
-    return Math.round(years);
+    return Math.round(months);
   }
 }

@@ -31,7 +31,7 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
                   text: experience.getYearsInterval(),
                 }),
                 new SpanRender({
-                  text: `experience.getDuration()`,
+                  text: `${experience.getDuration()}`,
                 }),
               ],
             }),

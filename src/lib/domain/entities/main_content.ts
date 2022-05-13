@@ -23,7 +23,9 @@ export abstract class MainContent {
   abstract _experienceLocationFromCountry(country: Brazil): LocationDetails;
 
   getDuration(): string {
-    return `${this._getMonthDuration()} ${this.locales.months}`;
+    const months: number = this._getMonthDuration();
+
+    return `${months} ${this.locales.months(months)}`;
   }
 
   getYearsInterval(): string {
@@ -45,10 +47,10 @@ export abstract class MainContent {
   private _getMonthDuration(): number {
     const initialTime: number = this.initialDate.getTime();
     const endTime: number = this.endDate?.getTime() ?? new Date().getTime();
-    const durationInYears: number = Conversions.milisecondsToYears(
+    const durationInMonths: number = Conversions.milisecondsToMonths(
       endTime - initialTime
     );
 
-    return durationInYears;
+    return durationInMonths;
   }
 }

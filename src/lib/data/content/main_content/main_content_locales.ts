@@ -2,10 +2,22 @@ import { MainContentLocales } from "../../../domain/entities/main_content_locale
 
 export class MainContentLocalesEN extends MainContentLocales {
   present: string = "Present";
-  months: string = "months";
+  months(duration: number): string {
+    if (duration === 1) {
+      return "month";
+    }
+
+    return "months";
+  }
 }
 
 export class MainContentLocalesPT extends MainContentLocales {
   present: string = "Presente";
-  months: string = "meses";
+  months(duration: number): string {
+    if (duration === 1) {
+      return "mês";
+    }
+
+    return "meses";
+  }
 }
