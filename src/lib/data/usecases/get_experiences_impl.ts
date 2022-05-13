@@ -1,5 +1,5 @@
 import { Experience } from "../../domain/entities/experience";
-import { MainSection } from "../../domain/entities/main_section";
+import { MainSection } from "../../domain/data_structure/main_section";
 import { Position } from "../../domain/entities/position";
 import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";
 import { GetExperiencesParams } from "../params/get_experiences_params";

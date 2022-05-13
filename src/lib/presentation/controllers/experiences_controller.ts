@@ -1,6 +1,6 @@
 import { RendersController } from "../../core/controllers/controller";
 import { Experience } from "../../domain/entities/experience";
-import { MainSection } from "../../domain/entities/main_section";
+import { MainSection } from "../../domain/data_structure/main_section";
 import { Position } from "../../domain/entities/position";
 import { Title } from "../../domain/entities/title";
 import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";

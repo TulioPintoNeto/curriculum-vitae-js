@@ -1,5 +1,5 @@
-import { MainContent } from "./main_content";
-import { Title } from "./title";
+import { MainContent } from "../entities/main_content";
+import { Title } from "../entities/title";
 
 export class MainSection<Content extends MainContent> {
   title: Title;

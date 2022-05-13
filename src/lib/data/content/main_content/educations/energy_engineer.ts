@@ -1,7 +1,4 @@
-import { Brazil } from "../../../../domain/entities/brazil";
 import { Education } from "../../../../domain/entities/education";
-import { LocationDetails } from "../../../../domain/entities/location_details";
-import { Cities } from "../../cities/cities";
 import { EducationInstitutions } from "../../education_instutions/education_institutions";
 import { Bachelor } from "../../education_types/bachelor";
 

@@ -12,7 +12,7 @@ export class MainContentLocalesEN extends MainContentLocales {
 }
 
 export class MainContentLocalesPT extends MainContentLocales {
-  present: string = "Presente";
+  present: string = "Atual";
   months(duration: number): string {
     if (duration === 1) {
       return "mês";

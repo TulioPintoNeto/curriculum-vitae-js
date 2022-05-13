@@ -1,6 +1,6 @@
 import { Education } from "../../domain/entities/education";
 import { EducationType } from "../../domain/entities/education_type";
-import { MainSection } from "../../domain/entities/main_section";
+import { MainSection } from "../../domain/data_structure/main_section";
 import { GetEducations } from "../../domain/usecases/get_educations";
 import { GetEducationsParams } from "../params/get_educations_params";
 
