@@ -3,7 +3,7 @@ import {
   SystemsAnalysisAndDevelopment,
   SystemsAnalysisAndDevelopmentEN,
   SystemsAnalysisAndDevelopmentPT,
-} from "../../../data/content/educations/systems_analysis_and_development";
+} from "../../../data/content/main_content/educations/systems_analysis_and_development";
 import { Bachelor } from "../../../data/content/education_types/bachelor";
 import { EducationParams } from "../../../domain/entities/education";
 import { bachelorFactory } from "../education_types/bachelor_factory";

@@ -1,4 +1,9 @@
 export abstract class Classes {
+  //! Custom
+  static year: string = "year";
+
+  //! Bootstrap
+
   // Colors
   static asideColor: string = "gray";
   static mainSectionTextColor: string = "dark-blue";
@@ -19,4 +24,7 @@ export abstract class Classes {
   static displayFlex: string = "d-flex";
   static justifyContentCenter: string = "justify-content-center";
   static row: string = "row";
+
+  // Text
+  static textBold = "fw-bold";
 }

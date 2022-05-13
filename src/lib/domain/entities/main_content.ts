@@ -1,22 +1,23 @@
 import { Conversions } from "../../core/utils/conversios";
 import { Brazil } from "./brazil";
 import { LocationDetails } from "./location_details";
+import { MainContentLocales } from "./main_content_locales";
 
 export interface MainContentParams {
   country: Brazil;
-  present: string;
+  locales: MainContentLocales;
 }
 
 export abstract class MainContent {
   abstract endDate: Date | null;
   abstract initialDate: Date;
 
-  present: string;
+  locales: MainContentLocales;
   location: LocationDetails;
 
   constructor(params: MainContentParams) {
     this.location = this._experienceLocationFromCountry(params.country);
-    this.present = params.present;
+    this.locales = params.locales;
   }
 
   abstract _experienceLocationFromCountry(country: Brazil): LocationDetails;
@@ -35,7 +36,7 @@ export abstract class MainContent {
     const initialYear = this.initialDate.getFullYear();
 
     if (this.endDate === null) {
-      return `${initialYear} - ${this.present}`;
+      return `${initialYear} - ${this.locales.present}`;
     }
 
     const endYear = this.endDate.getFullYear();

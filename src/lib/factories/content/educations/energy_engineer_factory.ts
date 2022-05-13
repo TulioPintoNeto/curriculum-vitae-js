@@ -3,7 +3,7 @@ import {
   EnergyEngineer,
   EnergyEngineerEN,
   EnergyEngineerPT,
-} from "../../../data/content/educations/energy_engineer";
+} from "../../../data/content/main_content/educations/energy_engineer";
 import { Bachelor } from "../../../data/content/education_types/bachelor";
 import { EducationParams } from "../../../domain/entities/education";
 import { bachelorFactory } from "../education_types/bachelor_factory";

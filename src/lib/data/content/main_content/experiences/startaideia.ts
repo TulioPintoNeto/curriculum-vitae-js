@@ -1,11 +1,11 @@
-import { Brazil } from "../../../domain/entities/brazil";
+import { Brazil } from "../../../../domain/entities/brazil";
 import {
   Experience,
   ExperienceParams,
-} from "../../../domain/entities/experience";
-import { LocationDetails } from "../../../domain/entities/location_details";
-import { Cities } from "../cities/cities";
-import { MobileDevPosition } from "../positions/mobile_dev_position";
+} from "../../../../domain/entities/experience";
+import { LocationDetails } from "../../../../domain/entities/location_details";
+import { Cities } from "../../cities/cities";
+import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class Startaideia extends Experience<MobileDevPosition> {
   endDate: Date | null = null;

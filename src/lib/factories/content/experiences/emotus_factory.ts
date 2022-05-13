@@ -3,7 +3,7 @@ import {
   Emotus,
   EmotusEN,
   EmotusPT,
-} from "../../../data/content/experiences/emotus";
+} from "../../../data/content/main_content/experiences/emotus";
 import { FrontEndDevPosition } from "../../../data/content/positions/front_end_dev_position";
 import { ExperienceParams } from "../../../domain/entities/experience";
 import { mainContentParamsFactory } from "../main_content/main_content_params_factory";

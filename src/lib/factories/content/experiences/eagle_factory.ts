@@ -3,7 +3,7 @@ import {
   Eagle,
   EagleEN,
   EaglePT,
-} from "../../../data/content/experiences/eagle";
+} from "../../../data/content/main_content/experiences/eagle";
 import { FrontEndDevPosition } from "../../../data/content/positions/front_end_dev_position";
 import { ExperienceParams } from "../../../domain/entities/experience";
 import { mainContentParamsFactory } from "../main_content/main_content_params_factory";

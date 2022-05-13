@@ -3,7 +3,7 @@ import {
   PetSocialMedia,
   PetSocialMediaEN,
   PetSocialMediaPT,
-} from "../../../data/content/experiences/pet_social_media";
+} from "../../../data/content/main_content/experiences/pet_social_media";
 import { MobileDevPosition } from "../../../data/content/positions/mobile_dev_position";
 import { ExperienceParams } from "../../../domain/entities/experience";
 import { mainContentParamsFactory } from "../main_content/main_content_params_factory";

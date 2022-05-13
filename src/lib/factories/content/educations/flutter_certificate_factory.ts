@@ -1,5 +1,5 @@
 import { Language } from "../../../core/languages/language";
-import { FlutterCertificate } from "../../../data/content/educations/flutter_certificate";
+import { FlutterCertificate } from "../../../data/content/main_content/educations/flutter_certificate";
 import { Certificate } from "../../../data/content/education_types/certificate";
 import { EducationParams } from "../../../domain/entities/education";
 import { certificateFactory } from "../education_types/certificate_factory";

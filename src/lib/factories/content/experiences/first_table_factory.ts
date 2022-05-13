@@ -3,7 +3,7 @@ import {
   FirstTable,
   FirstTableEN,
   FirstTablePT,
-} from "../../../data/content/experiences/first_table";
+} from "../../../data/content/main_content/experiences/first_table";
 import { MobileDevPosition } from "../../../data/content/positions/mobile_dev_position";
 import { ExperienceParams } from "../../../domain/entities/experience";
 import { mainContentParamsFactory } from "../main_content/main_content_params_factory";

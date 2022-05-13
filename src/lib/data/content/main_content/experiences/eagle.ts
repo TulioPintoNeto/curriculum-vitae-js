@@ -1,11 +1,11 @@
-import { Brazil } from "../../../domain/entities/brazil";
+import { Brazil } from "../../../../domain/entities/brazil";
 import {
   Experience,
   ExperienceParams,
-} from "../../../domain/entities/experience";
-import { LocationDetails } from "../../../domain/entities/location_details";
-import { Cities } from "../cities/cities";
-import { FrontEndDevPosition } from "../positions/front_end_dev_position";
+} from "../../../../domain/entities/experience";
+import { LocationDetails } from "../../../../domain/entities/location_details";
+import { Cities } from "../../cities/cities";
+import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
 export abstract class Eagle extends Experience<FrontEndDevPosition> {
   endDate: Date = new Date(2021, 7);

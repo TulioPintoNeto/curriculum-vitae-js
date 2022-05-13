@@ -3,7 +3,7 @@ import {
   D3Energy,
   D3EnergyEN,
   D3EnergyPT,
-} from "../../../data/content/experiences/d3_energy";
+} from "../../../data/content/main_content/experiences/d3_energy";
 import { D3EnergyPosition } from "../../../data/content/positions/d3_energy_position";
 import { ExperienceParams } from "../../../domain/entities/experience";
 import { mainContentParamsFactory } from "../main_content/main_content_params_factory";
