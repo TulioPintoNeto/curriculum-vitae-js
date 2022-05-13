@@ -4,7 +4,6 @@ import {
   ExperienceParams,
 } from "../../../../domain/entities/experience";
 import { LocationDetails } from "../../../../domain/entities/location_details";
-import { Cities } from "../../cities/cities";
 import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
 export abstract class Emotus extends Experience<FrontEndDevPosition> {
@@ -17,12 +16,9 @@ export abstract class Emotus extends Experience<FrontEndDevPosition> {
 
   _experienceLocationFromCountry(country: Brazil): LocationDetails {
     const company: string = "Emotus";
-    const city: string = Cities.PELOTAS;
 
     return new LocationDetails({
-      city: city,
       company: company,
-      country: country,
     });
   }
 }

@@ -1,7 +1,6 @@
 import { Brazil } from "../../../../domain/entities/brazil";
 import { Experience } from "../../../../domain/entities/experience";
 import { LocationDetails } from "../../../../domain/entities/location_details";
-import { Cities } from "../../cities/cities";
 import { D3EnergyPosition } from "../../positions/d3_energy_position";
 
 export abstract class D3Energy extends Experience<D3EnergyPosition> {
@@ -10,12 +9,9 @@ export abstract class D3Energy extends Experience<D3EnergyPosition> {
 
   _experienceLocationFromCountry(country: Brazil): LocationDetails {
     const company: string = "D3 Energia";
-    const city: string = Cities.PORTO_ALEGRE;
 
     return new LocationDetails({
-      city,
       company,
-      country,
     });
   }
 }

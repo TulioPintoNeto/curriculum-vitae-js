@@ -4,7 +4,6 @@ import {
   ExperienceParams,
 } from "../../../../domain/entities/experience";
 import { LocationDetails } from "../../../../domain/entities/location_details";
-import { Cities } from "../../cities/cities";
 import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class PetSocialMedia extends Experience<MobileDevPosition> {
@@ -19,12 +18,9 @@ export abstract class PetSocialMedia extends Experience<MobileDevPosition> {
 
   _experienceLocationFromCountry(country: Brazil): LocationDetails {
     const company: string = this.company;
-    const city: string = Cities.PELOTAS;
 
     return new LocationDetails({
-      city: city,
       company: company,
-      country: country,
     });
   }
 }
