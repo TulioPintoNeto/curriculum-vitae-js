@@ -1,17 +1,15 @@
-import { DevPosition } from "../../../domain/entities/position";
-import { PositionLocalesEN, PositionLocalesPT } from "./positions";
+import { Position } from "../../../domain/entities/position";
 
-export abstract class FrontEndDevPosition extends DevPosition {
-  typeOfTech: string = "front-end";
-  tech: string = "React JS";
-}
+export abstract class FrontEndDevPosition extends Position {}
 
 export class FrontEndDevPositionPT extends FrontEndDevPosition {
-  position: string = PositionLocalesPT.position;
-  with: string = PositionLocalesPT.with;
+  locale(): string {
+    return "Desenvolvedor front-end com React JS";
+  }
 }
 
 export class FrontEndDevPositionEN extends FrontEndDevPosition {
-  position: string = PositionLocalesEN.position;
-  with: string = PositionLocalesEN.with;
+  locale(): string {
+    return "Front-end developer with React JS";
+  }
 }
