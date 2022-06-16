@@ -6,6 +6,7 @@ import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
 import { RowRender } from "../common/row_render";
 import { SpanRender } from "../common/span_render";
+import { DurationRender } from "./duration_render";
 
 interface ExperiencesAppenderParams {
   experiences: Experience<Position>[];
@@ -22,19 +23,7 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
         return new RowRender({
           classes: [Classes.mainSectionTextColor, Classes.mainSectionContent],
           children: [
-            new ColumnRender({
-              classes: [Classes.paddingStart2, Classes.noPaddingEnd],
-              size: 3,
-              children: [
-                new ParagraphRender({
-                  classes: [Classes.year, Classes.textBold],
-                  text: experience.getYearsInterval(),
-                }),
-                new SpanRender({
-                  text: `${experience.getDuration()}`,
-                }),
-              ],
-            }),
+            new DurationRender({ experience }),
             new ColumnRender({
               classes: [Classes.noPaddingStart, Classes.paddingEnd2],
               size: 9,
