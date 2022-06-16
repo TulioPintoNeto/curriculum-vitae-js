@@ -1,9 +1,4 @@
-import { Brazil } from "../../../../domain/entities/brazil";
-import {
-  Experience,
-  ExperienceParams,
-} from "../../../../domain/entities/experience";
-import { LocationDetails } from "../../../../domain/entities/location_details";
+import { Experience } from "../../../../domain/entities/experience";
 import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class Startaideia extends Experience<MobileDevPosition> {

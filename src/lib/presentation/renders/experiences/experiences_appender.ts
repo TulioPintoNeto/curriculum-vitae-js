@@ -38,7 +38,12 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
             new ColumnRender({
               classes: [Classes.noPaddingStart, Classes.paddingEnd2],
               size: 9,
-              children: [],
+              children: [
+                new ParagraphRender({
+                  classes: [Classes.activity, Classes.textBold],
+                  text: experience.title,
+                }),
+              ],
             }),
           ],
         });
