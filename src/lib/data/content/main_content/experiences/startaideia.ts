@@ -13,6 +13,10 @@ export class StartaideiaPT extends Startaideia {
     "Definir padrões de projeto e testes automatizados (unitários) utilizando TDD e Clean Architecture",
     "Implementar mudanças de hábitos, cultura CI/CD e automatização",
   ];
+
+  typeOfExperience() {
+    return "Tempo integral";
+  }
 }
 
 export class StartaideiaEN extends Startaideia {
@@ -21,4 +25,8 @@ export class StartaideiaEN extends Startaideia {
     "Definition of project patterns and creation of unit tests using TDD and Clean Architecture",
     "Implementation of changes in habits, CI/CD culture and automation",
   ];
+
+  typeOfExperience() {
+    return "Full-time";
+  }
 }

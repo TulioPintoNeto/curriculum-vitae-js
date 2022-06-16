@@ -11,10 +11,18 @@ export class EmotusEN extends Emotus {
   responsabilities: string[] = [
     "SPA development to integrate commercial distributor, installer and final client using JavaScript, JS Linter with the Airbnb style guide, React JS using function components, Styled-Components, React Testing Library and React Router",
   ];
+
+  typeOfExperience() {
+    return "Self Employed";
+  }
 }
 
 export class EmotusPT extends Emotus {
   responsabilities: string[] = [
     "Desenvolvimento de SPA para integração entre distribuidor, instalador e cliente final utilizando JavaScript, JS Linter com o guia de estilo do Airbnb, React JS com function components, Styled-Components, React Testing Library e React Router",
   ];
+
+  typeOfExperience() {
+    return "Empreendedor";
+  }
 }

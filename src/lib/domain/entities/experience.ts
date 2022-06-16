@@ -15,6 +15,8 @@ export abstract class Experience<
 
   constructor(params: ExperienceParams<TypeDevPosition>) {
     super(params.mainContentParams);
-    this.title = params.position.locale();
+    this.title = `(${this.typeOfExperience()}) ${params.position.locale()}`;
   }
+
+  abstract typeOfExperience(): string;
 }

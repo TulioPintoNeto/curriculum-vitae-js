@@ -5,6 +5,10 @@ export abstract class Eagle extends Experience<FrontEndDevPosition> {
   endDate: Date = new Date(2021, 7);
   initialDate: Date = new Date(2020, 11);
   company: string = "Eagle";
+
+  typeOfExperience() {
+    return "Freelance";
+  }
 }
 
 export class EaglePT extends Eagle {

@@ -14,6 +14,10 @@ export class D3EnergyPT extends D3Energy {
     "Criação e manutenção no website da empresa",
     "Dimensionar, analisar a viabilidade, projetar, coordenar ainstalação e manutenção de sistemas solares",
   ];
+
+  typeOfExperience() {
+    return "Estágio";
+  }
 }
 
 export class D3EnergyEN extends D3Energy {
@@ -23,4 +27,8 @@ export class D3EnergyEN extends D3Energy {
     "Creation and maintenance of the company website",
     "Sizing, checking viability, projecting, coordinating the installation and maintenance of solar systems",
   ];
+
+  typeOfExperience() {
+    return "Intern";
+  }
 }

@@ -4,6 +4,10 @@ import { MobileDevPosition } from "../../positions/mobile_dev_position";
 export abstract class PetSocialMedia extends Experience<MobileDevPosition> {
   endDate: Date = new Date(2021, 3);
   initialDate: Date = new Date(2020, 11);
+
+  typeOfExperience() {
+    return "Freelance";
+  }
 }
 
 export class PetSocialMediaPT extends PetSocialMedia {
