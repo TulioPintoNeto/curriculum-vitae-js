@@ -32,6 +32,10 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
                   classes: [Classes.activity, Classes.textBold],
                   text: experience.title,
                 }),
+                new ParagraphRender({
+                  classes: [Classes.local],
+                  text: experience.company,
+                }),
               ],
             }),
           ],

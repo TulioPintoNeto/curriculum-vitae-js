@@ -1,7 +1,8 @@
 export abstract class Classes {
   //! Custom
-  static year: string = "year";
   static activity: string = "activity";
+  static local: string = "local";
+  static year: string = "year";
 
   //! Bootstrap
 
