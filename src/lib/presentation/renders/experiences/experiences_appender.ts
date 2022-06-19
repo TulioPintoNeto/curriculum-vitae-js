@@ -5,8 +5,8 @@ import { Position } from "../../../domain/entities/position";
 import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
 import { RowRender } from "../common/row_render";
-import { SpanRender } from "../common/span_render";
 import { DurationRender } from "./duration_render";
+import { ExperienceDetailRender } from "./experience_detail_render";
 
 interface ExperiencesAppenderParams {
   experiences: Experience<Position>[];
@@ -24,20 +24,7 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
           classes: [Classes.mainSectionTextColor, Classes.mainSectionContent],
           children: [
             new DurationRender({ experience }),
-            new ColumnRender({
-              classes: [Classes.noPaddingStart, Classes.paddingEnd2],
-              size: 9,
-              children: [
-                new ParagraphRender({
-                  classes: [Classes.activity, Classes.textBold],
-                  text: experience.title,
-                }),
-                new ParagraphRender({
-                  classes: [Classes.local],
-                  text: experience.company,
-                }),
-              ],
-            }),
+            new ExperienceDetailRender({ experience }),
           ],
         });
       })
