@@ -23,7 +23,15 @@ export class ExperienceDetailRender extends ElementRender<ExperienceDetailRender
           classes: [Classes.local],
           text: params.experience.company,
         }),
+        ...params.experience.responsabilities.map(this.responsabilityRender),
       ],
+    });
+  }
+
+  responsabilityRender(responsability: string): ParagraphRender {
+    return new ParagraphRender({
+      classes: [Classes.description],
+      text: `🞄 ${responsability}`,
     });
   }
 }

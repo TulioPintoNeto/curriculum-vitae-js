@@ -1,6 +1,7 @@
 export abstract class Classes {
   //! Custom
   static activity: string = "activity";
+  static description: string = "description";
   static local: string = "local";
   static year: string = "year";
 
