@@ -8,6 +8,7 @@ import { SpanRender } from "./span_render";
 
 interface TimeRenderParams {
   content: MainContent;
+  hasDuration?: boolean;
 }
 
 export class TimeRender extends ElementRender<TimeRenderParams> {
@@ -15,15 +16,27 @@ export class TimeRender extends ElementRender<TimeRenderParams> {
     return new ColumnRender({
       classes: [Classes.paddingStart2, Classes.noPaddingEnd],
       size: 3,
-      children: [
-        new ParagraphRender({
-          classes: [Classes.year, Classes.textBold],
-          text: params.content.getYearsInterval(),
-        }),
+      children: this.getChildren(params),
+    });
+  }
+
+  private getChildren(params: TimeRenderParams): NodeElement[] {
+    const { hasDuration = true } = params;
+    const children: NodeElement[] = [
+      new ParagraphRender({
+        classes: [Classes.year, Classes.textBold],
+        text: params.content.getYearsInterval(),
+      }),
+    ];
+
+    if (hasDuration) {
+      children.push(
         new SpanRender({
           text: params.content.getDuration(),
-        }),
-      ],
-    });
+        })
+      );
+    }
+
+    return children;
   }
 }

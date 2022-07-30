@@ -21,7 +21,7 @@ export class EducationsAppender extends Appender<EducationsAppenderParams> {
         return new RowRender({
           classes: [Classes.mainSectionTextColor, Classes.mainSectionContent],
           children: [
-            new TimeRender({ content: education }),
+            new TimeRender({ content: education, hasDuration: false }),
             new MainContentDetailRender({ content: education }),
           ],
         });
