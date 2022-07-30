@@ -5,7 +5,7 @@ import { Position } from "../../../domain/entities/position";
 import { ColumnRender } from "../common/column_render";
 import { ParagraphRender } from "../common/paragraph_render";
 import { RowRender } from "../common/row_render";
-import { DurationRender } from "./duration_render";
+import { DurationRender } from "../../controllers/duration_render";
 import { ExperienceDetailRender } from "./experience_detail_render";
 
 interface ExperiencesAppenderParams {
