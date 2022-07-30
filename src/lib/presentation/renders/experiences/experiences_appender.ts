@@ -4,7 +4,8 @@ import { Experience } from "../../../domain/entities/experience";
 import { Position } from "../../../domain/entities/position";
 import { RowRender } from "../common/row_render";
 import { DurationRender } from "../common/duration_render";
-import { ExperienceDetailRender } from "./experience_detail_render";
+import { MainContentDetailRender } from "../common/main_content_detail_render";
+import { ParagraphRender } from "../common/paragraph_render";
 
 interface ExperiencesAppenderParams {
   experiences: Experience<Position>[];
@@ -22,10 +23,22 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
           classes: [Classes.mainSectionTextColor, Classes.mainSectionContent],
           children: [
             new DurationRender({ content: experience }),
-            new ExperienceDetailRender({ experience }),
+            new MainContentDetailRender({
+              content: experience,
+              extraContentRenders: experience.responsabilities.map(
+                this.responsabilityRender
+              ),
+            }),
           ],
         });
       })
     );
+  }
+
+  responsabilityRender(responsability: string): ParagraphRender {
+    return new ParagraphRender({
+      classes: [Classes.description],
+      text: `🞄 ${responsability}`,
+    });
   }
 }
