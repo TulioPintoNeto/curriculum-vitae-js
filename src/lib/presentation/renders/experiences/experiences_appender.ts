@@ -3,7 +3,7 @@ import { Classes } from "../../../core/utils/classes";
 import { Experience } from "../../../domain/entities/experience";
 import { Position } from "../../../domain/entities/position";
 import { RowRender } from "../common/row_render";
-import { DurationRender } from "../common/duration_render";
+import { TimeRender } from "../common/time_render";
 import { MainContentDetailRender } from "../common/main_content_detail_render";
 import { ParagraphRender } from "../common/paragraph_render";
 
@@ -22,7 +22,7 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
         return new RowRender({
           classes: [Classes.mainSectionTextColor, Classes.mainSectionContent],
           children: [
-            new DurationRender({ content: experience }),
+            new TimeRender({ content: experience }),
             new MainContentDetailRender({
               content: experience,
               extraContentRenders: experience.responsabilities.map(

@@ -6,12 +6,12 @@ import { ColumnRender } from "./column_render";
 import { ParagraphRender } from "./paragraph_render";
 import { SpanRender } from "./span_render";
 
-interface DurationRenderParams {
+interface TimeRenderParams {
   content: MainContent;
 }
 
-export class DurationRender extends ElementRender<DurationRenderParams> {
-  build(params: DurationRenderParams): NodeElement {
+export class TimeRender extends ElementRender<TimeRenderParams> {
+  build(params: TimeRenderParams): NodeElement {
     return new ColumnRender({
       classes: [Classes.paddingStart2, Classes.noPaddingEnd],
       size: 3,
