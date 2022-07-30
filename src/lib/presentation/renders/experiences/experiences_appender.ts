@@ -13,7 +13,7 @@ interface ExperiencesAppenderParams {
 }
 
 export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
-  getFatherId(): string {
+  get fatherId(): string {
     return "experiences";
   }
 

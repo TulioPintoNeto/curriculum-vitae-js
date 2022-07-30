@@ -8,7 +8,7 @@ interface InterestsAppenderParams {
 }
 
 export class InterestsAppender extends Appender<InterestsAppenderParams> {
-  getFatherId(): string {
+  get fatherId(): string {
     return "interests";
   }
 

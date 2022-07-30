@@ -22,7 +22,7 @@ export class LanguagesAppender extends Appender<LanguagesAppenderParams> {
     }
   }
 
-  getFatherId(): string {
+  get fatherId(): string {
     return "languages";
   }
 

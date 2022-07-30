@@ -8,7 +8,7 @@ export abstract class Appender<Params> extends Render<Params, void> {
     this.build(params);
   }
 
-  abstract getFatherId(): string;
+  abstract get fatherId(): string;
 
   protected append(...elements: CustomElement[]): void {
     const fatherElement: HTMLElement = this._getFatherElement();
@@ -21,7 +21,7 @@ export abstract class Appender<Params> extends Render<Params, void> {
   }
 
   private _getFatherElement(): HTMLElement {
-    const element = document.getElementById(this.getFatherId());
+    const element = document.getElementById(this.fatherId);
 
     if (element === null) {
       throw Error("Could not find father element.");

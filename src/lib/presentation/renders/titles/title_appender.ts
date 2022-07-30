@@ -16,7 +16,7 @@ export class TitleAppender extends Appender<TitleAppenderParams> {
     this.append(new TextElement(params.text));
   }
 
-  getFatherId(): string {
+  get fatherId(): string {
     return this.fatherIdVar;
   }
 }
