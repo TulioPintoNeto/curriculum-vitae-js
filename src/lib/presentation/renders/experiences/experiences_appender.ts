@@ -2,10 +2,8 @@ import { Appender } from "../../../core/renders/appender";
 import { Classes } from "../../../core/utils/classes";
 import { Experience } from "../../../domain/entities/experience";
 import { Position } from "../../../domain/entities/position";
-import { ColumnRender } from "../common/column_render";
-import { ParagraphRender } from "../common/paragraph_render";
 import { RowRender } from "../common/row_render";
-import { DurationRender } from "../../controllers/duration_render";
+import { DurationRender } from "../common/duration_render";
 import { ExperienceDetailRender } from "./experience_detail_render";
 
 interface ExperiencesAppenderParams {

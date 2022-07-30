@@ -1,11 +1,11 @@
-import { NodeElement } from "../../core/renders/elements/node_element";
-import { ElementRender } from "../../core/renders/element_render";
-import { Classes } from "../../core/utils/classes";
-import { Experience } from "../../domain/entities/experience";
-import { Position } from "../../domain/entities/position";
-import { ColumnRender } from "../renders/common/column_render";
-import { ParagraphRender } from "../renders/common/paragraph_render";
-import { SpanRender } from "../renders/common/span_render";
+import { NodeElement } from "../../../core/renders/elements/node_element";
+import { ElementRender } from "../../../core/renders/element_render";
+import { Classes } from "../../../core/utils/classes";
+import { Experience } from "../../../domain/entities/experience";
+import { Position } from "../../../domain/entities/position";
+import { ColumnRender } from "./column_render";
+import { ParagraphRender } from "./paragraph_render";
+import { SpanRender } from "./span_render";
 
 interface DurationRenderParams {
   experience: Experience<Position>;
