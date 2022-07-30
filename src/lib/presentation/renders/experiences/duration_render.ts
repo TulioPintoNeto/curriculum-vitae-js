@@ -12,10 +12,6 @@ interface DurationRenderParams {
 }
 
 export class DurationRender extends ElementRender<DurationRenderParams> {
-  getFatherId(): string {
-    return "experiences";
-  }
-
   build(params: DurationRenderParams): NodeElement {
     return new ColumnRender({
       classes: [Classes.paddingStart2, Classes.noPaddingEnd],
