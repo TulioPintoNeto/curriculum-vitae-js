@@ -21,7 +21,7 @@ export class ExperiencesAppender extends Appender<ExperiencesAppenderParams> {
         return new RowRender({
           classes: [Classes.mainSectionTextColor, Classes.mainSectionContent],
           children: [
-            new DurationRender({ experience }),
+            new DurationRender({ content: experience }),
             new ExperienceDetailRender({ experience }),
           ],
         });

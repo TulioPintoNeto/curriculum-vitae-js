@@ -7,7 +7,7 @@ import { ParagraphRender } from "./paragraph_render";
 import { SpanRender } from "./span_render";
 
 interface DurationRenderParams {
-  experience: MainContent;
+  content: MainContent;
 }
 
 export class DurationRender extends ElementRender<DurationRenderParams> {
@@ -18,10 +18,10 @@ export class DurationRender extends ElementRender<DurationRenderParams> {
       children: [
         new ParagraphRender({
           classes: [Classes.year, Classes.textBold],
-          text: params.experience.getYearsInterval(),
+          text: params.content.getYearsInterval(),
         }),
         new SpanRender({
-          text: params.experience.getDuration(),
+          text: params.content.getDuration(),
         }),
       ],
     });
