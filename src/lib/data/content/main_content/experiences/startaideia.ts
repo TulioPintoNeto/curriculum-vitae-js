@@ -2,7 +2,7 @@ import { Experience } from "../../../../domain/entities/experience";
 import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class Startaideia extends Experience<MobileDevPosition> {
-  endDate: Date | null = null;
+  endDate: Date | null = new Date(2022, 3);
   initialDate: Date = new Date(2021, 7);
   company: string = "Startaideia";
 }
