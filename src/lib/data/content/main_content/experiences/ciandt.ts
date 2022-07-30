@@ -1,7 +1,7 @@
 import { Experience } from "../../../../domain/entities/experience";
-import { MobileDevPosition } from "../../positions/mobile_dev_position";
+import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
-export abstract class Ciandt extends Experience<MobileDevPosition> {
+export abstract class Ciandt extends Experience<FrontEndDevPosition> {
   endDate: Date | null = null;
   initialDate: Date = new Date(2022, 4);
   company: string = "CI&T";
