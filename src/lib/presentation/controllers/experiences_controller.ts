@@ -3,7 +3,7 @@ import { Experience } from "../../domain/entities/experience";
 import { MainSection } from "../../domain/data_structure/main_section";
 import { Position } from "../../domain/entities/position";
 import { Title } from "../../domain/entities/title";
-import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";
+import { GetExperiences } from "../../domain/usecases/get_experiences";
 import { ExperiencesAppender } from "../renders/experiences/experiences_appender";
 import { TitleAppender } from "../renders/titles/title_appender";
 
@@ -12,7 +12,7 @@ export class ExperiencesController implements RendersController {
 
   experiencesMainSection: MainSection<Experience<Position>>;
 
-  constructor(getExperiences: GetExperiencesMainSection) {
+  constructor(getExperiences: GetExperiences) {
     this.experiencesMainSection = getExperiences.call();
   }
 

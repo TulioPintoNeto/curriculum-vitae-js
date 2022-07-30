@@ -1,6 +1,6 @@
 import { Language } from "../../core/languages/language";
 import { GetExperiencesImpl } from "../../data/usecases/get_experiences_impl";
-import { GetExperiencesMainSection } from "../../domain/usecases/get_experiences";
+import { GetExperiences } from "../../domain/usecases/get_experiences";
 import { ciandtFactory } from "../content/experiences/ciandt_factory";
 import { d3EnergyFactory } from "../content/experiences/d3_energy_factory";
 import { eagleFactory } from "../content/experiences/eagle_factory";
@@ -10,9 +10,7 @@ import { petSocialMediaFactory } from "../content/experiences/pet_social_media_f
 import { startaideiaFactory } from "../content/experiences/startaideia_factory";
 import { experienceTitleFactory } from "../content/title/experience_title_factory";
 
-export const getExperiencesFactory = (
-  language: Language
-): GetExperiencesMainSection => {
+export const getExperiencesFactory = (language: Language): GetExperiences => {
   return new GetExperiencesImpl({
     title: experienceTitleFactory(language),
     content: [

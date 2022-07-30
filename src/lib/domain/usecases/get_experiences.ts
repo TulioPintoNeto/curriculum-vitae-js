@@ -3,7 +3,7 @@ import { Experience } from "../entities/experience";
 import { MainSection } from "../data_structure/main_section";
 import { Position } from "../entities/position";
 
-export abstract class GetExperiencesMainSection extends UseCase<
+export abstract class GetExperiences extends UseCase<
   MainSection<Experience<Position>>
 > {
   abstract call(): MainSection<Experience<Position>>;
