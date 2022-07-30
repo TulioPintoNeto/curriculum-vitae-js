@@ -14,14 +14,7 @@ export class GetExperiencesImpl implements GetExperiencesMainSection {
   call(): MainSection<Experience<Position>> {
     return new MainSection({
       title: this.params.title,
-      content: [
-        this.params.startaideia,
-        this.params.eagle,
-        this.params.firstTable,
-        this.params.emotus,
-        this.params.petSocialMedia,
-        this.params.d3Energy,
-      ],
+      content: this.params.content,
     });
   }
 }
