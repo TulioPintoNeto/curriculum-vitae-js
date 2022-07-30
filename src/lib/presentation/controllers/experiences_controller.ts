@@ -17,14 +17,12 @@ export class ExperiencesController implements RendersController {
   }
 
   update(): void {
-    const experiences: Experience<Position>[] =
-      this.experiencesMainSection.content;
-    const experiencesTitle: Title = this.experiencesMainSection.title;
+    const { content, title } = this.experiencesMainSection;
 
-    new ExperiencesAppender({ experiences });
+    new ExperiencesAppender({ experiences: content });
 
     new TitleAppender({
-      text: experiencesTitle.locale,
+      text: title.locale,
       fatherId: this.experiencesTitleFatherId,
     });
   }
