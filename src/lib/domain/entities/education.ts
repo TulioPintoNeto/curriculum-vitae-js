@@ -10,7 +10,6 @@ export abstract class Education<
   Type extends EducationType
 > extends MainContent {
   educationType: string;
-  abstract title: string;
 
   constructor(params: EducationParams<Type>) {
     super(params.mainContentParams);

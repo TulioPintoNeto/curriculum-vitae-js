@@ -11,6 +11,7 @@ export abstract class MainContent {
   abstract endDate: Date | null;
   abstract initialDate: Date;
   abstract company: string;
+  abstract title: string;
 
   locales: MainContentLocales;
 
