@@ -4,7 +4,7 @@ import { Certificate } from "../../education_types/certificate";
 
 export abstract class SystemsAnalysisAndDevelopment extends Education<Certificate> {
   endDate: Date | null = null;
-  initialDate: Date = new Date(2022);
+  initialDate: Date = new Date(2022, 1);
   company: string = EducationInstitutions.UCPEL;
 }
 

@@ -3,8 +3,8 @@ import { EducationInstitutions } from "../../education_instutions/education_inst
 import { Certificate } from "../../education_types/certificate";
 
 export class FlutterCertificate extends Education<Certificate> {
-  endDate: Date = new Date(2022);
-  initialDate: Date = new Date(2022);
+  endDate: Date = new Date(2022, 1);
+  initialDate: Date = new Date(2022, 1);
   title: string = "Flutter";
   company: string = EducationInstitutions.ALURA;
 }
