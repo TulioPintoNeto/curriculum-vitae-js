@@ -12,8 +12,8 @@ export class ExperiencesController implements RendersController {
 
   experiencesMainSection: MainSection<Experience<Position>>;
 
-  constructor(params: { getExperiences: GetExperiencesMainSection }) {
-    this.experiencesMainSection = params.getExperiences.call();
+  constructor(getExperiences: GetExperiencesMainSection) {
+    this.experiencesMainSection = getExperiences.call();
   }
 
   update(): void {

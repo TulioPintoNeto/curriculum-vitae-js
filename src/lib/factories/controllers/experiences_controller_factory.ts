@@ -5,7 +5,5 @@ import { getExperiencesFactory } from "../usecases/get_experiences_factory";
 export const experiencesControllerFactory = (
   language: Language
 ): ExperiencesController => {
-  return new ExperiencesController({
-    getExperiences: getExperiencesFactory(language),
-  });
+  return new ExperiencesController(getExperiencesFactory(language));
 };
