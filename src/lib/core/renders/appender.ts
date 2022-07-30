@@ -24,7 +24,7 @@ export abstract class Appender<Params> extends Render<Params, void> {
     const element = document.getElementById(this.fatherId);
 
     if (element === null) {
-      throw Error("Could not find father element.");
+      throw Error(`Could not find father element: ${this.fatherId}`);
     }
 
     return element;

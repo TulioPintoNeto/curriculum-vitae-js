@@ -6,20 +6,20 @@ import { LanguagesController } from "./languages_controller";
 import { TitlesController } from "./titles_controller";
 
 export class AppController implements RendersController {
-  // educationsController: EducationsController;
+  educationsController: EducationsController;
   experiencesController: ExperiencesController;
   interestsController: InterestsController;
   languagesController: LanguagesController;
   titlesController: TitlesController;
 
   constructor(params: {
-    // educationsController: EducationsController;
+    educationsController: EducationsController;
     experiencesController: ExperiencesController;
     interestsController: InterestsController;
     languagesController: LanguagesController;
     titlesController: TitlesController;
   }) {
-    // this.educationsController = params.educationsController;
+    this.educationsController = params.educationsController;
     this.experiencesController = params.experiencesController;
     this.interestsController = params.interestsController;
     this.languagesController = params.languagesController;
@@ -27,6 +27,7 @@ export class AppController implements RendersController {
   }
 
   update() {
+    this.educationsController.update();
     this.experiencesController.update();
     this.interestsController.update();
     this.languagesController.update();
