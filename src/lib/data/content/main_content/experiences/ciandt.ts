@@ -23,11 +23,11 @@ export class CiandtPT extends Ciandt {
 
 export class CiandtEN extends Ciandt {
   responsabilities: string[] = [
-    "Development of React components for a admin panel",
+    "Development of React components for an admin panel",
     "Development of components using good practices of search engine optimization (SEO)",
-    "Development of scripts, such as import of XML content to a API, using Node JS",
-    "Participate of the decisions, such as project patterns, technologies and automation",
-    "Creation of units tests using TDD and integration tests",
+    "Development of scripts, such as importing XML content to an API, using Node JS",
+    "Participating in decision making, such as project patterns, technologies and automation",
+    "Creating integration tests and unit tests using TDD",
   ];
 
   typeOfExperience() {

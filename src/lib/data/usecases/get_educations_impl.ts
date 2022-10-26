@@ -15,8 +15,8 @@ export class GetEducationsImpl implements GetEducations {
     return new MainSection({
       title: this.params.title,
       content: [
-        this.params.systemsAnalysisAndDevelopment,
         this.params.nodeJSCertificate,
+        this.params.systemsAnalysisAndDevelopment,
         this.params.flutterCertificate,
         this.params.reactJSCertificate,
         this.params.energyEngineer,
