@@ -2,8 +2,8 @@ import { Experience } from "../../../../domain/entities/experience";
 import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
 export abstract class Eagle extends Experience<FrontEndDevPosition> {
-  endDate: Date = new Date(2021, 7);
-  initialDate: Date = new Date(2020, 11);
+  endDate: Date = new Date(2021, 11);
+  initialDate: Date = new Date(2021, 2);
   company: string = "Eagle";
 
   typeOfExperience() {

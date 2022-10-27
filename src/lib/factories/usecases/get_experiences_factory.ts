@@ -16,8 +16,8 @@ export const getExperiencesFactory = (language: Language): GetExperiences => {
     content: [
       ciandtFactory(language),
       startaideiaFactory(language),
-      eagleFactory(language),
       firstTableFactory(language),
+      eagleFactory(language),
       emotusFactory(language),
       petSocialMediaFactory(language),
       d3EnergyFactory(language),

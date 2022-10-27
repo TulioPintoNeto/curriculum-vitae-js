@@ -3,7 +3,7 @@ import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
 export abstract class Ciandt extends Experience<FrontEndDevPosition> {
   endDate: Date | null = null;
-  initialDate: Date = new Date(2022, 4);
+  initialDate: Date = new Date(2022, 3);
   company: string = "CI&T";
 }
 

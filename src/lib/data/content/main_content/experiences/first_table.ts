@@ -2,7 +2,7 @@ import { Experience } from "../../../../domain/entities/experience";
 import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class FirstTable extends Experience<MobileDevPosition> {
-  endDate: Date = new Date(2021, 12);
+  endDate: Date = new Date(2021, 11);
   initialDate: Date = new Date(2021, 4);
   company: string = "Primeira Mesa";
 
@@ -20,6 +20,7 @@ export class FirstTablePT extends FirstTable {
 
 export class FirstTableEN extends FirstTable {
   responsabilities: string[] = [
-    "SPA development to integrate commercial distributor, installer and final client using JavaScript, JS Linter with the Airbnb style guide, React JS using function components, Styled-Components, React Testing Library and React Router",
+    "Maintenance of the company application and development of new functionalities;",
+    "Responsible for teaching and orienting the new developers team.",
   ];
 }

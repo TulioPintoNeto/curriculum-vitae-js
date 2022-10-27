@@ -2,8 +2,8 @@ import { Experience } from "../../../../domain/entities/experience";
 import { D3EnergyPosition } from "../../positions/d3_energy_position";
 
 export abstract class D3Energy extends Experience<D3EnergyPosition> {
-  endDate: Date = new Date(2020, 11);
-  initialDate: Date = new Date(2019, 6);
+  endDate: Date = new Date(2020, 10);
+  initialDate: Date = new Date(2019, 5);
   company: string = "D3 Energia";
 }
 

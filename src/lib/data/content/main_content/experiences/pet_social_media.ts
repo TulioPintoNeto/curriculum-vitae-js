@@ -2,8 +2,8 @@ import { Experience } from "../../../../domain/entities/experience";
 import { MobileDevPosition } from "../../positions/mobile_dev_position";
 
 export abstract class PetSocialMedia extends Experience<MobileDevPosition> {
-  endDate: Date = new Date(2021, 3);
-  initialDate: Date = new Date(2020, 11);
+  endDate: Date = new Date(2021, 2);
+  initialDate: Date = new Date(2020, 10);
 
   typeOfExperience() {
     return "Freelance";

@@ -2,8 +2,8 @@ import { Experience } from "../../../../domain/entities/experience";
 import { FrontEndDevPosition } from "../../positions/front_end_dev_position";
 
 export abstract class Emotus extends Experience<FrontEndDevPosition> {
-  endDate: Date = new Date(2021, 7);
-  initialDate: Date = new Date(2020, 11);
+  endDate: Date = new Date(2021, 6);
+  initialDate: Date = new Date(2020, 10);
   company: string = "Emotus";
 }
 
