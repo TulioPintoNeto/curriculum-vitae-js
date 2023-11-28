@@ -1,7 +1,7 @@
 import { Language } from "../../core/languages/language";
 
 export class AppStateController {
-  language: Language = Language.PT_BR;
+  language: Language = Language.EN_US;
 
   toggleLanguage(): Language {
     const newLanguage = this.newLanguage();
