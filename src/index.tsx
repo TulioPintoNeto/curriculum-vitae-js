@@ -1,7 +1,17 @@
+import { StrictMode } from "react";
+import { App } from "./app";
 import { Language } from "./lib/core/languages/language";
 import { appControllerFactory } from "./lib/factories/controllers/app_controller_factory";
 import { AppController } from "./lib/presentation/controllers/app_controller";
 import { AppStateController } from "./lib/presentation/controllers/app_state_controller";
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.getElementById("root")!);
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
 
 const appStateController = new AppStateController();
 

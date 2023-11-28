@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noEmitOnError": true,
+    "rootDir": "./",
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "ES2022"
+  }
+}
