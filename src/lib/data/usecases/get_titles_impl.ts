@@ -11,7 +11,6 @@ export class GetTitlesImpl implements GetTitles {
 
   call(): Title[] {
     return [
-      this.params.contactTitle,
       this.params.interestsTitle,
       this.params.othersTitle,
     ];

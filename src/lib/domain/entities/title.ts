@@ -1,7 +1,4 @@
 export enum Titles {
-  CONTACT,
-  EDUCATION,
-  EXPERIENCE,
   INTERESTS,
   OTHERS,
 }

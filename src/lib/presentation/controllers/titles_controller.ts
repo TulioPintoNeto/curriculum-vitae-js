@@ -4,7 +4,6 @@ import { GetTitles } from "../../domain/usecases/get_titles";
 import { TitleAppender } from "../renders/titles/title_appender";
 
 export class TitlesController implements RendersController {
-  contactId: string = "contact-title";
   interestsId: string = "interests-title";
   languagesId: string = "languages-title";
   othersId: string = "others-title";
@@ -30,12 +29,8 @@ export class TitlesController implements RendersController {
 
   private _getIdByType(titleType: Titles): string {
     switch (titleType) {
-      case Titles.CONTACT:
-        return this.contactId;
       case Titles.INTERESTS:
         return this.interestsId;
-      case Titles.LANGUAGES:
-        return this.languagesId;
       case Titles.OTHERS:
         return this.othersId;
       default:
