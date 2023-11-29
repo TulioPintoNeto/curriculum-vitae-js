@@ -67,7 +67,7 @@ span {
 }
 
 #side-menu {
-  width: 33%;
+  width: 35%;
   min-height: calc(24.7cm + 29.7cm);
   background-color: rgb(135, 140, 150);
 }
@@ -78,7 +78,7 @@ span {
 }
 
 #main-content {
-  width: 67%;
+  width: 65%;
 }
 
 #main-content .row {
