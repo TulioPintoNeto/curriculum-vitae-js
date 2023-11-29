@@ -3,7 +3,6 @@ export enum Titles {
   EDUCATION,
   EXPERIENCE,
   INTERESTS,
-  LANGUAGES,
   OTHERS,
 }
 

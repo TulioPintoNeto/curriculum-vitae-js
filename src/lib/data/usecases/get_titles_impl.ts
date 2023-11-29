@@ -13,7 +13,6 @@ export class GetTitlesImpl implements GetTitles {
     return [
       this.params.contactTitle,
       this.params.interestsTitle,
-      this.params.languagesTitle,
       this.params.othersTitle,
     ];
   }

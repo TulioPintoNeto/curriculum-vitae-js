@@ -1,25 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { AppStateController } from "./lib/presentation/controllers/app_state_controller";
+import { useEffect, useState } from "react";
 import { AppController } from "./lib/presentation/controllers/app_controller";
 import { appControllerFactory } from "./lib/factories/controllers/app_controller_factory";
-import { Language } from "./lib/core/languages/language";
+import { LanguageSection } from "./lib/presentation/components/LanguageSection";
+import { useLanguage } from "./lib/presentation/context/language";
 
-const appStateController = new AppStateController();
-
-export const App = () => {
-  const [language, setLanguage] = useState<Language>(Language.EN_US);
-
-  const toggleLanguage = () => {
-    setLanguage((l) => l === Language.EN_US ? Language.PT_BR : Language.EN_US);
-  }
-
-  useEffect(() => {
-    const changeLanguageButton = document.getElementById("changeLanguage");
-
-    if (changeLanguageButton !== null) {
-      changeLanguageButton.onclick = toggleLanguage;
-    }
-  }, []);
+export const Content = () => {
+  const language = useLanguage();
 
   useEffect(() => {
     const appController: AppController = appControllerFactory(language);
@@ -28,12 +14,6 @@ export const App = () => {
 
   return (
     <>
-      <button
-        className="btn btn-primary d-print-none position-fixed m-3"
-        id="changeLanguage"
-      >
-        Mudar Idioma
-      </button>
       <div
         className="container-fluid d-flex flex-column align-items-stretch jusity"
         id="curriculum"
@@ -92,10 +72,7 @@ export const App = () => {
                 <p className="gray mb-0">tulio_neto_2@hotmail.com</p>
               </div>
             </div>
-            <h5 className="light-gray mt-3" id="languages-title">
-              Languages
-            </h5>
-            <div id="languages"></div>
+            <LanguageSection />
             <h5 className="light-gray mt-3">Expertise</h5>
             <div className="row gray">
               <div className="col-6">
