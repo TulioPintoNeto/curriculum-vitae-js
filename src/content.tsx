@@ -4,6 +4,7 @@ import { appControllerFactory } from "./lib/factories/controllers/app_controller
 import { LanguageSection } from "./lib/presentation/components/LanguageSection";
 import { useLanguage } from "./lib/presentation/context/language";
 import { ContactSection } from "./lib/presentation/components/ContactSection";
+import { ExpertiseSection } from "./lib/presentation/components/ExpertiseSection";
 
 export const Content = () => {
   const language = useLanguage();
@@ -32,36 +33,21 @@ export const Content = () => {
           <div className="px-2 py-2" id="side-menu">
             <ContactSection />
             <LanguageSection />
-            <h5 className="light-gray mt-3">Expertise</h5>
-            <div className="row gray">
-              <div className="col-6">
-                <p className="mb-2">CSS</p>
-                <p className="mb-2">HTML</p>
-                <p className="mb-2">MySQL</p>
-                <p className="mb-2">PHP</p>
-                <p className="mb-2">R</p>
-              </div>
-              <div className="col-6">
-                <p className="mb-2">Flutter</p>
-                <p className="mb-2">JavaScript</p>
-                <p className="mb-2">Node</p>
-                <p className="mb-2">Python</p>
-                <p className="mb-2">React JS</p>
-              </div>
-            </div>
+            <ExpertiseSection />
             <h5 className="light-gray mt-3">Softwares/IDE</h5>
             <div className="row gray">
               <div className="col-6">
-                <p className="mb-2">FileZilla</p>
-                <p className="mb-2">MS Excel</p>
-                <p className="mb-2">MS Word</p>
+                <p className="mb-2">Insomnia</p>
+                <p className="mb-2">Postman</p>
                 <p className="mb-2">SourceTree</p>
+                <p className="mb-2">Docker</p>
+                <p className="mb-2">VSCode</p>
               </div>
               <div className="col-6">
-                <p className="mb-2">Insomnia</p>
+                <p className="mb-2">Git</p>
+                <p className="mb-2">MS Excel</p>
+                <p className="mb-2">MS Word</p>
                 <p className="mb-2">MS PowerPoint</p>
-                <p className="mb-2">Postman</p>
-                <p className="mb-2">VSCode</p>
               </div>
             </div>
             <h5 className="light-gray mt-3" id="others-title">
@@ -69,16 +55,17 @@ export const Content = () => {
             </h5>
             <div className="row gray">
               <div className="col-6">
-                <p className="mb-2">Bootstrap</p>
                 <p className="mb-2">Clean Architecture</p>
+                <p className="mb-2">Bootstrap</p>
+                <p className="mb-2">Automated Tests</p>
                 <p className="mb-2">RegEx</p>
-                <p className="mb-2">SEO</p>
+                <p className="mb-2">TailwindCSS</p>
               </div>
               <div className="col-6">
-                <p className="mb-2">Clean Code</p>
-                <p className="mb-2">JQuery</p>
-                <p className="mb-2">Scrum</p>
                 <p className="mb-2">TDD</p>
+                <p className="mb-2">Clean Code</p>
+                <p className="mb-2">SEO</p>
+                <p className="mb-2">Scrum</p>
               </div>
             </div>
             <h5 className="light-gray mt-3" id="interests-title">
