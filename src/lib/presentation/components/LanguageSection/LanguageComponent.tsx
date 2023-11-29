@@ -13,8 +13,8 @@ export const LanguageComponent = ({ level, text }: Props) => {
   return (
     <div className="col-6">
       <p className="mb-0">{text}</p>
-      {circles.map((circle) => (
-        <i className={`${circle} fa-circle`}></i>
+      {circles.map((circle, i) => (
+        <i key={i} className={`${circle} fa-circle`}></i>
       ))}
     </div>
   );
