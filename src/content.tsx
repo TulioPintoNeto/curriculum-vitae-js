@@ -3,6 +3,7 @@ import { AppController } from "./lib/presentation/controllers/app_controller";
 import { appControllerFactory } from "./lib/factories/controllers/app_controller_factory";
 import { LanguageSection } from "./lib/presentation/components/LanguageSection";
 import { useLanguage } from "./lib/presentation/context/language";
+import { ContactSection } from "./lib/presentation/components/ContactSection";
 
 export const Content = () => {
   const language = useLanguage();
@@ -29,49 +30,7 @@ export const Content = () => {
         </div>
         <div className="row align-items-stretch p-0">
           <div className="px-2 py-2" id="side-menu">
-            <h5 className="light-gray" id="contact-title">
-              Contact
-            </h5>
-            <div className="row mx-0 mb-1">
-              <div className="col-1 p-0 d-flex align-items-center justify-content-center">
-                <i className="fab fa-github gray"></i>
-              </div>
-              <div className="col-11 pe-0">
-                <p className="gray mb-0">/TulioPintoNeto</p>
-              </div>
-            </div>
-            <div className="row mx-0 mb-1">
-              <div className="col-1 p-0 d-flex align-items-center justify-content-center">
-                <i className="fab fa-linkedin gray"></i>
-              </div>
-              <div className="col-11 pe-0">
-                <p className="gray mb-0">/tulio-pinto-neto</p>
-              </div>
-            </div>
-            <div className="row mx-0 mb-1">
-              <div className="col-1 p-0 d-flex align-items-center justify-content-center">
-                <i className="fas fa-map-marker-alt gray"></i>
-              </div>
-              <div className="col-11 pe-0">
-                <p className="gray mb-0">Pelotas/RS - Brazil</p>
-              </div>
-            </div>
-            <div className="row mx-0 mb-1">
-              <div className="col-1 p-0 d-flex align-items-center justify-content-center">
-                <i className="fas fa-mobile-alt gray"></i>
-              </div>
-              <div className="col-11 pe-0">
-                <p className="gray mb-0 mt-1">+55 51 99408-1002</p>
-              </div>
-            </div>
-            <div className="row mx-0 mb-2">
-              <div className="col-1 p-0 d-flex align-items-center justify-content-center">
-                <i className="fas fa-envelope gray"></i>
-              </div>
-              <div className="col-11 pe-0">
-                <p className="gray mb-0">tulio_neto_2@hotmail.com</p>
-              </div>
-            </div>
+            <ContactSection />
             <LanguageSection />
             <h5 className="light-gray mt-3">Expertise</h5>
             <div className="row gray">

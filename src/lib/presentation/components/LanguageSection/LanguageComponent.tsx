@@ -1,4 +1,4 @@
-import { useLanguage } from "../context/language";
+import { useLanguage } from "../../context/language";
 
 type Props = {
   level: number;

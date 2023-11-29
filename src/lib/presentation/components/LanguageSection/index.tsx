@@ -1,5 +1,5 @@
-import { locales } from "../../locales";
-import { useLanguage } from "../context/language";
+import { locales } from "../../../locales";
+import { useLanguage } from "../../context/language";
 import { LanguageComponent } from "./LanguageComponent";
 
 export const LanguageSection = () => {
