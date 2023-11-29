@@ -5,6 +5,7 @@ import { LanguageSection } from "./lib/presentation/components/LanguageSection";
 import { useLanguage } from "./lib/presentation/context/language";
 import { ContactSection } from "./lib/presentation/components/ContactSection";
 import { ExpertiseSection } from "./lib/presentation/components/ExpertiseSection";
+import { EducationSection } from "./lib/presentation/components/EducationSection";
 
 export const Content = () => {
   const language = useLanguage();
@@ -79,15 +80,7 @@ export const Content = () => {
               id="experiences-title"
             ></h5>
             <div id="experiences"></div>
-            <div id="education">
-              <h5
-                className="py-2 w-100 light-gray bg-dark-blue"
-                id="education-title"
-              >
-                Education
-              </h5>
-              <div id="educations"></div>
-            </div>
+            <EducationSection />
           </div>
         </div>
       </div>
