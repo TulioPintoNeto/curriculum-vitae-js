@@ -116,6 +116,10 @@ span {
   padding-top: 1.2rem;
 }
 
+#main-content .content:last-child {
+  padding-bottom: 1.2rem;
+}
+
 #main-content #education-title {
   margin-top: 1.2rem;
 }
