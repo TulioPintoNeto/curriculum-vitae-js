@@ -6,15 +6,15 @@ export const d3Energia = {
   initialDate: new Date(2019, 5),
   responsabilities: {
     [Language.EN_US]: [
-      "Development of new functionalities for the company software. That was a concern in changing the software from procedural to object oriented",
+      "Responsible for the development and maintenance of the company software using JQuery, HTML, CSS, JS, PHP and MySQL. The software was made to have a pipeline of clients, do engineering calculations and export reports and proposals in PDF",
       "Doing the back-up of emails, files and database",
-      "Creation and maintenance of the company website",
+      "Creation and maintenance of the company website, using SEO tech practices and keywords to optimize rankings in organic search",
       "Sizing, checking viability, projecting, coordinating the installation and maintenance of solar systems",
     ],
     [Language.PT_BR]: [
-      "Adição de novas funcionalidades do software da empresa.Houve ainda foco em transformar o software de proceduralpara orientação em objetos",
-      "Realizar o back-up de e-mails, arquivos do sistema e bancode dados",
-      "Criação e manutenção no website da empresa",
+      "Responsável por desenvolver e dar manutenção do software da empresa usando JQuery, HTML, CSS, JS, PHP e MySQL. O software foi feito para ter um pipeline dos clientes, fazer cálculos da equipe de engenharia e exportar relatórios e propostas em PDF",
+      "Realizar o back-up de e-mails, arquivos do sistema e banco de dados",
+      "Criação e manutenção no website da empresa, usando técnicas SEO e palavras-chave pra otimizar posicionamento na pesquisa orgânica",
       "Dimensionar, analisar a viabilidade, projetar, coordenar ainstalação e manutenção de sistemas solares",
     ],
   },
