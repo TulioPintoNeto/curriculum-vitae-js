@@ -6,10 +6,10 @@ export const pataki = {
   initialDate: new Date(2020, 10),
   responsabilities: {
     [Language.EN_US]: [
-      "Front-end development of a social media for mobile devices, using Flutter and Android Studio. The abilities that was used: control forms, video player, timeline and chat",
+      "Mobile development of social media using Flutter and Android Studio. For some features, we consume web sockets. The following list includes some functionalities that were developed: controlled forms, video player, timeline and real-time chat",
     ],
     [Language.PT_BR]: [
-      "Desenvolvimento do front-end de uma rede social para mobile, utilizando Flutter e Android Studio. Dentre as habilidades utilizadas, estão: formulários controlados, video player, timeline e chat",
+      "Desenvolvimento mobile de uma rede social utilizando Flutter e Android Studio. Para algumas funcionalidades foi utilizado web sockets. Algumas funcionalidades que foram desenvolvidas: formulários controlados, video player, timeline e real-time chat",
     ],
   },
   title: {
