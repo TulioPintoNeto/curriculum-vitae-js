@@ -6,10 +6,10 @@ export const emotus = {
   initialDate: new Date(2020, 10),
   responsabilities: {
     [Language.EN_US]: [
-      "SPA development to integrate commercial distributor, installer and final client using JavaScript, JS Linter with the Airbnb style guide, React JS using function components, Styled-Components, React Testing Library and React Router",
+      "SPA development to integrate commercial distributor, installer and final client using JavaScript, ESLint with the Airbnb style guide, React JS using function components, Styled-Components, React Testing Library and React Router",
     ],
     [Language.PT_BR]: [
-      "Desenvolvimento de SPA para integração entre distribuidor, instalador e cliente final utilizando JavaScript, JS Linter com o guia de estilo do Airbnb, React JS com function components, Styled-Components, React Testing Library e React Router",
+      "Desenvolvimento de SPA para integração entre distribuidor, instalador e cliente final utilizando JavaScript, ESLint com o guia de estilo do Airbnb, React JS com function components, Styled-Components, React Testing Library e React Router",
     ],
   },
   title: {
