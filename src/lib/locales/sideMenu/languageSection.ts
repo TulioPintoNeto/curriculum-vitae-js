@@ -1,6 +1,6 @@
-import { Language } from "../core/languages/language";
+import { Language } from "../../core/languages/language";
 
-export const languagesSection = {
+export const languageSection = {
   title: {
     [Language.EN_US]: "Languages",
     [Language.PT_BR]: "Idiomas",

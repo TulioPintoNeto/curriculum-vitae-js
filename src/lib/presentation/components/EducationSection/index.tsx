@@ -6,7 +6,6 @@ import { Education } from "./Education";
 export const EducationSection = () => {
   const language = useLanguage();
   const { title, educations } = locales.educationSection;
-  console.log(educations);
 
   return (
     <div id="education">

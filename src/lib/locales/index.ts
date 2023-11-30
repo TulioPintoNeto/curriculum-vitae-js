@@ -1,7 +1,8 @@
 import { educationSection } from "./educationSection";
-import { languagesSection } from "./languageSection";
+import { languageSection } from "./sideMenu/languageSection";
 import { experiencesSection } from "./experiencesSection";
 import { Language } from "../core/languages/language";
+import { sideMenu } from "./sideMenu/index";
 
 export const locales = {
   duration: {
@@ -28,5 +29,5 @@ export const locales = {
   },
   educationSection,
   experiencesSection,
-  languagesSection,
+  sideMenu,
 };

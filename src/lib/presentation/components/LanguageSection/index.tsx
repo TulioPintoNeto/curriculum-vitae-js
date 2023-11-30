@@ -5,7 +5,7 @@ import { LanguageComponent } from "./LanguageComponent";
 
 export const LanguageSection = () => {
   const language = useLanguage();
-  const { title, languages } = locales.languagesSection;
+  const { title, languages } = locales.sideMenu.languageSection;
 
   return (
     <>

@@ -32,8 +32,6 @@ export const DurationComponent = ({
   const end = endMoment.isSame(moment(), "date") ? "Actual" : endMoment.year();
   const yearsDuration = initialMoment.year() === end ? end : `${initialMoment.year()} - ${end}`
 
-  console.table({initialDate, endDate, years, months, roundedYears});
-
   return (
     <div className="ps-2 pe-0 col-3">
       <p className="mb-0 year fw-bold">
