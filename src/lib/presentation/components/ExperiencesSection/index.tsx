@@ -11,16 +11,33 @@ export const ExperiencesSection = () => {
     <>
       <h5 className="py-2 w-100 light-gray bg-dark-blue">{title[language]}</h5>
       <div>
-        {experiences.map((experience) => (
-          <Fragment key={experience.company}>
-            <Experience
-              {...experience}
-              responsabilities={experience.responsabilities[language]}
-              title={experience.title[language]}
-              type={experience.type[language]}
-            />
-          </Fragment>
-        ))}
+        {experiences.map((experience) => {
+          if (Array.isArray(experience)) {
+            return experience.map((nationalExperience, i) => (
+              <Fragment key={nationalExperience.company}>
+                <Experience
+                  continuousLine={experience.length !== i + 1}
+                  {...nationalExperience}
+                  responsabilities={
+                    nationalExperience.responsabilities[language]
+                  }
+                  title={nationalExperience.title[language]}
+                  type={nationalExperience.type[language]}
+                />
+              </Fragment>
+            ));
+          }
+          return (
+            <Fragment key={experience.company}>
+              <Experience
+                {...experience}
+                responsabilities={experience.responsabilities[language]}
+                title={experience.title[language]}
+                type={experience.type[language]}
+              />
+            </Fragment>
+          );
+        })}
       </div>
     </>
   );

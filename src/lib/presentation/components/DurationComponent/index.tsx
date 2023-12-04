@@ -1,14 +1,17 @@
 import moment from "moment";
 import { useLanguage } from "../../context/language";
 import { locales } from "../../../locales";
+import CN from "classnames";
 
 type Props = {
+  continuousLine: boolean;
   endDate: Date | null;
   initialDate: Date;
   includeDuration?: boolean;
 };
 
 export const DurationComponent = ({
+  continuousLine,
   endDate,
   initialDate,
   includeDuration = false,
@@ -19,7 +22,7 @@ export const DurationComponent = ({
   const endMoment = moment(endDate);
   const initialMoment = moment(initialDate);
   const months = endMoment.diff(initialMoment, "months") + 1;
-  const years = endMoment.diff(initialMoment, "years", true) + 1/12;
+  const years = endMoment.diff(initialMoment, "years", true) + 1 / 12;
   const roundedYears = Math.round(years * 2) / 2;
 
   const yearStr =
@@ -30,13 +33,16 @@ export const DurationComponent = ({
     roundedYears >= 1 ? `${roundedYears} ${yearStr}` : `${months} ${monthStr}`;
 
   const end = endMoment.isSame(moment(), "date") ? "Actual" : endMoment.year();
-  const yearsDuration = initialMoment.year() === end ? end : `${initialMoment.year()} - ${end}`
+  const yearsDuration =
+    initialMoment.year() === end ? end : `${initialMoment.year()} - ${end}`;
 
   return (
-    <div className="ps-2 pe-0 col-3">
-      <p className="mb-0 year fw-bold">
-        {yearsDuration}
-      </p>
+    <div
+      className={CN("ps-2 pe-0 col-3", {
+        "continuous-line": continuousLine,
+      })}
+    >
+      <p className="mb-0 year fw-bold">{yearsDuration}</p>
       <span>{includeDuration && duration}</span>
     </div>
   );

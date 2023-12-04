@@ -1,4 +1,5 @@
 import { DurationComponent } from "../DurationComponent";
+import CN from "classnames";
 
 type Props = {
   company: string;
@@ -7,10 +8,12 @@ type Props = {
   responsabilities: string[];
   title: string;
   type: string;
+  continuousLine?: boolean;
 };
 
 export const Experience = ({
   company,
+  continuousLine = false,
   endDate,
   initialDate,
   responsabilities,
@@ -18,8 +21,11 @@ export const Experience = ({
   type,
 }: Props) => (
   <>
-    <div className="row dark-blue content">
+    <div
+      className={CN("row dark-blue content", { "reduced-pb": continuousLine })}
+    >
       <DurationComponent
+        continuousLine={continuousLine}
         endDate={endDate}
         initialDate={initialDate}
         includeDuration

@@ -21,7 +21,7 @@ type Experience = {
 
 type ExperiencesSection = {
   title: Locales;
-  experiences: Experience[];
+  experiences: (Experience | Experience[])[];
 };
 
 export const experiencesSection: ExperiencesSection = {

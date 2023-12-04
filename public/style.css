@@ -93,6 +93,21 @@ span {
   font-size: 0.75rem;
 }
 
+#main-content .continuous-line {
+  position: relative;
+}
+
+#main-content .continuous-line::after {
+  background: rgb(135, 140, 150);
+  bottom: 0px;
+  border-radius: 100%;
+  content: '';
+  height: 58%;
+  left: calc(50% - 1px + 0.25rem);
+  position: absolute;
+  width: 2px;
+}
+
 #main-content .col-9 {
   text-align: left !important;
 }
@@ -114,6 +129,10 @@ span {
 #main-content .content:not(h5 + div) {
   page-break-inside: avoid;
   padding-top: 1.2rem;
+}
+
+#main-content .reduced-pb + .content {
+  padding-top: 0.3rem;
 }
 
 #main-content .content:last-child {
