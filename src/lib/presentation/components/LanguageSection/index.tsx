@@ -8,8 +8,8 @@ export const LanguageSection = () => {
   const { title, languages } = locales.sideMenu.languageSection;
 
   return (
-    <>
-      <h5 className="light-gray mt-3">{title[language]}</h5>
+    <div className="side-menu-section">
+      <h5 className="light-gray pt-3">{title[language]}</h5>
       <div id="languages">
         <div className="gray row">
           {languages.map(({ level, text }) => (
@@ -19,6 +19,6 @@ export const LanguageSection = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };

@@ -3,7 +3,7 @@ import { Language } from "../../core/languages/language";
 export const d3Energia = {
   company: "D3 Energia",
   endDate: new Date(2020, 10),
-  initialDate: new Date(2019, 5),
+  initialDate: new Date(2017, 9),
   responsabilities: {
     [Language.EN_US]: [
       "Responsible for the development and maintenance of the company software using JQuery, HTML, CSS, JS, PHP and MySQL. The software was made to have a pipeline of clients, do engineering calculations and export reports and proposals in PDF",

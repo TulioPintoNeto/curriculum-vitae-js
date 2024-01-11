@@ -6,8 +6,8 @@ export const OthersSection = () => {
   const { title } = locales.sideMenu.othersSection;
 
   return (
-    <>
-      <h5 className="light-gray mt-3">
+    <div className="side-menu-section">
+      <h5 className="light-gray pt-3">
         {title[language]}
       </h5>
       <div className="row gray">
@@ -25,6 +25,6 @@ export const OthersSection = () => {
           <p className="mb-2">Scrum</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };

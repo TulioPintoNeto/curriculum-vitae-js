@@ -7,7 +7,7 @@ export const ciandt = [
     initialDate: new Date(2022, 11),
     responsabilities: {
       [Language.EN_US]: [
-        "Development of new features for a financial software using NextJS, CSS modules with SASS and Highcharts",
+        "Development of new features for a financial software focused on data visualization using NextJS and CSS modules with SASS, React-Tables for displaying tables with integrated filters and Highcharts",
         "Creation of units and integration tests, usage of Storybook with the React Components to do visual regression testing using Loki",
       ],
       [Language.PT_BR]: [
@@ -20,7 +20,7 @@ export const ciandt = [
       [Language.PT_BR]: "Desenvolvedor front-end senior com React JS",
     },
     type: {
-      [Language.EN_US]: "Full-time",
+      [Language.EN_US]: "Permanent Position",
       [Language.PT_BR]: "Tempo Integral",
     },
   },
@@ -49,7 +49,7 @@ export const ciandt = [
       [Language.PT_BR]: "Desenvolvedor front-end com React JS",
     },
     type: {
-      [Language.EN_US]: "Full-time",
+      [Language.EN_US]: "Permanent Position",
       [Language.PT_BR]: "Tempo Integral",
     },
   },

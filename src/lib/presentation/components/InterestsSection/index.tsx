@@ -6,8 +6,8 @@ export const InterestsSection = () => {
   const { title, physicalActivity, music } = locales.sideMenu.interestsSection;
 
   return (
-    <>
-      <h5 className="light-gray mt-3">{title[language]}</h5>
+    <div className="side-menu-section">
+      <h5 className="light-gray pt-3">{title[language]}</h5>
       <div>
         <div className="row gray mx-0 mb-2">
           <div className="p-0 d-flex align-items-center justify-content-center col-1">
@@ -26,6 +26,6 @@ export const InterestsSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

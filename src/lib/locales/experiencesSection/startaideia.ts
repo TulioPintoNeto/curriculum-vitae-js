@@ -23,7 +23,7 @@ export const startaideia = {
     [Language.PT_BR]: "Desenvolvedor mobile com Flutter",
   },
   type: {
-    [Language.EN_US]: "Full-time",
+    [Language.EN_US]: "Permanent Position",
     [Language.PT_BR]: "Tempo Integral",
   },
 };

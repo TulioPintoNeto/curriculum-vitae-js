@@ -1,6 +1,6 @@
 export const SoftwaresSection = () => (
-  <>
-    <h5 className="light-gray mt-3">Softwares/IDE</h5>
+  <div className="side-menu-section">
+    <h5 className="light-gray pt-3">Softwares/IDE</h5>
     <div className="row gray">
       <div className="col-6">
         <p className="mb-2">Insomnia</p>
@@ -16,5 +16,5 @@ export const SoftwaresSection = () => (
         <p className="mb-2">MS PowerPoint</p>
       </div>
     </div>
-  </>
+  </div>
 );

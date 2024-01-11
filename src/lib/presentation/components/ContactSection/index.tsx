@@ -7,7 +7,7 @@ export const ContactSection = () => {
   const { title } = locales.sideMenu.contactSection;
 
   return (
-    <>
+    <div className="side-menu-section">
       <h5 className="light-gray">{title[language]}</h5>
       <ContactRow iconClassName="fab fa-github" text="/TulioPintoNeto" />
       <ContactRow iconClassName="fab fa-linkedin" text="/tulio-pinto-neto" />
@@ -15,8 +15,8 @@ export const ContactSection = () => {
       <ContactRow iconClassName="fas fa-mobile-alt" text="+44 07423 380429" />
       <ContactRow
         iconClassName="fas fa-envelope"
-        text="tulio_neto_2@hotmail.com"
+        text="tulio.pinto.neto@gmail.com"
       />
-    </>
+    </div>
   );
 };
