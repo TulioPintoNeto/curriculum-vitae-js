@@ -9,9 +9,9 @@ export const LanguageSection = () => {
 
   return (
     <div className="side-menu-section">
-      <h5 className="light-gray pt-3">{title[language]}</h5>
+      <h5 className="pt-3">{title[language]}</h5>
       <div id="languages">
-        <div className="gray row">
+        <div className="row">
           {languages.map(({ level, text }) => (
             <Fragment key={text[language]}>
               <LanguageComponent level={level} text={text[language]} />

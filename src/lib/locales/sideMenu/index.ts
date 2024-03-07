@@ -2,12 +2,6 @@ import { Language } from "../../core/languages/language";
 import { languageSection } from "./languageSection";
 
 export const sideMenu = {
-  contactSection: {
-    title: {
-      [Language.EN_US]: "Contact",
-      [Language.PT_BR]: "Contato",
-    },
-  },
   languageSection,
   expertiseSection: {
     title: {

@@ -7,10 +7,10 @@ export const OthersSection = () => {
 
   return (
     <div className="side-menu-section">
-      <h5 className="light-gray pt-3">
+      <h5 className="pt-3">
         {title[language]}
       </h5>
-      <div className="row gray">
+      <div className="row">
         <div className="col-6">
           <p className="mb-2">Clean Architecture</p>
           <p className="mb-2">Bootstrap</p>

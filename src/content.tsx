@@ -1,7 +1,11 @@
 import { EducationSection } from "./lib/presentation/sections/EducationSection";
 import { ExperiencesSection } from "./lib/presentation/sections/ExperiencesSection";
+import { ExpertiseSection } from "./lib/presentation/sections/ExpertiseSection";
 import { Header } from "./lib/presentation/sections/Header";
-import { SideMenu } from "./lib/presentation/sections/SideMenu";
+import { InterestsSection } from "./lib/presentation/sections/InterestsSection";
+import { LanguageSection } from "./lib/presentation/sections/LanguageSection";
+import { OthersSection } from "./lib/presentation/sections/OthersSection";
+import { SoftwaresSection } from "./lib/presentation/sections/SoftwaresSection";
 
 export const Content = () => {
   return (
@@ -12,10 +16,14 @@ export const Content = () => {
       >
         <Header />
         <div className="row align-items-stretch p-0">
-          <SideMenu />
           <div className="px-0 py-2 text-center" id="main-content">
+            <LanguageSection />
+            <ExpertiseSection />
+            <SoftwaresSection />
+            <OthersSection />
             <ExperiencesSection />
             <EducationSection />
+            <InterestsSection />
           </div>
         </div>
       </div>

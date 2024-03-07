@@ -17,7 +17,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   return (
     <LanguageContext.Provider value={language}>
       <button
-        className="btn btn-primary d-print-none position-fixed m-3"
+        className="btn btn-primary d-print-none position-fixed end-0 m-3"
         onClick={toggleLanguage}
       >
         Mudar Idioma

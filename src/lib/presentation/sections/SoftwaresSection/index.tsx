@@ -1,7 +1,7 @@
 export const SoftwaresSection = () => (
   <div className="side-menu-section">
-    <h5 className="light-gray pt-3">Softwares/IDE</h5>
-    <div className="row gray">
+    <h5 className="pt-3">Softwares/IDE</h5>
+    <div className="row">
       <div className="col-6">
         <p className="mb-2">Insomnia</p>
         <p className="mb-2">Postman</p>
