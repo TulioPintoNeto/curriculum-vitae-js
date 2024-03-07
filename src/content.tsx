@@ -5,6 +5,7 @@ import { Header } from "./lib/presentation/sections/Header";
 import { InterestsSection } from "./lib/presentation/sections/InterestsSection";
 import { LanguageSection } from "./lib/presentation/sections/LanguageSection";
 import { OthersSection } from "./lib/presentation/sections/OthersSection";
+import { SkillsSection } from "./lib/presentation/sections/SkillsSection";
 import { SoftwaresSection } from "./lib/presentation/sections/SoftwaresSection";
 
 export const Content = () => {
@@ -17,10 +18,7 @@ export const Content = () => {
         <Header />
         <div className="row align-items-stretch p-0">
           <div className="px-5 py-2 text-center" id="main-content">
-            <LanguageSection />
-            <ExpertiseSection />
-            <SoftwaresSection />
-            <OthersSection />
+            <SkillsSection />
             <ExperiencesSection />
             <EducationSection />
             <InterestsSection />

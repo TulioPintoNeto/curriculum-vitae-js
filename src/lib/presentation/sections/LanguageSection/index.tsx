@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { locales } from "../../../locales";
 import { useLanguage } from "../../context/language";
 import { LanguageComponent } from "./LanguageComponent";
-import { Title } from "../../components/Title";
 
 export const LanguageSection = () => {
   const language = useLanguage();
@@ -10,7 +9,6 @@ export const LanguageSection = () => {
 
   return (
     <div>
-      <Title>{title[language]}</Title>
       <div>
         <div className="d-flex justify-content-around">
           {languages.map(({ level, text }) => (
