@@ -14,7 +14,7 @@ export const languageSection = {
       },
     },
     {
-      level: 4,
+      level: 5,
       text: {
         [Language.EN_US]: "English",
         [Language.PT_BR]: "Inglês",
