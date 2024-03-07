@@ -16,7 +16,7 @@ export const Content = () => {
       >
         <Header />
         <div className="row align-items-stretch p-0">
-          <div className="px-0 py-2 text-center" id="main-content">
+          <div className="px-5 py-2 text-center" id="main-content">
             <LanguageSection />
             <ExpertiseSection />
             <SoftwaresSection />

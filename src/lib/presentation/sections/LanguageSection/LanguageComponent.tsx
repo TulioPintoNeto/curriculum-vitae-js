@@ -1,4 +1,5 @@
-import { useLanguage } from "../../context/language";
+import CN from "classnames";
+import styles from "./styles.module.scss";
 
 type Props = {
   level: number;
@@ -11,10 +12,10 @@ export const LanguageComponent = ({ level, text }: Props) => {
   const circles = array5.map((position) => (level > position ? "fas" : "far"));
 
   return (
-    <div className="col-6">
+    <div>
       <p className="mb-0">{text}</p>
       {circles.map((circle, i) => (
-        <i key={i} className={`${circle} fa-circle`}></i>
+        <i key={i} className={CN(circle, styles.icon, "fa-circle")}></i>
       ))}
     </div>
   );

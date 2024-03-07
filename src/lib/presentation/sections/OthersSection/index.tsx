@@ -6,7 +6,7 @@ export const OthersSection = () => {
   const { title } = locales.sideMenu.othersSection;
 
   return (
-    <div className="side-menu-section">
+    <div>
       <h5 className="pt-3">
         {title[language]}
       </h5>
