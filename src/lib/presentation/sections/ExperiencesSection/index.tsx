@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { locales } from "../../../locales";
 import { useLanguage } from "../../context/language";
 import { Experience } from "./Experience";
+import { Title } from "../../components/Title";
 
 export const ExperiencesSection = () => {
   const language = useLanguage();
@@ -9,7 +10,7 @@ export const ExperiencesSection = () => {
 
   return (
     <>
-      <h5 className="py-2 w-100 light-gray bg-dark-blue">{title[language]}</h5>
+      <Title>{title[language]}</Title>
       <div>
         {experiences.map((experience) => {
           if (Array.isArray(experience)) {

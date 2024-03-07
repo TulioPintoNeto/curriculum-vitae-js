@@ -1,7 +1,7 @@
-import { EducationSection } from "./lib/presentation/components/EducationSection";
-import { ExperiencesSection } from "./lib/presentation/components/ExperiencesSection";
-import { Header } from "./lib/presentation/components/Header";
-import { SideMenu } from "./lib/presentation/components/SideMenu";
+import { EducationSection } from "./lib/presentation/sections/EducationSection";
+import { ExperiencesSection } from "./lib/presentation/sections/ExperiencesSection";
+import { Header } from "./lib/presentation/sections/Header";
+import { SideMenu } from "./lib/presentation/sections/SideMenu";
 
 export const Content = () => {
   return (
