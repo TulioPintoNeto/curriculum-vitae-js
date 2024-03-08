@@ -2,6 +2,7 @@
 
 html,
 body {
+  font-size: 10pt;
   width: 21cm;
   min-height: calc(29.7cm * 2);
   font-family: "Montserrat", sans-serif;
@@ -9,7 +10,6 @@ body {
 
 p,
 span {
-  font-size: 0.9rem;
   margin-bottom: 1.2rem;
 }
 
@@ -23,7 +23,6 @@ span {
 }
 
 #main-content {
-  font-size: 0.8rem;
   padding: 0 2cm;
 }
 
@@ -31,50 +30,13 @@ span {
   margin: 0;
 }
 
-#main-content .year + span {
-  font-size: 0.75rem;
-}
-
-#main-content .continuous-line {
-  position: relative;
-}
-
-#main-content .continuous-line::after {
-  background: rgb(135, 140, 150);
-  bottom: 0px;
-  border-radius: 100%;
-  content: "";
-  height: 58%;
-  left: calc(50% - 1px + 0.25rem);
-  position: absolute;
-  width: 2px;
-}
-
-#main-content .col-9 {
-  text-align: left !important;
-}
-
-#main-content .activity {
-  font-size: 0.9rem;
-}
-
 #main-content .local {
-  font-size: 0.83rem;
   font-style: italic;
-}
-
-#main-content .description {
-  font-size: 0.8rem;
-  margin-bottom: 0;
 }
 
 #main-content .content:not(h5 + div) {
   page-break-inside: avoid;
   padding-top: 1.2rem;
-}
-
-#main-content .reduced-pb + .content {
-  padding-top: 0.3rem;
 }
 
 #main-content .content:last-child {

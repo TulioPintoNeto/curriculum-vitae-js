@@ -1,8 +1,9 @@
 import { ContactRow } from "./ContactRow";
+import styles from "./styles.module.scss";
 
 export const ContactSection = () => {
   return (
-    <div>
+    <div className={styles.contactSection}>
       <ContactRow iconClassName="fas fa-map-marker-alt" text="Cambridge - UK" />
       <ContactRow iconClassName="fab fa-github" text="/TulioPintoNeto" />
       <ContactRow iconClassName="fab fa-linkedin" text="/tulio-pinto-neto" />

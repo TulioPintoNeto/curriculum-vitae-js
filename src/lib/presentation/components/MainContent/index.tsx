@@ -1,6 +1,6 @@
-import CN from "classnames";
 import { DurationComponent } from "../../sections/DurationComponent";
 import { ReactNode } from "react";
+import styles from "./styles.module.scss";
 
 type Props = {
   company: ReactNode;
@@ -9,33 +9,32 @@ type Props = {
   includeDuration?: boolean;
   initialDate: Date;
   title: ReactNode;
-  continuousLine?: boolean;
+  type?: ReactNode;
 };
 
 export const MainContent = ({
   company,
   content,
-  continuousLine = false,
   endDate,
   includeDuration = false,
   initialDate,
   title,
+  type,
 }: Props) => (
-  <>
-    <div
-      className={CN("row dark-blue content", { "reduced-pb": continuousLine })}
-    >
+  <div className="dark-blue content ps-0">
+    <div className="d-flex justify-content-between">
+      <div>
+        <p className="mb-0 activity fw-bold text-align-left">{title}</p>
+        <p className="mb-0 fst-italic text-align-left d-flex">
+          {company} {type && `(${type})`}
+        </p>
+      </div>
       <DurationComponent
-        continuousLine={continuousLine}
         endDate={endDate}
         initialDate={initialDate}
         includeDuration={includeDuration}
       />
-      <div className="ps-0 pe-2 col-9">
-        <p className="mb-0 activity fw-bold">{title}</p>
-        <p className="mb-0 local">{company}</p>
-        {content}
-      </div>
     </div>
-  </>
+    {content}
+  </div>
 );

@@ -7,11 +7,11 @@ import styles from "./styles.module.scss";
 
 export const LanguageSection = () => {
   const language = useLanguage();
-  const { title, languages } = locales.skills.languageSection;
+  const { languages } = locales.skills.languageSection;
 
   return (
     <div
-      className={CN("d-flex justify-content-around", styles.languageWrapper)}
+      className={CN("d-flex justify-content-between", styles.languageWrapper)}
     >
       {languages.map(({ level, text }) => (
         <Fragment key={text[language]}>

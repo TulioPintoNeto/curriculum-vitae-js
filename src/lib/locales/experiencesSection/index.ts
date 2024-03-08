@@ -35,7 +35,7 @@ export const experiencesSection: ExperiencesSection = {
     primeiraMesa,
     eagle,
     emotus,
-    pataki,
+    // pataki,
     d3Energia,
   ],
 };

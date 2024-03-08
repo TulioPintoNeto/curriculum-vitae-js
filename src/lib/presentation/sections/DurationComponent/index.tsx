@@ -2,16 +2,15 @@ import moment from "moment";
 import { useLanguage } from "../../context/language";
 import { locales } from "../../../locales";
 import CN from "classnames";
+import styles from "./styles.module.scss";
 
 type Props = {
-  continuousLine: boolean;
   endDate: Date | null;
   initialDate: Date;
   includeDuration?: boolean;
 };
 
 export const DurationComponent = ({
-  continuousLine,
   endDate,
   initialDate,
   includeDuration = false,
@@ -33,17 +32,14 @@ export const DurationComponent = ({
     roundedYears >= 1 ? `${roundedYears} ${yearStr}` : `${months} ${monthStr}`;
 
   const end = endMoment.isSame(moment(), "date") ? "Present" : endMoment.year();
-  const yearsDuration =
-    initialMoment.year() === end ? end : `${initialMoment.year()} - ${end}`;
+  const yearsDuration = `${initialMoment.year()} - ${end}`;
 
   return (
-    <div
-      className={CN("pe-0 col-3", {
-        "continuous-line": continuousLine,
-      })}
-    >
-      <p className="mb-0 year fw-bold">{yearsDuration}</p>
-      <span>{includeDuration && duration}</span>
+    <div className="d-flex flex-column align-items-end">
+      <span className="fw-bold mb-0"> {yearsDuration}</span>
+      <span className={CN("mb-0", styles.duration)}>
+        {includeDuration && `(${duration})`}
+      </span>
     </div>
   );
 };

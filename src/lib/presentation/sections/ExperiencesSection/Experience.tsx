@@ -24,18 +24,14 @@ export const Experience = ({
   <MainContent
     company={company}
     content={responsabilities.map((responsability) => (
-      <p className="mb-0 description" key={responsability}>
+      <p className="mb-0 description text-justify" key={responsability}>
         🞄 {responsability}
       </p>
     ))}
-    continuousLine={continuousLine}
     endDate={endDate}
     includeDuration
     initialDate={initialDate}
-    title={
-      <>
-        ({type}) {title}
-      </>
-    }
+    title={<>{title}</>}
+    type={type}
   />
 );
