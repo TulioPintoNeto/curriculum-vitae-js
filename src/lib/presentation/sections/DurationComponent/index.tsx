@@ -32,13 +32,13 @@ export const DurationComponent = ({
   const duration =
     roundedYears >= 1 ? `${roundedYears} ${yearStr}` : `${months} ${monthStr}`;
 
-  const end = endMoment.isSame(moment(), "date") ? "Actual" : endMoment.year();
+  const end = endMoment.isSame(moment(), "date") ? "Present" : endMoment.year();
   const yearsDuration =
     initialMoment.year() === end ? end : `${initialMoment.year()} - ${end}`;
 
   return (
     <div
-      className={CN("ps-2 pe-0 col-3", {
+      className={CN("pe-0 col-3", {
         "continuous-line": continuousLine,
       })}
     >

@@ -3,7 +3,7 @@ import { useLanguage } from "../../context/language";
 
 export const InterestsSection = () => {
   const language = useLanguage();
-  const { title, physicalActivity, music } = locales.sideMenu.interestsSection;
+  const { title, physicalActivity, music } = locales.skills.interestsSection;
 
   return (
     <div>

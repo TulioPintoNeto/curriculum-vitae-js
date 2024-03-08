@@ -7,40 +7,29 @@ export const educationSection = {
   },
   educations: [
     {
-      endDate: new Date(2022, 9),
-      initialDate: new Date(2021, 1),
-      company: "UCPel",
-      title: {
-        [Language.EN_US]:
-          "Systems Analysis and Development (until 3º semester)",
-        [Language.PT_BR]:
-          "Análise e Desenvolvimento de Sistemas (até 3º Semestre)",
-      },
-    },
-    {
       endDate: new Date(2021, 1),
       initialDate: new Date(2021, 1),
-      company: "Alura",
+      company: "Alura Online Courses - Brazil",
       title: {
-        [Language.EN_US]: "Flutter",
-        [Language.PT_BR]: "Flutter",
+        [Language.EN_US]: "Flutter Certificate",
+        [Language.PT_BR]: "Flutter Certificate",
       },
     },
     {
       endDate: new Date(2021, 1),
       initialDate: new Date(2020, 1),
-      company: "Alura",
+      company: "Alura Online Courses - Brazil",
       title: {
-        [Language.EN_US]: "React JS",
-        [Language.PT_BR]: "React JS",
+        [Language.EN_US]: "React JS Certificate",
+        [Language.PT_BR]: "React JS Certificate",
       },
     },
     {
       endDate: new Date(2020, 1),
       initialDate: new Date(2013, 1),
-      company: "UFRGS",
+      company: "Federal University of Rio Grande do Sul - Brazil",
       title: {
-        [Language.EN_US]: "Energy Engineer",
+        [Language.EN_US]: "Bachelor in Energy Engineering",
         [Language.PT_BR]: "Engenharia de Energia",
       },
     },

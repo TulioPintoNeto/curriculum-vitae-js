@@ -1,0 +1,11 @@
+.tableRow {
+  border-bottom: 1px solid #ddd;
+  
+  td {
+    padding: 4px 0;
+  }
+
+  & > td:first-child {
+    width: 190px;
+  }
+}

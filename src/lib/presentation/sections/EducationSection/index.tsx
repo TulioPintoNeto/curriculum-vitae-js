@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { locales } from "../../../locales";
 import { useLanguage } from "../../context/language";
-import { Education } from "./Education";
 import { Title } from "../../components/Title";
+import { MainContent } from "../../components/MainContent";
 
 export const EducationSection = () => {
   const language = useLanguage();
@@ -14,7 +14,7 @@ export const EducationSection = () => {
       <div>
         {educations.map((props) => (
           <Fragment key={props.title[language]}>
-            <Education {...props} title={props.title[language]} />
+            <MainContent {...props} title={props.title[language]} />
           </Fragment>
         ))}
       </div>
