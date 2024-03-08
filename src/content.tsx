@@ -17,7 +17,7 @@ export const Content = () => {
             <SkillsSection />
             <ExperiencesSection />
             <EducationSection />
-            {/* <InterestsSection /> */}
+            <InterestsSection />
           </div>
         </div>
       </div>

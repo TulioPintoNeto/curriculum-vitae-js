@@ -11,7 +11,7 @@ export const LanguageSection = () => {
 
   return (
     <div
-      className={CN("d-flex justify-content-between", styles.languageWrapper)}
+      className={CN("d-flex gap-5", styles.languageWrapper)}
     >
       {languages.map(({ level, text }) => (
         <Fragment key={text[language]}>

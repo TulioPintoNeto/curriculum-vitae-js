@@ -1,30 +1,32 @@
+import { PropsWithChildren } from "react";
 import { locales } from "../../../locales";
 import { useLanguage } from "../../context/language";
+import CN from "classnames";
+import { Title } from "../../components/Title";
+
+type InterestProps = PropsWithChildren & {
+  icon: string;
+};
+
+const Interest = ({ children, icon }: InterestProps) => (
+  <div className="d-flex align-items-center gap-3">
+    <i className={CN(icon, "fas mb-1")} aria-hidden="true"></i>
+    <p className="mb-0">{children}</p>
+  </div>
+);
 
 export const InterestsSection = () => {
   const language = useLanguage();
-  const { title, physicalActivity, music } = locales.skills.interestsSection;
+  const { title, chess, physicalActivity, music } =
+    locales.skills.interestsSection;
 
   return (
     <div>
-      <h5 className="pt-3">{title[language]}</h5>
-      <div>
-        <div className="row mx-0 mb-2">
-          <div className="p-0 d-flex align-items-center justify-content-center col-1">
-            <i className="fas fa-biking" aria-hidden="true"></i>
-          </div>
-          <div className="col-11">
-            <p className="mb-0">{physicalActivity.title[language]}</p>
-          </div>
-        </div>
-        <div className="row mx-0 mb-2">
-          <div className="p-0 d-flex align-items-center justify-content-center col-1">
-            <i className="fas fa-music" aria-hidden="true"></i>
-          </div>
-          <div className="col-11">
-            <p className="mb-0">{music.title[language]}</p>
-          </div>
-        </div>
+      <Title>{title[language]}</Title>
+      <div className="mt-4 d-flex gap-5">
+        <Interest icon="fa-chess">{chess[language]}</Interest>
+        <Interest icon="fa-biking">{physicalActivity[language]}</Interest>
+        <Interest icon="fa-music">{music[language]}</Interest>
       </div>
     </div>
   );

@@ -19,37 +19,37 @@ export const skills = {
     title: {
       [Language.EN_US]: "UI & Markup",
       [Language.PT_BR]: "UI & Markup",
-    }
+    },
   },
   databases: {
     title: {
       [Language.EN_US]: "Databases",
       [Language.PT_BR]: "Banco de Dados",
-    }
+    },
   },
   testing: {
     title: {
       [Language.EN_US]: "Automated Testing",
       [Language.PT_BR]: "Testes Automatizados",
-    }
+    },
   },
   softwares: {
     title: {
       [Language.EN_US]: "Softwares",
       [Language.PT_BR]: "Softwares",
-    }
+    },
   },
   infra: {
     title: {
       [Language.EN_US]: "Infrastructure",
       [Language.PT_BR]: "Infraestrutura",
-    }
+    },
   },
   patterns: {
     title: {
       [Language.EN_US]: "Patterns",
       [Language.PT_BR]: "Infraestrutura",
-    }
+    },
   },
   others: {
     title: {
@@ -62,17 +62,17 @@ export const skills = {
       [Language.EN_US]: "Interests",
       [Language.PT_BR]: "Interesses",
     },
+    chess: {
+      [Language.EN_US]: "Chess",
+      [Language.PT_BR]: "Xadrez",
+    },
     physicalActivity: {
-      title: {
-        [Language.EN_US]: 'Physical Activity',
-        [Language.PT_BR]: 'Atividade Física',
-      }
+      [Language.EN_US]: "Physical Activity",
+      [Language.PT_BR]: "Atividade Física",
     },
     music: {
-      title: {
-        [Language.EN_US]: 'Music',
-        [Language.PT_BR]: 'Música',
-      }
-    }
+      [Language.EN_US]: "Music",
+      [Language.PT_BR]: "Música",
+    },
   },
 };
