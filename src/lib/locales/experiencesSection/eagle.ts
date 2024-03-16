@@ -17,11 +17,11 @@ export const eagle = {
     ],
   },
   title: {
-    [Language.EN_US]: "Front-end developer with React JS",
+    [Language.EN_US]: "Front-end engineer with React JS",
     [Language.PT_BR]: "Desenvolvedor front-end com React JS",
   },
   type: {
-    [Language.EN_US]: "Contract",
+    [Language.EN_US]: "Contract - Part time",
     [Language.PT_BR]: "Contrato",
   },
 };

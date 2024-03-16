@@ -16,8 +16,8 @@ export const ciandt = [
       ],
     },
     title: {
-      [Language.EN_US]: "Senior front-end developer with React JS",
-      [Language.PT_BR]: "Desenvolvedor front-end senior com React JS",
+      [Language.EN_US]: "Senior full-stack engineer with React JS/Spring",
+      [Language.PT_BR]: "Desenvolvedor full-stack senior com React JS/Spring",
     },
     type: {
       [Language.EN_US]: "Permanent Position",
@@ -45,7 +45,7 @@ export const ciandt = [
       ],
     },
     title: {
-      [Language.EN_US]: "Front-end developer with React JS",
+      [Language.EN_US]: "Front-end engineer with React JS",
       [Language.PT_BR]: "Desenvolvedor front-end com React JS",
     },
     type: {

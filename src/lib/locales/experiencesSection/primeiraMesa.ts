@@ -17,7 +17,7 @@ export const primeiraMesa = {
     ],
   },
   title: {
-    [Language.EN_US]: "Mobile developer with Flutter",
+    [Language.EN_US]: "Mobile engineer with Flutter",
     [Language.PT_BR]: "Desenvolvedor mobile com Flutter",
   },
   type: {

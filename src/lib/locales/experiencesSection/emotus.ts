@@ -13,7 +13,7 @@ export const emotus = {
     ],
   },
   title: {
-    [Language.EN_US]: "Front-end developer with React JS",
+    [Language.EN_US]: "Front-end engineer with React JS",
     [Language.PT_BR]: "Desenvolvedor front-end com React JS",
   },
   type: {
