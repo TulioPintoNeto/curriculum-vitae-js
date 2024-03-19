@@ -53,7 +53,7 @@ export const SkillsSection = () => {
         />
         <SkillsRow
           label={others.title[language]}
-          value="Webpack, RegEx, SEO, Scrum"
+          value="Firebase, Webpack, RegEx, SEO, Scrum"
         />
       </table>
     </>

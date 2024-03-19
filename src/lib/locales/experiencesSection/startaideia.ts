@@ -7,7 +7,7 @@ export const startaideia = {
   responsabilities: {
     [Language.EN_US]: [
       "Development of multiplataform applications (Web, Android and iOS)",
-      "Team reference in Flutter development",
+      "Lead the team in projects patterns, architectural decisions and code review.",
       "Definition of project patterns and creation of unit tests using TDD and Clean Architecture",
       "Implementation of changes in habits, CI/CD culture and automation",
     ],
