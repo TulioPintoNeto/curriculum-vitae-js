@@ -3,6 +3,7 @@ import { ciandt } from "./ciandt";
 import { d3Energia } from "./d3Energia";
 import { eagle } from "./eagle";
 import { emotus } from "./emotus";
+import { landclan } from "./landclan";
 import { pataki } from "./pataki";
 import { primeiraMesa } from "./primeiraMesa";
 import { startaideia } from "./startaideia";
@@ -30,9 +31,10 @@ export const experiencesSection: ExperiencesSection = {
     [Language.PT_BR]: "Experiência",
   },
   experiences: [
+    landclan,
     ciandt,
-    startaideia,
-    primeiraMesa,
+    // startaideia,
+    // primeiraMesa,
     eagle,
     emotus,
     // pataki,

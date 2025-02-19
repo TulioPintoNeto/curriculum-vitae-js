@@ -18,7 +18,3 @@ However, after nearly two years, I realized the maintenance burden of this custo
 - Bootstrap: Bootstrap remains integral to styling the application, ensuring consistency and responsiveness.
 - Clean Architecture: I adhere to clean architecture principles to guide code organization and design patterns.
 - React Context API: I developed a custom language system using React Context API to manage language preferences within the application.
-
-## Future Plans
-
-I am considering adopting i18next for language management to explore its capabilities and potentially streamline language handling within the CV.

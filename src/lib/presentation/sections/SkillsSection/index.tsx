@@ -24,11 +24,13 @@ export const SkillsSection = () => {
       <table>
         <SkillsRow
           label={programmingLanguages.title[language]}
-          value="TypeScript, Vanilla JavaScript, Dart, Java, Python"
+          value="*TypeScript*, Vanilla JavaScript, Java, Python"
+          // Dart
         />
         <SkillsRow
           label={frameworks.title[language]}
-          value="React.JS, Next.JS, Node.JS, Flutter, Spring"
+          value="*React.JS*, *Node.JS*, Next.JS, Angular, Spring"
+          // Flutter
         />
         <SkillsRow
           label={uiMarkup.title[language]}
@@ -41,7 +43,7 @@ export const SkillsSection = () => {
         <SkillsRow label={databases.title[language]} value="MySQL, NoSQL" />
         <SkillsRow
           label={softwares.title[language]}
-          value="MS Word, MS Excel, MS Power Point, Insomnia, Postman, VSCode, SourceTree"
+          value="*Visual Studio Code*, MS Word, MS Excel, MS Power Point, Insomnia, Postman, SourceTree"
         />
         <SkillsRow
           label={infra.title[language]}
@@ -49,11 +51,11 @@ export const SkillsSection = () => {
         />
         <SkillsRow
           label={patterns.title[language]}
-          value="Clean Architecture, Clean Code, SOLID, TDD"
+          value="*Object-oriented*, *Functional programming*, Clean Architecture, Clean Code, SOLID, TDD"
         />
         <SkillsRow
           label={others.title[language]}
-          value="Firebase, Webpack, RegEx, SEO, Scrum"
+          value="Firebase, Webpack, EsBuild, RegEx, SEO, Scrum"
         />
       </table>
     </>
