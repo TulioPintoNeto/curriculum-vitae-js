@@ -24,38 +24,44 @@ export const SkillsSection = () => {
       <table>
         <SkillsRow
           label={programmingLanguages.title[language]}
-          value="*TypeScript*, Vanilla JavaScript, Java, Python"
+          value="TypeScript, Vanilla JavaScript, Java, Python"
           // Dart
         />
         <SkillsRow
           label={frameworks.title[language]}
-          value="*React.JS*, *Node.JS*, Next.JS, Angular, Spring"
+          value="React.JS, Node.JS, Next.JS, Angular, Spring"
           // Flutter
         />
         <SkillsRow
           label={uiMarkup.title[language]}
-          value="HTML5, CSS3, Highcharts, Sass, Styled Components, MaterialUI, Bootstrap, TailwindCSS"
+          value="HTML5, CSS3, Highcharts, Sass, MaterialUI, Bootstrap"
+          // Styled Components, TailwindCSS
         />
         <SkillsRow
           label={testing.title[language]}
-          value="Jest, React Testing Library, Playwright, Loki, Flutter Test"
+          value="Jest, React Testing Library, Playwright"
+          // Loki, Flutter Test
         />
         <SkillsRow label={databases.title[language]} value="MySQL, NoSQL" />
         <SkillsRow
           label={softwares.title[language]}
-          value="*Visual Studio Code*, MS Word, MS Excel, MS Power Point, Insomnia, Postman, SourceTree"
+          value="Visual Studio Code, Insomnia, Postman"
+          // MS Word, MS Power Point, MS Excel, SourceTree
         />
         <SkillsRow
           label={infra.title[language]}
-          value="Docker, GitHub Actions, Jenkins, GitLab CI/CD"
+          value="Docker, GitHub Actions, Jenkins"
+          // GitLab CI/CD
         />
         <SkillsRow
           label={patterns.title[language]}
-          value="*Object-oriented*, *Functional programming*, Clean Architecture, Clean Code, SOLID, TDD"
+          value="Clean Architecture, Clean Code, SOLID, TDD"
+          // Object-oriented, Functional programming
         />
         <SkillsRow
           label={others.title[language]}
-          value="Firebase, Webpack, EsBuild, RegEx, SEO, Scrum"
+          value="Firebase, Webpack, EsBuild, RegEx, Scrum"
+          // SEO
         />
       </table>
     </>

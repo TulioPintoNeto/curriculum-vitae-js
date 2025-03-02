@@ -61,12 +61,13 @@ export const ciandt = {
   initialDate: new Date(2022, 3),
   responsabilities: {
     [Language.EN_US]: [
-      "Development of new features for a financial software focused on data visualization using NextJS and CSS modules with SASS, React-Tables for displaying tables with integrated filters and Highcharts",
+      "Development of new features for a financial software focused on data visualization using NextJS, TypeScript and SASS, React-Tables for displaying tables with integrated filters and Highcharts",
+        "Fixed bugs and optimised performance in a Java/Spring back-end, improving stability and reducing response times by 20%",
       "Creation of units and integration tests, usage of Storybook with the React Components to do visual regression testing using Loki",
       "Development of React components for an admin panel",
       "Development of components using good practices of search engine optimization (SEO)",
       "Development of scripts, such as importing XML content to an API, using Node JS",
-      "Participating in decision making, such as project patterns, technologies and automation",
+      "Contributed to decisions on project patterns, technology selection, and automation, leading to improved code maintainability and streamlined development processes",
       "Creating integration tests and unit tests using TDD",
     ],
     [Language.PT_BR]: [
