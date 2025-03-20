@@ -6,9 +6,9 @@ export const eagle = {
   initialDate: new Date(2021, 2),
   responsabilities: {
     [Language.EN_US]: [
-      "Responsible for the development of new SPA using ReactJS, Styled Components, Sass and consuming data from REST Api and Socket.IO",
-      "Maintenance and development of new functionalities for the company website source code",
-      "Maintenance of the existent SPA and development of new functionalities",
+      "Developed new SPA using ReactJS, Styled Components, Sass and consuming data from REST Api and Socket.IO",
+      "Maintained and developed new functionalities for the company website source code",
+      "Maintained the existent SPA and development of new functionalities",
     ],
     [Language.PT_BR]: [
       "Responsável pelo desenvolvimento de Single Page Application usando ReactJS, Styled Components, Sass e consumindo dados de REST Api e Socket.IO",

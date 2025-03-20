@@ -6,10 +6,10 @@ export const startaideia = {
   initialDate: new Date(2021, 6),
   responsabilities: {
     [Language.EN_US]: [
-      "Development of multiplataform applications (Web, Android and iOS)",
-      "Lead the team in projects patterns, architectural decisions and code review.",
-      "Definition of project patterns and creation of unit tests using TDD and Clean Architecture",
-      "Implementation of changes in habits, CI/CD culture and automation",
+      "Developed multiplataform applications (Web, Android and iOS)",
+      "Led the team in projects patterns, architectural decisions and code review.",
+      "Defined project patterns and creation of unit tests using TDD and Clean Architecture",
+      "Implemented changes in habits, CI/CD culture and automation",
     ],
     [Language.PT_BR]: [
       "Desenvolvimento de novos aplicativos multiplataforma (Web, Android e iOS)",

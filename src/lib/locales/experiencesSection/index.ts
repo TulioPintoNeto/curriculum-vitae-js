@@ -33,11 +33,11 @@ export const experiencesSection: ExperiencesSection = {
   experiences: [
     landclan,
     ciandt,
-    // startaideia,
+    startaideia,
     // primeiraMesa,
     eagle,
     emotus,
     // pataki,
-    d3Energia,
+    // d3Energia,
   ],
 };
